@@ -1,4 +1,4 @@
-# PartyGameProject
+# Unnamed Party Game
 Our CECS 491 senior group project as part of Team Seven.
 
 Austin, Khoa, Steven, Tou, and Wesley.
