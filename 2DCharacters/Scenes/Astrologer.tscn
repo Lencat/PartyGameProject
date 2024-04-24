@@ -1,0 +1,535 @@
+[gd_scene load_steps=124 format=3 uid="uid://iuquwl584lq4"]
+
+[ext_resource type="Script" path="res://2DCharacters/Scripts/Astrologer.gd" id="1_7wtpj"]
+[ext_resource type="Texture2D" uid="uid://2e3kihot4npp" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="2_aiykg"]
+[ext_resource type="Texture2D" uid="uid://btf82q6d0f77l" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="3_2yrtl"]
+[ext_resource type="Texture2D" uid="uid://bhe2dxeamk3bh" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="4_l8pio"]
+[ext_resource type="Texture2D" uid="uid://cf8w5xfmmmrur" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="5_rbrkp"]
+[ext_resource type="Texture2D" uid="uid://bg88c5igy7dj0" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="6_0031b"]
+[ext_resource type="Texture2D" uid="uid://2fkhkiipms4t" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="7_ykvd7"]
+[ext_resource type="Texture2D" uid="uid://bxvoruaymnwo7" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="8_6jq5j"]
+[ext_resource type="Texture2D" uid="uid://dml3hdb0af1ae" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="9_631gc"]
+[ext_resource type="Texture2D" uid="uid://ct72q6u0a0twy" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="10_14mbr"]
+[ext_resource type="Texture2D" uid="uid://cc21t4vda6mm2" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="11_i6812"]
+[ext_resource type="Texture2D" uid="uid://dph7lcqyif114" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="12_w4kpe"]
+[ext_resource type="Texture2D" uid="uid://chfx3c7ko77d" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="13_j4wcv"]
+[ext_resource type="Texture2D" uid="uid://36rweqgu0g72" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="14_ytgqg"]
+[ext_resource type="Texture2D" uid="uid://cveur3dla488r" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="15_jsamw"]
+[ext_resource type="Texture2D" uid="uid://dbcohypy52yqt" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="16_oa184"]
+[ext_resource type="Texture2D" uid="uid://0vw4rnf0845w" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="17_cnh6u"]
+[ext_resource type="Texture2D" uid="uid://cnu34jg1rjv3p" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="18_uboh1"]
+[ext_resource type="Texture2D" uid="uid://cyowb87kk3w1v" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="19_3emmx"]
+[ext_resource type="Texture2D" uid="uid://bumj2cjw86la8" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="20_kj3nd"]
+[ext_resource type="Texture2D" uid="uid://b0qdgxbkgndtn" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="21_2ocse"]
+[ext_resource type="Texture2D" uid="uid://bxy8fum1365s" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="22_kvwys"]
+[ext_resource type="Texture2D" uid="uid://1x62qjddlem2" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="23_7c1b6"]
+[ext_resource type="Texture2D" uid="uid://ceo6mlsc17bni" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="24_n3pil"]
+[ext_resource type="Texture2D" uid="uid://cl71lvx6rmtga" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="25_jf1my"]
+[ext_resource type="Texture2D" uid="uid://dbrnqnh20w5x" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="26_sn7vf"]
+[ext_resource type="Texture2D" uid="uid://dkvctu3tqwxmo" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="27_d2um2"]
+[ext_resource type="Texture2D" uid="uid://bov6qbilt22uf" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="28_pb2q6"]
+[ext_resource type="Texture2D" uid="uid://cguhpe0fhjsdf" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="29_qwuu7"]
+[ext_resource type="Texture2D" uid="uid://dygacin6myayu" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="30_a2jtx"]
+[ext_resource type="Texture2D" uid="uid://hp6fen8ow54x" path="res://2DAnimationAssets/Astrologer/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="31_8lbf7"]
+[ext_resource type="Texture2D" uid="uid://oc3mhsjcdiu7" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="32_rb1dt"]
+[ext_resource type="Texture2D" uid="uid://8nut6buq6sb5" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="33_h3maa"]
+[ext_resource type="Texture2D" uid="uid://dqignogtcu2wf" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="34_sanpe"]
+[ext_resource type="Texture2D" uid="uid://bf3wynmpnxodp" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="35_5kmnk"]
+[ext_resource type="Texture2D" uid="uid://1y65mnyoms3n" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="36_bvh3k"]
+[ext_resource type="Texture2D" uid="uid://hs3pgkwqiin6" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="37_r36a8"]
+[ext_resource type="Texture2D" uid="uid://b5cojo0ptmjgj" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="38_th7io"]
+[ext_resource type="Texture2D" uid="uid://jeu4hnyy1e45" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="39_wqb3g"]
+[ext_resource type="Texture2D" uid="uid://theaxqv1fc40" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="40_et5v2"]
+[ext_resource type="Texture2D" uid="uid://dgn1dp1fbe2ip" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="41_gkkmm"]
+[ext_resource type="Texture2D" uid="uid://bsr3liijbvqwl" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="42_p8ipm"]
+[ext_resource type="Texture2D" uid="uid://chdega87idh8e" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="43_yjuam"]
+[ext_resource type="Texture2D" uid="uid://buwohw4fm066t" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="44_57dbp"]
+[ext_resource type="Texture2D" uid="uid://b28mj1mxmpilo" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="45_262mi"]
+[ext_resource type="Texture2D" uid="uid://cvriptc6l2ahk" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="46_ypctc"]
+[ext_resource type="Texture2D" uid="uid://d2e5osujskfc5" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="47_h03pi"]
+[ext_resource type="Texture2D" uid="uid://byvv5huwp5h1j" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="48_ym0j1"]
+[ext_resource type="Texture2D" uid="uid://vugsyjjr0n5l" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="49_brgy6"]
+[ext_resource type="Texture2D" uid="uid://gmte1whe87t3" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="50_wh4t4"]
+[ext_resource type="Texture2D" uid="uid://dnpcftspdcqau" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="51_yy7jd"]
+[ext_resource type="Texture2D" uid="uid://ct6bwbuam33rh" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="52_vx7l4"]
+[ext_resource type="Texture2D" uid="uid://c85muuq22bghi" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="53_2kxey"]
+[ext_resource type="Texture2D" uid="uid://ygtn3qxa0jjw" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="54_ppwiv"]
+[ext_resource type="Texture2D" uid="uid://xr8y8iwa0eq2" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="55_vrk7b"]
+[ext_resource type="Texture2D" uid="uid://de6rv2yl2m3gr" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="56_2kijq"]
+[ext_resource type="Texture2D" uid="uid://dbcsun3ma017x" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="57_t72g2"]
+[ext_resource type="Texture2D" uid="uid://diehf6jfnhtq0" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="58_fbfjp"]
+[ext_resource type="Texture2D" uid="uid://dnl43fu88xncn" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="59_dxv4w"]
+[ext_resource type="Texture2D" uid="uid://b8lbtt3i2747y" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="60_oss1g"]
+[ext_resource type="Texture2D" uid="uid://d3k3ee4v8jtje" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="61_pfndm"]
+[ext_resource type="Texture2D" uid="uid://bn63foc5ibum3" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="62_8g70b"]
+[ext_resource type="Texture2D" uid="uid://ffd75rje7b3n" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="63_ypheb"]
+[ext_resource type="Texture2D" uid="uid://b80wf3ocprnhb" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="64_xt58c"]
+[ext_resource type="Texture2D" uid="uid://wsgfbbm8hkvc" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="65_o2kyc"]
+[ext_resource type="Texture2D" uid="uid://bjvh7q1j5cfyh" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="66_1t0y7"]
+[ext_resource type="Texture2D" uid="uid://dvbivcko785ch" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="67_ios11"]
+[ext_resource type="Texture2D" uid="uid://b21tjen12afmj" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="68_i8a86"]
+[ext_resource type="Texture2D" uid="uid://c142ocp7eb0kc" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="69_st30v"]
+[ext_resource type="Texture2D" uid="uid://bbsipmucei7ot" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="70_ls1si"]
+[ext_resource type="Texture2D" uid="uid://b22k6jght7ipi" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="71_usnc5"]
+[ext_resource type="Texture2D" uid="uid://ck4bawexldg5i" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="72_mimm6"]
+[ext_resource type="Texture2D" uid="uid://di46q31pke0hf" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="73_yia5e"]
+[ext_resource type="Texture2D" uid="uid://bgy8swmvhvwc4" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="74_gd42p"]
+[ext_resource type="Texture2D" uid="uid://b13e0sh2wj88d" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="75_achqc"]
+[ext_resource type="Texture2D" uid="uid://b5ofs1s6dp87m" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="76_ddoo0"]
+[ext_resource type="Texture2D" uid="uid://hcv224d5y8qh" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="77_xtago"]
+[ext_resource type="Texture2D" uid="uid://cjaka30w8qtko" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="78_7xvgw"]
+[ext_resource type="Texture2D" uid="uid://djykl2nrptaq2" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="79_icmkj"]
+[ext_resource type="Texture2D" uid="uid://xojj4f7ovup8" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="80_bqb7g"]
+[ext_resource type="Texture2D" uid="uid://fr055tj66uw2" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="81_mx1rc"]
+[ext_resource type="Texture2D" uid="uid://c3ghr4okfn488" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="82_km3j3"]
+[ext_resource type="Texture2D" uid="uid://dci3qr2ahee77" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="83_g03fx"]
+[ext_resource type="Texture2D" uid="uid://ydjq8qbwmwx6" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="84_nmkuv"]
+[ext_resource type="Texture2D" uid="uid://ccjuxt4k71jy" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="85_jltv6"]
+[ext_resource type="Texture2D" uid="uid://ddvgwccyl6nub" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="86_rwilv"]
+[ext_resource type="Texture2D" uid="uid://mbfkpaj4h6yb" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="87_rte3l"]
+[ext_resource type="Texture2D" uid="uid://cnnwrnlh6xdp3" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="88_syc7d"]
+[ext_resource type="Texture2D" uid="uid://0yfp0w8ntva8" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="89_updnj"]
+[ext_resource type="Texture2D" uid="uid://dljrlyhf0jyea" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_f774p"]
+[ext_resource type="Texture2D" uid="uid://d0yejmlalmhir" path="res://2DAnimationAssets/Astrologer/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_6t3dn"]
+[ext_resource type="Texture2D" uid="uid://ci4oe3077cf50" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="92_4cc8v"]
+[ext_resource type="Texture2D" uid="uid://chce78mfkfyj3" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="93_ch8ln"]
+[ext_resource type="Texture2D" uid="uid://bsx5cpcpqh1hv" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="94_wqlno"]
+[ext_resource type="Texture2D" uid="uid://774y8u1q4i5v" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="95_16uhs"]
+[ext_resource type="Texture2D" uid="uid://dny0robx0pjrh" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="96_00fim"]
+[ext_resource type="Texture2D" uid="uid://cnxhuoruxfd45" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="97_trl5j"]
+[ext_resource type="Texture2D" uid="uid://dj1rip510gvrn" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="98_f6o0o"]
+[ext_resource type="Texture2D" uid="uid://dim60tatrurkb" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="99_w2t4p"]
+[ext_resource type="Texture2D" uid="uid://bougmof7ve27b" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="100_a7ih8"]
+[ext_resource type="Texture2D" uid="uid://y184gs2e8v6f" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="101_b55o2"]
+[ext_resource type="Texture2D" uid="uid://bnppscaietljd" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="102_mlhxy"]
+[ext_resource type="Texture2D" uid="uid://blwkv6xpgr6f6" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="103_ond4u"]
+[ext_resource type="Texture2D" uid="uid://bivrv3jjcq3fs" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="104_d3sig"]
+[ext_resource type="Texture2D" uid="uid://cuxi0irx5q3pn" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="105_5suew"]
+[ext_resource type="Texture2D" uid="uid://s2jwtq7t2bqh" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="106_qxedx"]
+[ext_resource type="Texture2D" uid="uid://c8oqejeqtmauk" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="107_mhk56"]
+[ext_resource type="Texture2D" uid="uid://b2d7ckyqxq6tq" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="108_sdd8h"]
+[ext_resource type="Texture2D" uid="uid://dieasggb3ugxb" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="109_wq2e6"]
+[ext_resource type="Texture2D" uid="uid://d2ycwdqxql6h4" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="110_obvum"]
+[ext_resource type="Texture2D" uid="uid://dw2kom3y6vfyy" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="111_c4lbw"]
+[ext_resource type="Texture2D" uid="uid://dqfqpy0fiukyq" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="112_2c5ko"]
+[ext_resource type="Texture2D" uid="uid://cjtnxbyeovusx" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="113_el2o7"]
+[ext_resource type="Texture2D" uid="uid://qd2wc7e6rfxl" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="114_rka0p"]
+[ext_resource type="Texture2D" uid="uid://bl5lrxvobsofy" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="115_a550e"]
+[ext_resource type="Texture2D" uid="uid://c18hnhhak7ka8" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="116_q8ryd"]
+[ext_resource type="Texture2D" uid="uid://dwgls5ydp850o" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="117_sb6t0"]
+[ext_resource type="Texture2D" uid="uid://dansjj1dsypce" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="118_jmaai"]
+[ext_resource type="Texture2D" uid="uid://cul2xpn82125m" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="119_sn71x"]
+[ext_resource type="Texture2D" uid="uid://ddcc57rs54hmf" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="120_ao8jt"]
+[ext_resource type="Texture2D" uid="uid://cxmchr1aep5fn" path="res://2DAnimationAssets/Astrologer/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="121_1sw0e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83t84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aiykg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2yrtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l8pio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rbrkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0031b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ykvd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6jq5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_631gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_14mbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i6812")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w4kpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j4wcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ytgqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jsamw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oa184")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cnh6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uboh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3emmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kj3nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2ocse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kvwys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7c1b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n3pil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jf1my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sn7vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_d2um2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pb2q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qwuu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a2jtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8lbf7")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_rb1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h3maa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_sanpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5kmnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_bvh3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_r36a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_th7io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wqb3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_et5v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_gkkmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_p8ipm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yjuam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_57dbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_262mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ypctc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_h03pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ym0j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_brgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wh4t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yy7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_vx7l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_2kxey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ppwiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vrk7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2kijq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_t72g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_fbfjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_dxv4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oss1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_pfndm")
+}],
+"loop": true,
+"name": &"front_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_8g70b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ypheb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_xt58c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_o2kyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_1t0y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ios11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_i8a86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_st30v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ls1si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_usnc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_mimm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_yia5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_gd42p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_achqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ddoo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_xtago")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_7xvgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_icmkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_bqb7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_mx1rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_km3j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_g03fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_nmkuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jltv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_rwilv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_rte3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_syc7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_updnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_f774p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6t3dn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_4cc8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ch8ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_wqlno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_16uhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_00fim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_trl5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_f6o0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_w2t4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_a7ih8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_b55o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mlhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ond4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_d3sig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_5suew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_qxedx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_mhk56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_sdd8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_wq2e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_obvum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_c4lbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_2c5ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_el2o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_rka0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_a550e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_q8ryd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_sb6t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_jmaai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_sn71x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ao8jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_1sw0e")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqtbd"]
+size = Vector2(164, 282)
+
+[node name="Astrologer" type="CharacterBody2D"]
+script = ExtResource("1_7wtpj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_83t84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -140)
+shape = SubResource("RectangleShape2D_aqtbd")
+
+[node name="PlayerName" type="Label" parent="."]
+offset_left = -81.0
+offset_top = -415.0
+offset_right = 83.0
+offset_bottom = -352.0
+horizontal_alignment = 1
+vertical_alignment = 1
