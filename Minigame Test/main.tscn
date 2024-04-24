@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bydpeu3njw1vc"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_ej1s6"]
+[ext_resource type="PackedScene" uid="uid://cqlspjfsfsjap" path="res://placeholder_enemy.tscn" id="2_x2y2f"]
+[ext_resource type="PackedScene" uid="uid://c2gpuc7mgpbgy" path="res://player_blue.tscn" id="3_dnptf"]
+[ext_resource type="PackedScene" uid="uid://3ikbt8tnjxv1" path="res://player_red.tscn" id="4_6qmk6"]
+[ext_resource type="PackedScene" uid="uid://dm4qefxcmf5uy" path="res://player_green.tscn" id="5_fm8as"]
+[ext_resource type="PackedScene" uid="uid://c6lbb0rayyy5u" path="res://player_yellow.tscn" id="6_7ts4v"]
+[ext_resource type="PackedScene" uid="uid://caqy3jmk4ue1c" path="res://hud.tscn" id="7_gauy1"]
+
+[sub_resource type="Curve2D" id="Curve2D_qwp0w"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 479, 0)
+}
+point_count = 2
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ej1s6")
+mob_scene = ExtResource("2_x2y2f")
+
+[node name="PlayerBlue" parent="." instance=ExtResource("3_dnptf")]
+
+[node name="PlayerRed" parent="." instance=ExtResource("4_6qmk6")]
+
+[node name="PlayerGreen" parent="." instance=ExtResource("5_fm8as")]
+
+[node name="PlayerYellow" parent="." instance=ExtResource("6_7ts4v")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(240, 600)
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimerBlue" type="Timer" parent="."]
+
+[node name="ScoreTimerRed" type="Timer" parent="."]
+
+[node name="ScoreTimerGreen" type="Timer" parent="."]
+
+[node name="ScoreTimerYellow" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_qwp0w")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+position = Vector2(0, 1)
+rotation = -0.00208768
+
+[node name="Hud" parent="." instance=ExtResource("7_gauy1")]
+
+[connection signal="hit" from="PlayerBlue" to="." method="_on_player_blue_hit"]
+[connection signal="hit" from="PlayerRed" to="." method="_on_player_red_hit"]
+[connection signal="hit" from="PlayerGreen" to="." method="_on_player_green_hit"]
+[connection signal="hit" from="PlayerYellow" to="." method="_on_player_yellow_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimerBlue" to="." method="_on_score_timer_blue_timeout"]
+[connection signal="timeout" from="ScoreTimerRed" to="." method="_on_score_timer_red_timeout"]
+[connection signal="timeout" from="ScoreTimerGreen" to="." method="_on_score_timer_green_timeout"]
+[connection signal="timeout" from="ScoreTimerYellow" to="." method="_on_score_timer_yellow_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="Hud" to="." method="new_game"]
