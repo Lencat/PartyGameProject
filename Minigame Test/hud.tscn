@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://hud.gd" id="1_thmae"]
 
 [sub_resource type="FontFile" id="FontFile_7ltwe"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -239,6 +242,9 @@ cache/0/22/0/kerning_overrides/23/0 = Vector2(0, 0)
 cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_ekukd"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -265,6 +271,9 @@ cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_tyid5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -281,6 +290,9 @@ cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_4w802"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
