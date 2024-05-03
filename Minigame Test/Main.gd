@@ -105,6 +105,9 @@ func game_over():
 	"\n2nd: " + str(places[1]) + "\n3rd: " + str(places[2]) +
 	"\n4th: " + str(places[3]))
 	
+	$Hud.end_game()
+	
+	
 func sort_ascending(a, b):
 	if a < b:
 		return true

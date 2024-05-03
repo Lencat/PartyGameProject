@@ -10,7 +10,8 @@ func show_message(text):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$ReturnButton.hide()
+	$StartButton.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,3 +28,12 @@ func _on_start_button_pressed():
 
 func _on_message_timer_timeout():
 	$Message.hide()
+
+
+func end_game():
+	$ReturnButton.show()
+	$ReturnButton.grab_focus()
+
+
+func _on_return_pressed():
+	get_tree().quit()
