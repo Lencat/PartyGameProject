@@ -1,37 +1,53 @@
-extends Node2D
+extends Control
 
+var playerSelectNode: AnimatedSprite2D
+var characterNameLabel: Label
+var playerNameInput: LineEdit
+var needNameLabel: Label
 
-func _process(delta):
-	match Global.playerSelect:
-		0: 
-			get_node("PlayerSelect").play("artist")
-			get_node("CharacterName").text = "Artist"
-		1:
-			get_node("PlayerSelect").play("astrologer")
-			get_node("CharacterName").text = "Astrologer"
-		2:
-			get_node("PlayerSelect").play("citizen")
-			get_node("CharacterName").text = "Citizen"
+func _ready():
+	playerSelectNode = get_node("PlayerSelect") as AnimatedSprite2D
+	characterNameLabel = get_node("CharacterName") as Label
+	playerNameInput = get_node("PlayerName") as LineEdit
+	needNameLabel = get_node("NeedName") as Label
+	reset_for_next_player()
+
+func reset_for_next_player():
+	playerNameInput.text = ""
+	needNameLabel.text = ""
+	update_display()  # Ensure initial display is updated including sprite animation
+
+func update_display():
+	var character_index = Global.players_info[Global.get_current_player()]["character"]
+	characterNameLabel.text = ["Artist", "Astrologer", "Citizen"][character_index]
+	playerSelectNode.play(["artist", "astrologer", "citizen"][character_index])
 
 func _on_left_pressed():
-	if Global.playerSelect > 0:
-		Global.playerSelect -= 1
-	else:
-		Global.playerSelect = 2
-
+	var current_selection = Global.players_info[Global.get_current_player()]["character"]
+	current_selection = (current_selection - 1 + 3) % 3
+	Global.set_character_selection(current_selection, Global.get_current_player())
+	update_display()
 
 func _on_right_pressed():
-	if Global.playerSelect < 2:
-		Global.playerSelect += 1
-	else:
-		Global.playerSelect = 0
-
+	var current_selection = Global.players_info[Global.get_current_player()]["character"]
+	current_selection = (current_selection + 1) % 3
+	Global.set_character_selection(current_selection, Global.get_current_player())
+	update_display()
 
 func _on_select_pressed():
-	var playerName = get_node("PlayerName").text
-	if playerName == "":
-		get_node("NeedName").text = "Need a name"
+	var playerName = playerNameInput.text
+	var currentPlayerIndex = Global.get_current_player()  # Get the current player's index
+
+	if playerName == "" or Global.players_info[Global.get_current_player()]["character"] == null:
+		needNameLabel.text = "Please enter a name"
 	else:
-		Global.set_player_name(playerName)
-		Global.set_character_selection(Global.playerSelect)
-		get_tree().change_scene_to_file("res://2DWorld.tscn")
+		Global.set_player_name(playerName, Global.get_current_player())
+		# Print the current player's index along with the name after it's set
+		print("Player ", currentPlayerIndex + 1, " Selected Name: ", playerName) 
+		if not Global.next_player():
+			if Global.all_players_ready():
+				get_tree().change_scene_to_file("res://2DWorld.tscn")
+			else:
+				reset_for_next_player()
+		else:
+			reset_for_next_player()  # Reset for the next player even if it's not the last one
