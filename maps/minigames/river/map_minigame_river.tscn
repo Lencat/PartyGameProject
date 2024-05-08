@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://copuyti2uqu3w"]
+
+[ext_resource type="PackedScene" uid="uid://dyv38uiatdnts" path="res://maps/minigames/river/map-minigame-river.glb" id="1_x14ur"]
+
+[node name="map-minigame-river" instance=ExtResource("1_x14ur")]
