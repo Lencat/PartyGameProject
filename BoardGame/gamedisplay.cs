@@ -62,7 +62,7 @@ public static partial class GameDisplay
             int[] placeNumbers = [1, -1, -1, -1];
             for (int i=1; i<4; i++)
             {
-                if (PCs[i-1].getHeldClueCount() != PCs[i].getHeldClueCount())
+                if (PCs[i-1].getHeldClueCount() == PCs[i].getHeldClueCount())
                 {
                     placeNumbers[i] = placeNumbers[i-1];
                 }
