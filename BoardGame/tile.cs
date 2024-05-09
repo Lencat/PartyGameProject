@@ -3,8 +3,7 @@ using System;
 
 namespace Game.Board;
 
-enum TileType {
-	NoTile, //can't visit
+public enum TileType {
 	Blank, //can visit but nothing happens
 	Home, //can turn in clues to secure them
 	Clue, //beneficial minigame
@@ -15,57 +14,105 @@ enum TileType {
 	Reverse //reverses your direction of travel if you stop on it
 }
 
-enum Direction {
+public enum Direction {
 	North = 0,
 	West  = 1,
 	East  = 2,
 	South = 3
 }
 
-enum IO {
+public enum IO {
 	None = -1,
 	In   =  0,
 	Out  =  1
 }
 
-public partial class Tile : Node
+public partial class Tile
 {
-	private:
+	//private:
 		TileType type;
-		IO[4] inOutNWES; // default in/out Directions
-		Point2D position;
+		IO[] inOutNWES; //default in/out Directions; always should be size 4
+		Point2D position; //used as a backreference-- dictionary position should take priority
 
-    public:
-        Tile(TileType type, Point2D position, IO north, IO west, IO east, IO south)
+	//public:
+		public Tile(TileType type, IO north, IO west, IO east, IO south)
+		{
+			this.type = type;
+			this.position = new Point2D(-1,-1);
+			this.inOutNWES = new IO[4];
+			this.inOutNWES[(int)Direction.North] = north;
+			this.inOutNWES[(int)Direction.West]  = west;
+			this.inOutNWES[(int)Direction.East]  = east;
+			this.inOutNWES[(int)Direction.South] = south;
+		}
+
+		public void setPosition(Point2D position) {this.position = position;}
+		public void setPosition(int x, int y) {this.position = new Point2D(x,y);}
+		
+		public Point2D getPosition() {return this.position;}
+		public int getX() {return this.position.x;}
+		public int getY() {return this.position.y;}
+
+		public void setInOut(Direction direction, IO inOut)
+		{
+			this.inOutNWES[(int)direction] = inOut;
+		}
+		public void setInOutAll(IO north, IO west, IO east, IO south)
+		{
+			this.inOutNWES[(int)Direction.North] = north;
+			this.inOutNWES[(int)Direction.West] = west;
+			this.inOutNWES[(int)Direction.East] = east;
+			this.inOutNWES[(int)Direction.South] = south;
+		}
+		public IO getInOut(Direction direction) {return this.inOutNWES[(int)direction];}
+
+		public void setType (TileType type) {this.type = type;}
+		public TileType getType () {return this.type;}
+}
+
+public static partial class TileEffect
+{
+    //private
+        //
+    //public
+        public static void triggerTile(ref GameState game, ref PlayerCharacter pc, Tile? tile)
         {
-            this.type = type;
-            this.position = position;
-            this.inOutNWES[Direction.North] = north;
-            this.inOutNWES[Direction.West] = west;
-            this.inOutNWES[Direction.East] = east;
-            this.inOutNWES[Direction.South] = south;
+            if (tile is null)
+            {
+                //if a player somehow ends up nowhere, reset them to the start.
+                pc.setPosition(game.getBoard().getStartingPoint());
+                return;
+            }
+            switch (tile.getType())
+            {
+                case TileType.Blank:
+                    break;
+                case TileType.Home:
+                    pc.bankClues();
+                    break;
+                case TileType.Clue:
+                    pc.gainClues(1);
+                    break;
+                case TileType.Haunt:
+                    //todo to link
+                    //Minigame.start(ref game, ref pc);
+                    break;
+                case TileType.Dash:
+                    BoardMovement.move(ref game, ref pc);
+                    break;
+                case TileType.Slippery:
+                    //slipping handled as part of movement code
+                    //nothing special if you somehow land on one directly though
+                    break;
+                case TileType.Pitfall:
+                    //TODO
+                    break;
+                case TileType.Reverse:
+                    pc.toggleMoveReversed();
+                    break;
+                default:
+                    //unsupported tile type? should never get here
+                    break;
+            }
         }
-
-        void setPosition(Point2D position) {this.position = position;}
-        void setPosition(int x, int y) {this.position = Point2D(x,y);}
-        
-        Point2D getPosition() {return this.position;}
-        int getX() {return this.position.x();}
-        int getY() {return this.position.y;}
-
-        void setInOut(Direction direction, IO inOut)
-        {
-            this.inOutNWES[direction] = inOut;
-        }
-        void setInOutAll(IO north, IO west, IO east, IO south)
-        {
-            this.inOutNWES[Direction.North] = north;
-            this.inOutNWES[Direction.West] = west;
-            this.inOutNWES[Direction.East] = east;
-            this.inOutNWES[Direction.South] = south;
-        }
-        IO getInOut(Direction direction) {return this.inOutNWES[direction];}
-
-        void setType (TileType type) {this.type = type;}
-        TileType getType () {return this.type;}
 }

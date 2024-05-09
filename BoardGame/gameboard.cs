@@ -4,137 +4,95 @@ using System.Collections.Generic;
 
 namespace Game.Board;
 
-public partial class GameBoard : Node
+public partial class GameBoard
 {
-	private:
-		Dictionary<Point2D, Tile> tileGrid;
-		Point2D mapSize;
-		Point2D startTile;
+	//private
+		private Point2D mapSize;
+		private Point2D startingPoint;
+		private Dictionary<Point2D, Tile> tileDict;
 
-	public:
-		GameBoard() {
-			tileGrid = new Dictionary<Point2D, Tile>;
-			mapSize = Point2D(0,0);
-			startPoint = Point2D(0,0);
+	//public
+		public GameBoard()
+		{
+			this.tileDict = new Dictionary<Point2D, Tile>();
+			this.mapSize = new Point2D(0,0);
+			this.startingPoint = new Point2D(0,0);
 		}
 
-		GameBoard(file mapLayout) {
+		public GameBoard(string mapFilepath)
+		{
 			throw new NotImplementedException("Load from file not implemented.");
 			//store in a json eventually
+
+			//relayTilePositions();
 		}
 
-		void temp_load_map_graveyard() {
-			mapSize = Point2D(8,7);
-			startPoint = Point2D(7,0);
+		public void relayTilePositions()
+		{
+			foreach(KeyValuePair<Point2D,Tile> entry in this.tileDict)
+			{
+				entry.Value.setPosition(entry.Key);
+			}
+		}
+
+		public Tile? getTile(Point2D position)
+		{
+			Tile? tile = null;
+			bool successful = this.tileDict.TryGetValue(position, out tile);
+			if (successful)
+			{
+				return tile;
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		public Point2D getStartingPoint() {return this.startingPoint;}
+
+		public void temp_load_map_graveyard()
+		{
+			mapSize = new Point2D(8,7);
+			startingPoint = new Point2D(7,0);
 			
-			tileGrid;
-
-			tileGrid[7][0].type = TileType.Home;
-				tileGrid[7][0].inOutNWES[Direction.West]  = IO.In;
-				tileGrid[7][0].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][1].type = TileType.Dash;
-				tileGrid[7][1].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][1].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][2].type = TileType.Clue;
-				tileGrid[7][2].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][2].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][3].type = TileType.Blank;
-				tileGrid[7][3].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][3].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][4].type = TileType.Haunt;
-				tileGrid[7][4].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][4].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][5].type = TileType.Blank;
-				tileGrid[7][5].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][5].inOutNWES[Direction.North] = IO.Out;
-			tileGrid[7][6].type = TileType.Dash;
-				tileGrid[7][6].inOutNWES[Direction.South] = IO.In;
-				tileGrid[7][6].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[6][6].type = TileType.Blank;
-				tileGrid[6][6].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[6][6].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[5][6].type = TileType.Dash;
-				tileGrid[5][6].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[5][6].inOutNWES[Direction.West]  = IO.Out;
-				tileGrid[5][6].inOutNWES[Direction.South] = IO.Out;
-
-			tileGrid[4][6].type = TileType.Blank;
-				tileGrid[4][6].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[4][6].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[3][6].type = TileType.Blank;
-				tileGrid[3][6].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[3][6].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[3][5].type = TileType.Clue;
-				tileGrid[3][5].inOutNWES[Direction.North] = IO.In;
-				tileGrid[3][5].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[3][4].type = TileType.Blank;
-				tileGrid[3][4].inOutNWES[Direction.North] = IO.In;
-				tileGrid[3][4].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[2][4].type = TileType.Blank;
-				tileGrid[2][4].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[2][4].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[1][4].type = TileType.Clue;
-				tileGrid[1][4].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[1][4].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[0][4].type = TileType.Blank;
-				tileGrid[0][4].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[0][4].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[0][3].type = TileType.Blank;
-				tileGrid[0][3].inOutNWES[Direction.North] = IO.In;
-				tileGrid[0][3].inOutNWES[Direction.South] = IO.Out;
-
-			tileGrid[5][5].type = TileType.Haunt;
-				tileGrid[5][5].inOutNWES[Direction.North] = IO.In;
-				tileGrid[5][5].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[5][4].type = TileType.Clue;
-				tileGrid[5][4].inOutNWES[Direction.North] = IO.In;
-				tileGrid[5][4].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[5][3].type = TileType.Haunt;
-				tileGrid[5][3].inOutNWES[Direction.North] = IO.In;
-				tileGrid[5][3].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[5][2].type = TileType.Dash;
-				tileGrid[5][2].inOutNWES[Direction.North] = IO.In;
-				tileGrid[5][2].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[4][2].type = TileType.Haunt;
-				tileGrid[4][2].inOutNWES[Direction.East] = IO.In;
-				tileGrid[4][2].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[3][2].type = TileType.Clue;
-				tileGrid[3][2].inOutNWES[Direction.East] = IO.In;
-				tileGrid[3][2].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[2][2].type = TileType.Haunt;
-				tileGrid[2][2].inOutNWES[Direction.East] = IO.In;
-				tileGrid[2][2].inOutNWES[Direction.West]  = IO.Out;
-			tileGrid[1][2].type = TileType.Clue;
-				tileGrid[1][2].inOutNWES[Direction.East] = IO.In;
-				tileGrid[1][2].inOutNWES[Direction.West]  = IO.Out;
-
-			tileGrid[0][2].type = TileType.Dash;
-				tileGrid[0][2].inOutNWES[Direction.North] = IO.In;
-				tileGrid[0][2].inOutNWES[Direction.East]  = IO.In;
-				tileGrid[0][2].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[0][1].type = TileType.Blank;
-				tileGrid[0][1].inOutNWES[Direction.North] = IO.In;
-				tileGrid[0][1].inOutNWES[Direction.South] = IO.Out;
-			tileGrid[0][0].type = TileType.Dash;
-				tileGrid[0][0].inOutNWES[Direction.North] = IO.In;
-				tileGrid[0][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[1][0].type = TileType.Blank;
-				tileGrid[1][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[1][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[2][0].type = TileType.Clue;
-				tileGrid[2][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[2][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[3][0].type = TileType.Blank;
-				tileGrid[3][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[3][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[4][0].type = TileType.Haunt;
-				tileGrid[4][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[4][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[5][0].type = TileType.Haunt;
-				tileGrid[5][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[5][0].inOutNWES[Direction.East] = IO.Out;
-			tileGrid[6][0].type = TileType.Haunt;
-				tileGrid[6][0].inOutNWES[Direction.West] = IO.In;
-				tileGrid[6][0].inOutNWES[Direction.East] = IO.Out;
+			//                                                      North    West     East     South
+			tileDict.Add(new Point2D(7,0), new Tile(TileType.Home,  IO.Out,  IO.In,   IO.None, IO.None));
+			tileDict.Add(new Point2D(7,1), new Tile(TileType.Dash,  IO.Out,  IO.None, IO.None, IO.In  ));
+			tileDict.Add(new Point2D(7,2), new Tile(TileType.Clue,  IO.Out,  IO.None, IO.None, IO.In  ));
+			tileDict.Add(new Point2D(7,3), new Tile(TileType.Blank, IO.Out,  IO.None, IO.None, IO.In  ));
+			tileDict.Add(new Point2D(7,4), new Tile(TileType.Haunt, IO.Out,  IO.None, IO.None, IO.In  ));
+			tileDict.Add(new Point2D(7,5), new Tile(TileType.Blank, IO.Out,  IO.None, IO.None, IO.In  ));
+			tileDict.Add(new Point2D(7,6), new Tile(TileType.Dash,  IO.None, IO.Out,  IO.None, IO.In  ));
+			tileDict.Add(new Point2D(6,6), new Tile(TileType.Blank, IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(5,6), new Tile(TileType.Dash,  IO.None, IO.Out,  IO.In,   IO.Out ));
+			//                                                      North    West     East     South
+			tileDict.Add(new Point2D(4,6), new Tile(TileType.Blank, IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(3,6), new Tile(TileType.Blank, IO.None, IO.None, IO.In,   IO.Out ));
+			tileDict.Add(new Point2D(3,5), new Tile(TileType.Clue,  IO.In,   IO.None, IO.None, IO.Out));
+			tileDict.Add(new Point2D(3,4), new Tile(TileType.Blank, IO.In,   IO.Out,  IO.None, IO.None));
+			tileDict.Add(new Point2D(2,4), new Tile(TileType.Blank, IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(1,4), new Tile(TileType.Clue,  IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(0,4), new Tile(TileType.Blank, IO.None, IO.None, IO.In,   IO.Out ));
+			tileDict.Add(new Point2D(0,3), new Tile(TileType.Blank, IO.In,   IO.None, IO.None, IO.Out));
+			//                                                      North    West     East     South
+			tileDict.Add(new Point2D(5,5), new Tile(TileType.Haunt, IO.In,   IO.None, IO.None, IO.Out));
+			tileDict.Add(new Point2D(5,4), new Tile(TileType.Clue,  IO.In,   IO.None, IO.None, IO.Out));
+			tileDict.Add(new Point2D(5,3), new Tile(TileType.Haunt, IO.In,   IO.None, IO.None, IO.Out));
+			tileDict.Add(new Point2D(5,2), new Tile(TileType.Dash,  IO.In,   IO.Out,  IO.None, IO.None));
+			tileDict.Add(new Point2D(4,2), new Tile(TileType.Haunt, IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(3,2), new Tile(TileType.Clue,  IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(2,2), new Tile(TileType.Haunt, IO.None, IO.Out,  IO.In,   IO.None));
+			tileDict.Add(new Point2D(1,2), new Tile(TileType.Clue,  IO.None, IO.Out,  IO.In,   IO.None));
+			//                                                      North    West     East     South
+			tileDict.Add(new Point2D(0,2), new Tile(TileType.Dash,  IO.In,   IO.None, IO.In,   IO.Out));
+			tileDict.Add(new Point2D(0,1), new Tile(TileType.Blank, IO.In,   IO.None, IO.None, IO.Out));
+			tileDict.Add(new Point2D(0,0), new Tile(TileType.Dash,  IO.In,   IO.None, IO.Out,  IO.None));
+			tileDict.Add(new Point2D(1,0), new Tile(TileType.Blank, IO.None, IO.In,   IO.Out,  IO.None));
+			tileDict.Add(new Point2D(2,0), new Tile(TileType.Clue,  IO.None, IO.In,   IO.Out,  IO.None));
+			tileDict.Add(new Point2D(3,0), new Tile(TileType.Blank, IO.None, IO.In,   IO.Out,  IO.None));
+			tileDict.Add(new Point2D(4,0), new Tile(TileType.Haunt, IO.None, IO.In,   IO.Out,  IO.None));
+			tileDict.Add(new Point2D(5,0), new Tile(TileType.Haunt, IO.None, IO.In,   IO.Out,  IO.None));
+			tileDict.Add(new Point2D(6,0), new Tile(TileType.Haunt, IO.None, IO.In,   IO.Out,  IO.None));
 		}
 }
