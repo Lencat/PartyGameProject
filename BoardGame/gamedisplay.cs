@@ -56,6 +56,27 @@ public static partial class GameDisplay
                 game.getPC(PlayerSlot.Player3),
                 game.getPC(PlayerSlot.Player4)
             ];
+
+            PCs = PCs.OrderBy(pc => pc.getHeldClueCount()).ToArray();
+
+            int[] placeNumbers = [1, -1, -1, -1];
+            for (int i=1; i<4; i++)
+            {
+                if (PCs[i-1].getHeldClueCount() != PCs[i].getHeldClueCount())
+                {
+                    placeNumbers[i] = placeNumbers[i-1];
+                }
+                else
+                {
+                    placeNumbers[i] = i+1;
+                }
+            }
+
+            //can now display the info however
+
+            //PCs: array of players ordered by score
+            //placeNumbers: array of place rankings for each slot of PCs
+            //(if multiple people are tied, they both share the same # ranking)
         }
     //public
         public static void display(ref GameState game, DisplayType type)
