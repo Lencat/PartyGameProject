@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using System.Security.Cryptography;
 
 namespace Game.Board;
 
@@ -66,22 +65,6 @@ public static partial class BoardMovement
 			return output;
 		}
 
-		public static Direction promptMoveDirection(bool[] validDirections)
-		{
-			if (validDirections[(int)Direction.North]) {/*render button north*/};
-			if (validDirections[(int)Direction.West])  {/*render button west */};
-			if (validDirections[(int)Direction.East])  {/*render button east */};
-			if (validDirections[(int)Direction.South]) {/*render button south*/};
-
-			Direction? chosenDirection = null;
-			while (chosenDirection is not null & validDirections[(int)chosenDirection] == false)
-			{
-				//TODO: replace with proper prompt eventually
-				RandomNumberGenerator.GetInt32(0, 3);
-			}
-			return (Direction)chosenDirection;
-		}
-
 	//public
 		public static void move(ref GameState game, ref PlayerCharacter pc, int diceCount = 1, int tempMoveMod = 0, bool reverse = false)
 		{
@@ -118,7 +101,7 @@ public static partial class BoardMovement
 				}
 				else if (directionCount > 1)
 				{
-					paths = paths.adjacentTiles[(int)promptMoveDirection(directionValid)];
+					paths = paths.adjacentTiles[(int)PlayerInput.getInputMoveDirection(directionValid)];
 				}
 			}
 		}
