@@ -1,0 +1,400 @@
+[gd_scene load_steps=8 format=3 uid="uid://ches5letpkfn7"]
+
+[ext_resource type="Script" path="res://ui/gui.cs" id="1_p84mf"]
+[ext_resource type="Texture2D" uid="uid://cgpecma1q86ho" path="res://textures/ui/button-end-turn.png" id="2_r45jl"]
+[ext_resource type="Texture2D" uid="uid://mbobl06jtix2" path="res://textures/ui/button-move.png" id="3_1c4cm"]
+[ext_resource type="Texture2D" uid="uid://d37sgqf4miyxb" path="res://textures/ui/button-menu.png" id="4_sfp2g"]
+[ext_resource type="Texture2D" uid="uid://bphrph188a7i1" path="res://textures/ui/button-blank.png" id="5_5aqb6"]
+
+[sub_resource type="SystemFont" id="SystemFont_y5vdm"]
+
+[sub_resource type="Theme" id="Theme_sndxq"]
+default_font = SubResource("SystemFont_y5vdm")
+
+[node name="gui" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_p84mf")
+
+[node name="game_results" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="vbox_all" type="VBoxContainer" parent="game_results"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="label_places" type="Label" parent="game_results/vbox_all"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Places"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hbox_first_place" type="HBoxContainer" parent="game_results/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="game_results/vbox_all/hbox_first_place"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+text = "1st Place Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/vbox_all/hbox_first_place"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "??? clues found"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="hbox_second_place" type="HBoxContainer" parent="game_results/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="game_results/vbox_all/hbox_second_place"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+text = "2nd Place Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/vbox_all/hbox_second_place"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "??? clues found"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="hbox_third_place" type="HBoxContainer" parent="game_results/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="game_results/vbox_all/hbox_third_place"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+text = "3rd Place Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/vbox_all/hbox_third_place"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "??? clues found"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="hbox_fourth_place" type="HBoxContainer" parent="game_results/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="game_results/vbox_all/hbox_fourth_place"]
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+text = "4th Place Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/vbox_all/hbox_fourth_place"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+text = "??? clues found"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="hbox_buttons" type="HBoxContainer" parent="game_results/vbox_all"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+alignment = 1
+
+[node name="button_main_menu" type="Button" parent="game_results/vbox_all/hbox_buttons"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon_alignment = 1
+
+[node name="button_image" type="Sprite2D" parent="game_results/vbox_all/hbox_buttons/button_main_menu"]
+position = Vector2(90, 60)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_sfp2g")
+
+[node name="turn_prompt" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="turn_prompt" type="HBoxContainer" parent="turn_prompt"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 26.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="container_button1" type="CenterContainer" parent="turn_prompt/turn_prompt"]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+
+[node name="button_move" type="Button" parent="turn_prompt/turn_prompt/container_button1"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon_alignment = 1
+
+[node name="button_image" type="Sprite2D" parent="turn_prompt/turn_prompt/container_button1/button_move"]
+position = Vector2(90, 60)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_1c4cm")
+
+[node name="container_button2" type="CenterContainer" parent="turn_prompt/turn_prompt"]
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+
+[node name="button_end_turn" type="Button" parent="turn_prompt/turn_prompt/container_button2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon_alignment = 1
+
+[node name="button_image" type="Sprite2D" parent="turn_prompt/turn_prompt/container_button2/button_end_turn"]
+position = Vector2(90, 60)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_r45jl")
+
+[node name="pc_info" type="CanvasLayer" parent="."]
+
+[node name="margin_p1" type="MarginContainer" parent="pc_info"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_sndxq")
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="bounding_box" type="CenterContainer" parent="pc_info/margin_p1"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+
+[node name="bg" type="Sprite2D" parent="pc_info/margin_p1/bounding_box"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_5aqb6")
+centered = false
+
+[node name="vbox_all" type="VBoxContainer" parent="pc_info/margin_p1/bounding_box"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="pc_info/margin_p1/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/margin_p1/bounding_box/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="clues" type="Label" parent="pc_info/margin_p1/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="pc_info/margin_p1/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot" type="Label" parent="pc_info/margin_p1/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="margin_p2" type="MarginContainer" parent="pc_info"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -210.0
+offset_bottom = 150.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="bounding_box" type="CenterContainer" parent="pc_info/margin_p2"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+
+[node name="bg" type="Sprite2D" parent="pc_info/margin_p2/bounding_box"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_5aqb6")
+centered = false
+
+[node name="vbox_all" type="VBoxContainer" parent="pc_info/margin_p2/bounding_box"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="pc_info/margin_p2/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/margin_p2/bounding_box/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="clues" type="Label" parent="pc_info/margin_p2/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="pc_info/margin_p2/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot" type="Label" parent="pc_info/margin_p2/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Player 2"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="margin_p3" type="MarginContainer" parent="pc_info"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -150.0
+offset_right = 210.0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="bounding_box" type="CenterContainer" parent="pc_info/margin_p3"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+
+[node name="bg" type="Sprite2D" parent="pc_info/margin_p3/bounding_box"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_5aqb6")
+centered = false
+
+[node name="vbox_all" type="VBoxContainer" parent="pc_info/margin_p3/bounding_box"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="pc_info/margin_p3/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/margin_p3/bounding_box/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="clues" type="Label" parent="pc_info/margin_p3/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="pc_info/margin_p3/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot" type="Label" parent="pc_info/margin_p3/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Player 3"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="margin_p4" type="MarginContainer" parent="pc_info"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -150.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="bounding_box" type="CenterContainer" parent="pc_info/margin_p4"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+
+[node name="bg" type="Sprite2D" parent="pc_info/margin_p4/bounding_box"]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_5aqb6")
+centered = false
+
+[node name="vbox_all" type="VBoxContainer" parent="pc_info/margin_p4/bounding_box"]
+layout_mode = 2
+alignment = 1
+
+[node name="name" type="Label" parent="pc_info/margin_p4/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/margin_p4/bounding_box/vbox_all"]
+layout_mode = 2
+alignment = 1
+
+[node name="clues" type="Label" parent="pc_info/margin_p4/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="pc_info/margin_p4/bounding_box/vbox_all/HBoxContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="slot" type="Label" parent="pc_info/margin_p4/bounding_box/vbox_all"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Player 4"
+horizontal_alignment = 1
+vertical_alignment = 2
