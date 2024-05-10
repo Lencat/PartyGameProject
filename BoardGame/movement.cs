@@ -101,7 +101,7 @@ public static partial class BoardMovement
 				}
 				else if (directionCount > 1)
 				{
-					paths = paths.adjacentTiles[(int)PlayerInput.getInputMoveDirection(directionValid)];
+					paths = paths.adjacentTiles[(int)PlayerInput.getInputMoveDirection(ref game, directionValid)];
 				}
 			}
 		}

@@ -122,7 +122,7 @@ public static partial class Gameplay
 				while (continueTurn)
 				{
 					GameDisplay.display(ref game, DisplayType.TurnPrompt);
-					TurnAction playerAction = PlayerInput.getInputTurnAction(game.getWhoseTurnSlot());
+					TurnAction playerAction = PlayerInput.getInputTurnAction(ref game, game.getWhoseTurnSlot());
 					switch (playerAction)
 					{
 						case TurnAction.Nothing:

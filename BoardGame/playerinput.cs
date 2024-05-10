@@ -15,13 +15,13 @@ public enum TurnAction
 
 public static partial class PlayerInput
 {
-    public static TurnAction getInputTurnAction(PlayerSlot currentPlayer)
+    public static TurnAction getInputTurnAction(ref GameState game, PlayerSlot currentPlayer)
     {
         //TODO: random inputs until I link it proper.
         return (TurnAction)RandomNumberGenerator.GetInt32(-1,2);
     }
 
-    public static Direction getInputMoveDirection(bool[] validDirections)
+    public static Direction getInputMoveDirection(ref GameState game, bool[] validDirections)
     {
         if (validDirections[(int)Direction.North]) {/*render button north*/};
         if (validDirections[(int)Direction.West])  {/*render button west */};
