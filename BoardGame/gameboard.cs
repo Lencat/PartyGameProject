@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Game.Board;
 
-public partial class GameBoard
+public partial class Gameboard
 {
 	//private
 		private Point2D mapSize;
@@ -12,14 +12,14 @@ public partial class GameBoard
 		private Dictionary<Point2D, Tile> tileDict;
 
 	//public
-		public GameBoard()
+		public Gameboard()
 		{
 			this.tileDict = new Dictionary<Point2D, Tile>();
 			this.mapSize = new Point2D(0,0);
 			this.startingPoint = new Point2D(0,0);
 		}
 
-		public GameBoard(string mapFilepath)
+		public Gameboard(string mapFilepath)
 		{
 			throw new NotImplementedException("Load from file not implemented.");
 			//store in a json eventually

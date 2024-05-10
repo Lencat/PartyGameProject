@@ -15,9 +15,10 @@ public partial class GameState
 {
 	//private
 		PlayerCharacter[] PCs;
-		GameBoard board;
+		Gameboard board;
 		int roundNumber;
 		PlayerSlot whoseTurn;
+		int[] lastMinigameRankings;
 
 		public void initializePCPositions()
 		{
@@ -32,19 +33,21 @@ public partial class GameState
 		public GameState()
 		{
 			this.PCs = new PlayerCharacter[4];
-			this.board = new GameBoard();
+			this.board = new Gameboard();
 			this.roundNumber = 1;
 			this.whoseTurn = PlayerSlot.Player1;
+			this.lastMinigameRankings = new int[4];
 
 			this.initializePCPositions();
 		}
 
-		public GameState(GameBoard board, PlayerCharacter player1, PlayerCharacter player2, PlayerCharacter player3, PlayerCharacter player4)
+		public GameState(Gameboard board, PlayerCharacter player1, PlayerCharacter player2, PlayerCharacter player3, PlayerCharacter player4)
 		{
 			this.PCs = [player1, player2, player3, player4];
 			this.board = board;
 			this.roundNumber = 1;
 			this.whoseTurn = PlayerSlot.Player1;
+			this.lastMinigameRankings = new int[4];
 
 			this.initializePCPositions();
 		}
@@ -74,36 +77,46 @@ public partial class GameState
 			return false;
 		}
 
-		public ref GameBoard getBoard() {return ref this.board;}
+		public ref Gameboard getBoard() {return ref this.board;}
 		public Tile? getTile(Point2D position) {return this.board.getTile(position);}
-		public PlayerSlot getWhoseTurnSlot() {return this.whoseTurn;}
-		public ref PlayerCharacter getWhoseTurnPlayer() {return ref this.PCs[(int)whoseTurn];}
-		public int getRound() {return this.roundNumber;}
 
 		public ref PlayerCharacter getPC(PlayerSlot slot) {return ref this.PCs[(int)slot];}
+		public ref PlayerCharacter getPC(int slot) {return ref this.PCs[slot];}
 
+		public int getRound() {return this.roundNumber;}
+		public PlayerSlot getWhoseTurnSlot() {return this.whoseTurn;}
+		public ref PlayerCharacter getWhoseTurnPlayer() {return ref this.PCs[(int)whoseTurn];}
+
+		public void setMinigameResults(int p1rank, int p2rank, int p3rank, int p4rank) {this.lastMinigameRankings = [p1rank, p2rank, p3rank, p4rank];}
+		public int[] getMinigameResults() {return this.lastMinigameRankings;}
 		public void tempLoadGraveyard() {board.temp_load_map_graveyard();}
 }
 
 public static partial class Gameplay
 {
 	//public:
-		public static void mainLoop()
+		//start new game
+		public static void boardgameLoop()
 		{
-			bool continueGame = true;
-
-			//initialize game state
 			GameState game = new GameState(
-				new GameBoard(),                                                     //selectBoard(),
+				new Gameboard(),                                                     //selectBoard(),
 				new PlayerCharacter(new Player("Player 1", false), new Character()), //selectPlayer(PlayerSlot.Player1),
 				new PlayerCharacter(new Player("Player 2", false), new Character()), //selectPlayer(PlayerSlot.Player2),
 				new PlayerCharacter(new Player("Player 3", false), new Character()), //selectPlayer(PlayerSlot.Player3),
 				new PlayerCharacter(new Player("Player 4", false), new Character())  //selectPlayer(PlayerSlot.Player4)
 			);
-			
-			//TODO, replace when we can load from file
+
+			//temporary
 			game.tempLoadGraveyard();
-			
+
+			boardgameLoop(game);
+		}
+
+		//continue existing game
+		public static void boardgameLoop(GameState game)
+		{
+			bool continueGame = true;
+
 			//game loop
 			while (continueGame)
 			{
@@ -139,24 +152,31 @@ public static partial class Gameplay
 					}
 				}
 
-				//handle end of turn
-				;
-
 				//win check
 				if (game.isGameWon())
 				{
-					continueGame = false;
+					break;
 				}
 
+				//handle end of turn
+				;
+				
 				//handle end of round
-				else if(game.getWhoseTurnSlot() == PlayerSlot.Player1)
+				if(game.getWhoseTurnSlot() == PlayerSlot.Player4)
 				{
 					;
 				}
+
+				game.nextTurn();
 			}
 
-			//handle win
-			GameDisplay.display(ref game, DisplayType.Win);
-			GameDisplay.display(ref game, DisplayType.GameResults);
+			if (game.isGameWon())
+			{
+				//handle win
+				GameDisplay.display(ref game, DisplayType.Win);
+				GameDisplay.display(ref game, DisplayType.GameResults);
+			}
+			//else game quit early
+			;
 		}
 }
