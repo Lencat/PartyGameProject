@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal start_game
+signal return_minigame
 
 func show_message(text):
 	$Message.text = text
@@ -36,4 +37,4 @@ func end_game():
 
 
 func _on_return_pressed():
-	get_tree().quit()
+	return_minigame.emit()

@@ -50,60 +50,60 @@ func game_over():
 	scores.reverse()
 	
 	if scores[0] == score_blue:
-		places[0] = "Player 1"
+		places[0] = 1
 		PlayerScores.player1Score += 10
 	elif scores[0] == score_red:
-		places[0] = "Player 2"
+		places[0] = 2
 		PlayerScores.player2Score += 10
 	elif scores[0] == score_green:
-		places[0] = "Player 3"
+		places[0] = 3
 		PlayerScores.player3Score += 10
 	else:
-		places[0] = "Player 4"
+		places[0] = 4
 		PlayerScores.player4Score += 10
 		
-	if (scores[1] == score_blue) && (places[0] != "Player 1"):
-		places[1] = "Player 1"
+	if (scores[1] == score_blue) && (places[0] != 1):
+		places[1] = 1
 		PlayerScores.player1Score += 7
-	elif (scores[1] == score_red) && (places[0] != "Player 2"):
-		places[1] = "Player 2"
+	elif (scores[1] == score_red) && (places[0] != 2):
+		places[1] = 2
 		PlayerScores.player2Score += 7
-	elif (scores[1] == score_green) && (places[0] != "Player 3"):
-		places[1] = "Player 3"
+	elif (scores[1] == score_green) && (places[0] != 3):
+		places[1] = 3
 		PlayerScores.player3Score += 7
 	else:
-		places[1] = "Player 4"
+		places[1] = 4
 		PlayerScores.player4Score += 7
 		
-	if (scores[2] == score_blue) && (places[0] != "Player 1") && (places[1] != "Player 1"):
-		places[2] = "Player 1"
+	if (scores[2] == score_blue) && (places[0] != 1) && (places[1] != 1):
+		places[2] = 1
 		PlayerScores.player1Score += 5
-	elif (scores[2] == score_red) && (places[0] != "Player 2") && (places[1] != "Player 2"):
-		places[2] = "Player 2"
+	elif (scores[2] == score_red) && (places[0] != 2) && (places[1] != 2):
+		places[2] = 2
 		PlayerScores.player2Score += 5
-	elif (scores[2] == score_green) && (places[0] != "Player 3") && (places[1] != "Player 3"):
-		places[2] = "Player 3"
+	elif (scores[2] == score_green) && (places[0] != 3) && (places[1] != 3):
+		places[2] = 3
 		PlayerScores.player3Score += 5
 	else:
-		places[2] = "Player 4"
+		places[2] = 4
 		PlayerScores.player4Score += 5
 		
-	if (scores[3] == score_blue) && (places[0] != "Player 1") && (places[1] != "Player 1") && (places[2] != "Player 1"):
-		places[3] = "Player 1"
+	if (scores[3] == score_blue) && (places[0] != 1) && (places[1] != 1) && (places[2] != 1):
+		places[3] = 1
 		PlayerScores.player1Score += 3
-	elif (scores[3] == score_red) && (places[0] != "Player 2") && (places[1] != "Player 2") && (places[2] != "Player 2"):
-		places[3] = "Player 2"
+	elif (scores[3] == score_red) && (places[0] != 2) && (places[1] != 2) && (places[2] != 2):
+		places[3] = 2
 		PlayerScores.player2Score += 3
-	elif (scores[3] == score_green) && (places[0] != "Player 3") && (places[1] != "Player 3") && (places[2] != "Player 3"):
-		places[3] = "Player 3"
+	elif (scores[3] == score_green) && (places[0] != 3) && (places[1] != 3) && (places[2] != 3):
+		places[3] = 3
 		PlayerScores.player3Score += 3
 	else:
-		places[3] = "Player 4"
+		places[3] = 4
 		PlayerScores.player4Score += 3
 		
-	$Hud.show_message("Finished\n" + "1st: " + str(places[0]) + 
-	"\n2nd: " + str(places[1]) + "\n3rd: " + str(places[2]) +
-	"\n4th: " + str(places[3]))
+	$Hud.show_message("Finished\n" + "1st: Player " + str(places[0]) + 
+	"\n2nd: Player " + str(places[1]) + "\n3rd: Player " + str(places[2]) +
+	"\n4th: Player" + str(places[3]))
 	
 	$Hud.end_game()
 	
