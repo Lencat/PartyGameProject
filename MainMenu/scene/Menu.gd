@@ -7,7 +7,7 @@ extends Control
 @onready var options_menu = $Options_Menu as OptionsMenu
 @onready var margin_container = $MarginContainer as MarginContainer
 
-#@onready var start_level = preload("*****") as PackedScene #insert main scene
+@onready var start_level = preload("res://2DWorld.tscn") as PackedScene #insert main scene
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +19,7 @@ func _ready():
 func _on_start_button_pressed() -> void:
 	#function for starting the game, loads up the 1st scene
 	
-	#get_tree().change_scene_to_packed(start_level) #Paste 1st scene
+	get_tree().change_scene_to_packed(start_level) #Paste 1st scene
 	pass
 	
 func _on_options_button_pressed() -> void:

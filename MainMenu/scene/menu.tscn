@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scene/Menu.gd" id="1_1gnmu"]
 [ext_resource type="Texture2D" uid="uid://bph1kn2j8mbpd" path="res://resources/Placeholder_Background.png" id="2_um15i"]
 [ext_resource type="PackedScene" uid="uid://cnu8mvcrs1lsp" path="res://options_menu/options_menu.tscn" id="3_5qtdn"]
-[ext_resource type="AudioStream" uid="uid://dt4afde7opabb" path="res://scene/Spy snort.wav" id="4_s6n3a"]
+[ext_resource type="AudioStream" uid="uid://n3lxy7uot8ug" path="res://scene/Notre Dame.mp3" id="4_rd5oi"]
 
 [sub_resource type="SystemFont" id="SystemFont_fc7wl"]
 font_names = PackedStringArray("Impact")
@@ -102,7 +102,8 @@ visible = false
 layout_mode = 1
 
 [node name="MusicStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_s6n3a")
+stream = ExtResource("4_rd5oi")
+volume_db = -3.0
 autoplay = true
 bus = &"Music"
 
