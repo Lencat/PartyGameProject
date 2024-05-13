@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://caqy3jmk4ue1c"]
+[gd_scene load_steps=7 format=3 uid="uid://caqy3jmk4ue1c"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_thmae"]
 
 [sub_resource type="FontFile" id="FontFile_7ltwe"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -239,6 +242,9 @@ cache/0/22/0/kerning_overrides/23/0 = Vector2(0, 0)
 cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_ekukd"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -265,6 +271,9 @@ cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_tyid5"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -281,6 +290,20 @@ cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_4w802"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="FontFile_jo7no"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -325,10 +348,10 @@ grow_vertical = 2
 theme_override_fonts/font = SubResource("FontFile_ekukd")
 theme_override_font_sizes/font_size = 20
 text = "Controls:
-Blue - left and right arrow keys
-Red - A and D keys
-Green - V and N keys
-Yellow - J and L keys"
+Player 1 (Blue) - left and right arrow keys
+Player 2 (Red) - A and D keys
+Player 3 (Green) - V and N keys
+Player 4 (Yellow) - J and L keys"
 horizontal_alignment = 1
 
 [node name="Message" type="Label" parent="."]
@@ -364,9 +387,25 @@ grow_vertical = 0
 theme_override_fonts/font = SubResource("FontFile_4w802")
 text = "Start"
 
+[node name="ReturnButton" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -140.0
+offset_right = 75.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = SubResource("FontFile_jo7no")
+text = "Return"
+
 [node name="MessageTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
 [connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
