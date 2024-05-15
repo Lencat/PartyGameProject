@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://1b1w1mird7rf"]
+
+[ext_resource type="Script" path="res://scene/player_count.gd" id="1_kd8oo"]
+
+[node name="PlayerCount" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kd8oo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 198.0
+offset_right = 646.0
+offset_bottom = 221.0
+scale = Vector2(1.63502, 2.34075)
+text = "How many players do you want?"
+
+[node name="TwoPlayers" type="Button" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 283.0
+offset_right = 638.0
+offset_bottom = 314.0
+text = "2 Players"
+
+[node name="ThreePlayers" type="Button" parent="."]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 346.0
+offset_right = 637.0
+offset_bottom = 377.0
+text = "3 Players"
+
+[node name="FourPlayers" type="Button" parent="."]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 413.0
+offset_right = 638.0
+offset_bottom = 444.0
+text = "4 Players"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="TwoPlayers" to="." method="_on_two_players_pressed"]
+[connection signal="pressed" from="ThreePlayers" to="." method="_on_three_players_pressed"]
+[connection signal="pressed" from="FourPlayers" to="." method="_on_four_players_pressed"]
