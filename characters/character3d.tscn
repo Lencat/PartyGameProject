@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2yxw0lhnjnrg"]
+
+[ext_resource type="Script" path="res://characters/character3d.gd" id="1_g1f6n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iqcu6"]
+height = 1.3
+
+[node name="Character3D" type="CharacterBody3D"]
+script = ExtResource("1_g1f6n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_iqcu6")
+
+[node name="PlayerName" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+billboard = 1
+text = "Player Name"
