@@ -18,7 +18,7 @@ func _ready():
 	start_button.grab_focus()
 	
 	# Plays BGM and stores controller
-	menuBGM = MusicManager.play(MusicManager.Music.GothicCuteInst, 0, -10)
+	menuBGM = MusicManager.play(MusicManager.Music.NotreDame, 0, -10)
 	
 	#replace with preloading the player/boardgame select when those exist
 	Controller.preload_character_select()

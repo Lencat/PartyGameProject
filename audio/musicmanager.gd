@@ -9,6 +9,7 @@ signal thread_exit
 var Music = {
 	"GothicCuteInst": "res://audio/music/gothic/peritune_gothic_inst_loop.ogg",
 	"CrimsonMoon": "res://audio/music/peritune_crimson_moon_loop.ogg"
+	"NotreDame": "res://audio/music/notre_dame.mp3"
 }
 
 # Called when the node enters the scene tree for the first time.
