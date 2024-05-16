@@ -1,0 +1,536 @@
+[gd_scene load_steps=124 format=3 uid="uid://c8505vqaypbca"]
+
+[ext_resource type="Script" path="res://characters/citizen/citizen.gd" id="1_hyqac"]
+[ext_resource type="Texture2D" uid="uid://c1i8ck67c2y3a" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="2_vhxvp"]
+[ext_resource type="Texture2D" uid="uid://cghnchmnwyria" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="3_emvxy"]
+[ext_resource type="Texture2D" uid="uid://bpdm7g12llgua" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="4_k382w"]
+[ext_resource type="Texture2D" uid="uid://dm5iv17xk3pla" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="5_4n01k"]
+[ext_resource type="Texture2D" uid="uid://c1wfqvl7nm1na" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="6_q85t3"]
+[ext_resource type="Texture2D" uid="uid://bcusq8glx47wa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="7_nfr42"]
+[ext_resource type="Texture2D" uid="uid://bxmam7yjecdca" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="8_vll2x"]
+[ext_resource type="Texture2D" uid="uid://bqakbgi0vfmqa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="9_yhhpy"]
+[ext_resource type="Texture2D" uid="uid://cfuhw6e7pgf1a" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="10_oqr55"]
+[ext_resource type="Texture2D" uid="uid://cy0228u2ckp3a" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="11_ado5y"]
+[ext_resource type="Texture2D" uid="uid://dico5xljqxbva" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="12_ffftn"]
+[ext_resource type="Texture2D" uid="uid://dswkvydaucaua" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="13_wxj32"]
+[ext_resource type="Texture2D" uid="uid://djrg3j5wu6qja" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="14_3a0eu"]
+[ext_resource type="Texture2D" uid="uid://st28rs1atfia" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="15_kfpc0"]
+[ext_resource type="Texture2D" uid="uid://ckvc2vxvuayqa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="16_rij0d"]
+[ext_resource type="Texture2D" uid="uid://ca2x5rehte8fa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="17_4rv4i"]
+[ext_resource type="Texture2D" uid="uid://dg8rytfpfwwaa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="18_0j0hh"]
+[ext_resource type="Texture2D" uid="uid://bs6ipxgcjxwbs" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="19_wpt8k"]
+[ext_resource type="Texture2D" uid="uid://blin8g4gftloa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="20_xyyk4"]
+[ext_resource type="Texture2D" uid="uid://5g3kcieosrva" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="21_q75i7"]
+[ext_resource type="Texture2D" uid="uid://cke7g74r71eta" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="22_2is8n"]
+[ext_resource type="Texture2D" uid="uid://bv1ka8nctl0wa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="23_42h8j"]
+[ext_resource type="Texture2D" uid="uid://cln2ib5fefm8a" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="24_wpevh"]
+[ext_resource type="Texture2D" uid="uid://b0kt3a5iev4la" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="25_gbpa3"]
+[ext_resource type="Texture2D" uid="uid://qvwbqpsd1lda" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="26_8ib28"]
+[ext_resource type="Texture2D" uid="uid://ci5ur2yudmjea" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="27_w77m1"]
+[ext_resource type="Texture2D" uid="uid://ibq4iu4qo46a" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="28_5mxm2"]
+[ext_resource type="Texture2D" uid="uid://y4gqe4itiyaa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="29_hdgrs"]
+[ext_resource type="Texture2D" uid="uid://cioaed3gqceaa" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="30_c3f1e"]
+[ext_resource type="Texture2D" uid="uid://b6ynwdq1c1rba" path="res://characters/citizen/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="31_j4egs"]
+[ext_resource type="Texture2D" uid="uid://shlr0xv1w33a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="32_q0yay"]
+[ext_resource type="Texture2D" uid="uid://dneso8nsj7h5a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="33_hlfvr"]
+[ext_resource type="Texture2D" uid="uid://btxmj764a8sda" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="34_tgq4e"]
+[ext_resource type="Texture2D" uid="uid://dv8chxgntoqra" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="35_6e87i"]
+[ext_resource type="Texture2D" uid="uid://cclnt8wijg52a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="36_htb1m"]
+[ext_resource type="Texture2D" uid="uid://o8qo1o5j7p4a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="37_sei51"]
+[ext_resource type="Texture2D" uid="uid://b2jfntl7d3p0a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="38_5g23k"]
+[ext_resource type="Texture2D" uid="uid://be0rf62v3nspa" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="39_m7ukh"]
+[ext_resource type="Texture2D" uid="uid://bmvwnxanosewa" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="40_ofgmf"]
+[ext_resource type="Texture2D" uid="uid://dy48m6obmbc0a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="41_4m62i"]
+[ext_resource type="Texture2D" uid="uid://cdhcynajaek7a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="42_qfj33"]
+[ext_resource type="Texture2D" uid="uid://dfh1as716sina" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="43_crexa"]
+[ext_resource type="Texture2D" uid="uid://dbwdmnvtdhk0a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="44_la8p1"]
+[ext_resource type="Texture2D" uid="uid://d17r1cn2phwka" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="45_60hy1"]
+[ext_resource type="Texture2D" uid="uid://ba8sythsgcpja" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="46_6mutn"]
+[ext_resource type="Texture2D" uid="uid://qff8wy4orhxa" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="47_ppa72"]
+[ext_resource type="Texture2D" uid="uid://2josx65o8r8a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="48_qn4jg"]
+[ext_resource type="Texture2D" uid="uid://cdvhi1atg64ka" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="49_rh886"]
+[ext_resource type="Texture2D" uid="uid://c6eubcxdy1jda" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="50_6rguk"]
+[ext_resource type="Texture2D" uid="uid://dy1c0h2y3wqaa" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="51_d0cpl"]
+[ext_resource type="Texture2D" uid="uid://bekm8fl7x1kna" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="52_ducl4"]
+[ext_resource type="Texture2D" uid="uid://bngnk8kyl4y8a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="53_up3vd"]
+[ext_resource type="Texture2D" uid="uid://bvf1fpqi4rwva" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="54_ly3c2"]
+[ext_resource type="Texture2D" uid="uid://nvgu0xj6isia" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="55_rlspl"]
+[ext_resource type="Texture2D" uid="uid://drel5h8ww7kfa" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="56_h22t2"]
+[ext_resource type="Texture2D" uid="uid://b1jboht6gb16s" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="57_5ypbf"]
+[ext_resource type="Texture2D" uid="uid://bn3qpv8pmkhia" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="58_ebrwk"]
+[ext_resource type="Texture2D" uid="uid://bwrfiowi875la" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="59_lxh1h"]
+[ext_resource type="Texture2D" uid="uid://jmtly3wt4aia" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="60_yb3ul"]
+[ext_resource type="Texture2D" uid="uid://cpl0x7nufd7la" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="61_pkeea"]
+[ext_resource type="Texture2D" uid="uid://t7quptcloo3a" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="62_f8dqs"]
+[ext_resource type="Texture2D" uid="uid://dd8otltuvkj10" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="63_8kxcl"]
+[ext_resource type="Texture2D" uid="uid://8p8bw8j0g8kl" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="64_ethd5"]
+[ext_resource type="Texture2D" uid="uid://cfafwoiurlkc2" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="65_a4wdk"]
+[ext_resource type="Texture2D" uid="uid://bdt8fbxx55mf2" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="66_m0pp6"]
+[ext_resource type="Texture2D" uid="uid://bxdxxsmomgi07" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="67_7t8n5"]
+[ext_resource type="Texture2D" uid="uid://dl62j1wy7rnqy" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="68_prwww"]
+[ext_resource type="Texture2D" uid="uid://bxnn7xunievhr" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="69_gq81x"]
+[ext_resource type="Texture2D" uid="uid://bfcbfi2l1i6rr" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="70_08rnn"]
+[ext_resource type="Texture2D" uid="uid://dggx8wypsluat" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="71_8pg7o"]
+[ext_resource type="Texture2D" uid="uid://dagwv5jyp0dwi" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="72_2v231"]
+[ext_resource type="Texture2D" uid="uid://b10lhg5ieg52u" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="73_aok8r"]
+[ext_resource type="Texture2D" uid="uid://c1pu1t836acsb" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="74_wp7ce"]
+[ext_resource type="Texture2D" uid="uid://2i4lh0m3fi0k" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="75_cny6l"]
+[ext_resource type="Texture2D" uid="uid://cd05raq3ujpy2" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="76_phyon"]
+[ext_resource type="Texture2D" uid="uid://cylh4oatvpnlg" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="77_ldm0f"]
+[ext_resource type="Texture2D" uid="uid://bg2dx63s8251j" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="78_mxs16"]
+[ext_resource type="Texture2D" uid="uid://b4ua7xnemtxx5" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="79_lyqo0"]
+[ext_resource type="Texture2D" uid="uid://cnuoil0qpogyr" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="80_8r3or"]
+[ext_resource type="Texture2D" uid="uid://dmqgiajxr2wer" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="81_7v76m"]
+[ext_resource type="Texture2D" uid="uid://cm2j35xvd8dne" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="82_w0ohi"]
+[ext_resource type="Texture2D" uid="uid://26xfc6jjv6mv" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="83_lg82s"]
+[ext_resource type="Texture2D" uid="uid://c4a73fpn4rqxo" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="84_q05bh"]
+[ext_resource type="Texture2D" uid="uid://b4l1wxtc8xl4m" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="85_i20xr"]
+[ext_resource type="Texture2D" uid="uid://7nte1a05wq2y" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="86_n18eg"]
+[ext_resource type="Texture2D" uid="uid://clslf7jav11no" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="87_7a0ni"]
+[ext_resource type="Texture2D" uid="uid://0elw4f1t8k2s" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="88_2v5qa"]
+[ext_resource type="Texture2D" uid="uid://b6dhec405h713" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="89_g71wo"]
+[ext_resource type="Texture2D" uid="uid://c26chyft7pp53" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_er1rn"]
+[ext_resource type="Texture2D" uid="uid://b74lw526f0wsf" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_th3hn"]
+[ext_resource type="Texture2D" uid="uid://dlpkvijtxc0k6" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="92_2mayy"]
+[ext_resource type="Texture2D" uid="uid://bsl7pkhdmfd84" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="93_4bq3w"]
+[ext_resource type="Texture2D" uid="uid://bblxvw88p110d" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="94_xpw3c"]
+[ext_resource type="Texture2D" uid="uid://dwkxtbg1g3jhw" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="95_vo2m0"]
+[ext_resource type="Texture2D" uid="uid://cr3a4j8yo5ui3" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="96_f2hmq"]
+[ext_resource type="Texture2D" uid="uid://8hqujvhpv176" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="97_hoewa"]
+[ext_resource type="Texture2D" uid="uid://crwt0deqomgbb" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="98_50rvs"]
+[ext_resource type="Texture2D" uid="uid://dpaatl03fuioa" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="99_txhnr"]
+[ext_resource type="Texture2D" uid="uid://b0j5m8nsycywc" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="100_xmdid"]
+[ext_resource type="Texture2D" uid="uid://bipc8p41fp7e5" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="101_jfc5t"]
+[ext_resource type="Texture2D" uid="uid://jep4rqmw6p77" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="102_k5gv5"]
+[ext_resource type="Texture2D" uid="uid://dkm2woclb333o" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="103_7cqqy"]
+[ext_resource type="Texture2D" uid="uid://fdwypjdy67s5" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="104_4df1p"]
+[ext_resource type="Texture2D" uid="uid://cnbinm8w1gypr" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="105_p57jr"]
+[ext_resource type="Texture2D" uid="uid://dnbrjnk2aaksi" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="106_q278s"]
+[ext_resource type="Texture2D" uid="uid://bmhtjmrehypl" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="107_sbctc"]
+[ext_resource type="Texture2D" uid="uid://dtua61jq5vj5u" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="108_x576x"]
+[ext_resource type="Texture2D" uid="uid://h4of2qt0nbwo" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="109_t4jg4"]
+[ext_resource type="Texture2D" uid="uid://c4genibgfgspp" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="110_nywnx"]
+[ext_resource type="Texture2D" uid="uid://b73x832h1tnab" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="111_ob74p"]
+[ext_resource type="Texture2D" uid="uid://cgchnsnlpq2y6" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="112_iq7a5"]
+[ext_resource type="Texture2D" uid="uid://cigig0k6q5qle" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="113_kq165"]
+[ext_resource type="Texture2D" uid="uid://c7der0ghhpudl" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="114_o2ssm"]
+[ext_resource type="Texture2D" uid="uid://dfxgt6lwsx7ty" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="115_vto2e"]
+[ext_resource type="Texture2D" uid="uid://iwef2wv4nsdn" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="116_xpq46"]
+[ext_resource type="Texture2D" uid="uid://beproec0nnjek" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="117_3aak3"]
+[ext_resource type="Texture2D" uid="uid://2d6m24t7bxd4" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="118_tjx52"]
+[ext_resource type="Texture2D" uid="uid://bwgs2kf0yq5cm" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="119_ujudi"]
+[ext_resource type="Texture2D" uid="uid://yq62iwt6wwy2" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="120_sj4wk"]
+[ext_resource type="Texture2D" uid="uid://ckhgowp6rxhoe" path="res://characters/citizen/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="121_daqin"]
+
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eerdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vhxvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_emvxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k382w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4n01k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q85t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nfr42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vll2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yhhpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oqr55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ado5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ffftn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wxj32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3a0eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kfpc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rij0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4rv4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0j0hh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wpt8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xyyk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q75i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_2is8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_42h8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_wpevh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gbpa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8ib28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_w77m1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5mxm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_hdgrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_c3f1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_j4egs")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_q0yay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_hlfvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tgq4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_6e87i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_htb1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_sei51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5g23k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_m7ukh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_ofgmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_4m62i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_qfj33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_crexa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_la8p1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_60hy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6mutn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ppa72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_qn4jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rh886")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6rguk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_d0cpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_ducl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_up3vd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ly3c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_rlspl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_h22t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_5ypbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ebrwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_lxh1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_yb3ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_pkeea")
+}],
+"loop": true,
+"name": &"front_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_f8dqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_8kxcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ethd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_a4wdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_m0pp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_7t8n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_prwww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_gq81x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_08rnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_8pg7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_2v231")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_aok8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_wp7ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_cny6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_phyon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ldm0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_mxs16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_lyqo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_8r3or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_7v76m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_w0ohi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_lg82s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_q05bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_i20xr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_n18eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_7a0ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_2v5qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_g71wo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_er1rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_th3hn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_2mayy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_4bq3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_xpw3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_vo2m0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_f2hmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_hoewa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_50rvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_txhnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_xmdid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_jfc5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_k5gv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_7cqqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_4df1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_p57jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_q278s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_sbctc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_x576x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_t4jg4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_nywnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_ob74p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_iq7a5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_kq165")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_o2ssm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_vto2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_xpq46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_3aak3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_tjx52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_ujudi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_sj4wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_daqin")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cahve"]
+size = Vector2(156, 278)
+
+[node name="Citizen" type="CharacterBody2D"]
+script = ExtResource("1_hyqac")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_eerdl")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -140)
+shape = SubResource("RectangleShape2D_cahve")
+
+[node name="PlayerName" type="Label" parent="."]
+offset_left = -83.0
+offset_top = -380.0
+offset_right = 86.0
+offset_bottom = -323.0
+horizontal_alignment = 1
+vertical_alignment = 1

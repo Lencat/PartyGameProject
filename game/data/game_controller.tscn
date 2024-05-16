@@ -1,0 +1,316 @@
+[gd_scene load_steps=7 format=3 uid="uid://dyyep1n5dkbom"]
+
+[ext_resource type="PackedScene" uid="uid://ches5letpkfn7" path="res://game/ui/gui.tscn" id="1_npxgr"]
+[ext_resource type="Script" path="res://game/data/move_handler.gd" id="2_4wp3c"]
+[ext_resource type="Script" path="res://game/data/direction_prompt.gd" id="3_y2ahv"]
+[ext_resource type="Texture2D" uid="uid://cws2nntjhpacr" path="res://textures/ui/arrow.png" id="4_iidxe"]
+[ext_resource type="Script" path="res://game/camerapan.gd" id="5_fltr7"]
+
+[sub_resource type="GDScript" id="GDScript_mwfu4"]
+script/source = "extends Node3D
+
+@onready var GUI := $GUI
+var map
+
+var gameData = {
+	\"board\": {},
+	\"players\": [],
+	\"round\": 1,
+	\"whoseTurn\": 0,
+	\"isWon\": false,
+}
+
+enum player_slot {
+	player1 = 0,
+	player2 = 1,
+	player3 = 2,
+	player4 = 3,
+}
+
+enum tile_type {
+	blank,
+	home,
+	clue,
+	haunt,
+	dash,
+	slippery,
+}
+
+enum IO {
+	none = -1,
+	i = 0,
+	o = 1,
+}
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	_load_map()
+	_load_players()
+	_load_music()
+
+func _load_map():
+	#TODO replace with actual load when actual map select is in
+	_temp_function_load_graveyard()
+	map = load(\"res://maps/boards/graveyard/graveyard_staged.tscn\")
+	add_child(map.instantiate())
+
+func _load_players():
+	for i in range(len(CharacterData.players_info)):
+		var new_player = {}
+		new_player[\"name\"] = CharacterData.players_info[i].name
+		new_player[\"character_id\"] = CharacterData.players_info[i].character
+		new_player[\"position\"] = Vector2i(gameData.board.homes[i])
+		new_player[\"clues_held\"] = 0
+		new_player[\"clues_stored\"] = 0
+		gameData.players.append(new_player)
+
+func _load_music():
+	get_tree().create_timer(3).timeout.connect(MusicManager.play.bind(MusicManager.Music.CrimsonMoon))
+
+func handle_next_turn():
+	if gameData.whoseTurn == player_slot.player1:
+		handle_round_start()
+	handle_turn_start()
+	handle_turn()
+	handle_turn_end()
+	if gameData.whoseTurn == player_slot.player4:
+		handle_round_end()
+	advance_turn()
+
+func handle_round_start():
+	GUI.show_new_round_popup(gameData.round)
+
+func handle_turn_start():
+	var player_slot = gameData.whoseTurn
+	var player_name = gameData.players[player_slot].name
+	GUI.show_new_turn_popup(player_name, player_slot)
+
+func handle_turn():
+	GUI.show_turn_prompt()
+
+func handle_turn_end():
+	check_win()
+
+func handle_round_end():
+	#end early if game is already won
+	if gameData.isWon:
+		return
+	pass
+
+func advance_turn():
+	if gameData.whoseTurn == 3:
+		gameData.whoseTurn = 0
+		gameData.round += 1
+	else:
+		gameData.whoseTurn += 1
+
+func check_win():
+	for player in gameData.players:
+		if player.clues_held >= 10:
+			gameData.isWon = true
+			GUI.show_game_results()
+
+func _temp_function_load_graveyard():
+	var graveyard_board = {
+		\"minX\": 0,
+		\"maxX\": 7,
+		\"minY\": 0,
+		\"maxY\": 6,
+		\"homes\": [Vector2i(7,0), Vector2i(7,0), Vector2i(7,0), Vector2i(7,0)]
+	}
+	graveyard_board[\"tiles\"] = {
+		Vector2i(7,0): {\"tile_type\": tile_type.home,  \"n\":IO.o,    \"w\":IO.i,    \"e\":IO.none, \"s\":IO.none},
+		Vector2i(7,1): {\"tile_type\": tile_type.dash,  \"n\":IO.o,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(7,2): {\"tile_type\": tile_type.clue,  \"n\":IO.o,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(7,3): {\"tile_type\": tile_type.blank, \"n\":IO.o,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(7,4): {\"tile_type\": tile_type.haunt, \"n\":IO.o,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(7,5): {\"tile_type\": tile_type.blank, \"n\":IO.o,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(7,6): {\"tile_type\": tile_type.dash,  \"n\":IO.none, \"w\":IO.o,    \"e\":IO.none, \"s\":IO.i   },
+		Vector2i(6,6): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(5,6): {\"tile_type\": tile_type.dash,  \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.o   },
+		
+		Vector2i(4,6): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(3,6): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.none, \"e\":IO.i,    \"s\":IO.o   },
+		Vector2i(3,5): {\"tile_type\": tile_type.clue,  \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		Vector2i(3,4): {\"tile_type\": tile_type.blank, \"n\":IO.i,    \"w\":IO.o,    \"e\":IO.none, \"s\":IO.none},
+		Vector2i(2,4): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(1,4): {\"tile_type\": tile_type.clue,  \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(0,4): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.none, \"e\":IO.i,    \"s\":IO.o   },
+		Vector2i(0,3): {\"tile_type\": tile_type.blank, \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		
+		Vector2i(5,5): {\"tile_type\": tile_type.haunt, \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		Vector2i(5,4): {\"tile_type\": tile_type.clue,  \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		Vector2i(5,3): {\"tile_type\": tile_type.haunt, \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		Vector2i(5,2): {\"tile_type\": tile_type.dash,  \"n\":IO.i,    \"w\":IO.o,    \"e\":IO.none, \"s\":IO.none},
+		Vector2i(4,2): {\"tile_type\": tile_type.haunt, \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(3,2): {\"tile_type\": tile_type.clue,  \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(2,2): {\"tile_type\": tile_type.haunt, \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		Vector2i(1,2): {\"tile_type\": tile_type.clue,  \"n\":IO.none, \"w\":IO.o,    \"e\":IO.i,    \"s\":IO.none},
+		
+		Vector2i(0,2): {\"tile_type\": tile_type.dash,  \"n\":IO.i,    \"w\":IO.none, \"e\":IO.i,    \"s\":IO.o   },
+		Vector2i(0,1): {\"tile_type\": tile_type.blank, \"n\":IO.i,    \"w\":IO.none, \"e\":IO.none, \"s\":IO.o   },
+		Vector2i(0,0): {\"tile_type\": tile_type.dash,  \"n\":IO.i,    \"w\":IO.none, \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(1,0): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(2,0): {\"tile_type\": tile_type.clue,  \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(3,0): {\"tile_type\": tile_type.blank, \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(4,0): {\"tile_type\": tile_type.haunt, \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(5,0): {\"tile_type\": tile_type.haunt, \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+		Vector2i(6,0): {\"tile_type\": tile_type.haunt, \"n\":IO.none, \"w\":IO.i,    \"e\":IO.o,    \"s\":IO.none},
+	}
+	
+	gameData.board = graveyard_board
+"
+
+[node name="GameController" type="Node3D" groups=["Data"]]
+script = SubResource("GDScript_mwfu4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("1_npxgr")]
+
+[node name="MoveHandler" type="Node3D" parent="."]
+script = ExtResource("2_4wp3c")
+
+[node name="DirectionPrompt" type="Control" parent="MoveHandler"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("3_y2ahv")
+
+[node name="BoxUp" type="CenterContainer" parent="MoveHandler/DirectionPrompt"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 50.0
+grow_horizontal = 2
+pivot_offset = Vector2(25, 25)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MoveHandler/DirectionPrompt/BoxUp"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_iidxe")
+expand_mode = 1
+
+[node name="ButtonNorth" type="Button" parent="MoveHandler/DirectionPrompt/BoxUp"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(48, 42)
+layout_mode = 2
+
+[node name="BoxLeft" type="CenterContainer" parent="MoveHandler/DirectionPrompt"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+grow_vertical = 2
+rotation = -1.5708
+pivot_offset = Vector2(25, 25)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MoveHandler/DirectionPrompt/BoxLeft"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_iidxe")
+expand_mode = 1
+
+[node name="ButtonWest" type="Button" parent="MoveHandler/DirectionPrompt/BoxLeft"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(48, 42)
+layout_mode = 2
+
+[node name="BoxRight" type="CenterContainer" parent="MoveHandler/DirectionPrompt"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -25.0
+offset_bottom = 25.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 1.5708
+pivot_offset = Vector2(25, 25)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MoveHandler/DirectionPrompt/BoxRight"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_iidxe")
+expand_mode = 1
+
+[node name="ButtonEast" type="Button" parent="MoveHandler/DirectionPrompt/BoxRight"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(48, 42)
+layout_mode = 2
+
+[node name="BoxDown" type="CenterContainer" parent="MoveHandler/DirectionPrompt"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -50.0
+offset_right = 25.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 3.14159
+pivot_offset = Vector2(25, 25)
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="MoveHandler/DirectionPrompt/BoxDown"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_iidxe")
+expand_mode = 1
+
+[node name="ButtonSouth" type="Button" parent="MoveHandler/DirectionPrompt/BoxDown"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(48, 42)
+layout_mode = 2
+
+[node name="CameraTarget" type="Node3D" parent="."]
+
+[node name="CameraFocus" type="Node3D" parent="."]
+top_level = true
+script = ExtResource("5_fltr7")
+
+[node name="OverheadCamera" type="Camera3D" parent="CameraFocus"]
+transform = Transform3D(0.859208, -0.398078, 0.321394, 0.0112182, 0.64269, 0.766044, -0.511502, -0.654587, 0.55667, 0, 4, 0)
+h_offset = 0.1
+v_offset = -1.5
+current = true
+fov = 70.0
+far = 200.0
+
+[connection signal="pressed" from="MoveHandler/DirectionPrompt/BoxUp/ButtonNorth" to="MoveHandler/DirectionPrompt" method="_on_button_north_pressed"]
+[connection signal="pressed" from="MoveHandler/DirectionPrompt/BoxLeft/ButtonWest" to="MoveHandler/DirectionPrompt" method="_on_button_west_pressed"]
+[connection signal="pressed" from="MoveHandler/DirectionPrompt/BoxRight/ButtonEast" to="MoveHandler/DirectionPrompt" method="_on_button_east_pressed"]
+[connection signal="pressed" from="MoveHandler/DirectionPrompt/BoxDown/ButtonSouth" to="MoveHandler/DirectionPrompt" method="_on_button_south_pressed"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://ipmigv08met2"]
+
+[ext_resource type="PackedScene" uid="uid://wdpaomoecmxl" path="res://maps/boards/graveyard/graveyard_map.tscn" id="1_7nmk2"]
+
+[sub_resource type="Environment" id="Environment_quhq2"]
+background_mode = 4
+ambient_light_source = 2
+ambient_light_color = Color(0.4, 0.6, 1, 1)
+ambient_light_energy = 0.6
+reflected_light_source = 1
+volumetric_fog_enabled = true
+volumetric_fog_emission = Color(0, 0, 1, 1)
+
+[node name="Scene" type="Node3D"]
+
+[node name="Map" parent="." instance=ExtResource("1_7nmk2")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -7, 0, 0)
+
+[node name="grass_9050" parent="Map" index="9119"]
+visible = false
+
+[node name="grass_10017" parent="Map" index="10086"]
+visible = false
+
+[node name="grass_10035" parent="Map" index="10104"]
+visible = false
+
+[node name="grass_10720" parent="Map" index="10789"]
+visible = false
+
+[node name="grass_11959" parent="Map" index="12028"]
+visible = false
+
+[node name="grass_11968" parent="Map" index="12037"]
+visible = false
+
+[node name="grass_12110" parent="Map" index="12179"]
+visible = false
+
+[node name="Moonlight" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.978148, -0.103956, 0.180057, 0, 0.866025, 0.5, -0.207912, 0.489074, -0.8471, -1.5, 3, -11.5)
+light_energy = 1.5
+shadow_enabled = true
+sky_mode = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_quhq2")
+
+[editable path="Map"]

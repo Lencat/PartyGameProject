@@ -1,0 +1,1220 @@
+[gd_scene load_steps=30 format=3 uid="uid://ches5letpkfn7"]
+
+[ext_resource type="Material" uid="uid://bkooiw3fuvbbt" path="res://textures/shaders/tint_red.tres" id="1_ampmw"]
+[ext_resource type="Script" path="res://game/ui/gui.gd" id="1_x0lnl"]
+[ext_resource type="Texture2D" uid="uid://dmwmxembxbrqi" path="res://textures/ui/player_plaque.png" id="2_h8j4e"]
+[ext_resource type="Texture2D" uid="uid://cgpecma1q86ho" path="res://textures/ui/button-end-turn.png" id="2_r45jl"]
+[ext_resource type="Texture2D" uid="uid://mbobl06jtix2" path="res://textures/ui/button-move.png" id="3_1c4cm"]
+[ext_resource type="Material" uid="uid://ck4id8n2ttbfp" path="res://textures/shaders/tint_blue.tres" id="3_glp1p"]
+[ext_resource type="Material" uid="uid://nombl8hu2jpw" path="res://textures/shaders/tint_green.tres" id="4_scyrg"]
+[ext_resource type="Texture2D" uid="uid://d37sgqf4miyxb" path="res://textures/ui/button-menu.png" id="4_sfp2g"]
+[ext_resource type="Material" uid="uid://cdj1utqboa8n4" path="res://textures/shaders/tint_yellow.tres" id="5_msrdf"]
+[ext_resource type="Texture2D" uid="uid://bokvjdwfxxl02" path="res://textures/ui/button-roll.png" id="8_0brka"]
+[ext_resource type="Script" path="res://game/ui/turn_prompt.gd" id="8_7fbnw"]
+[ext_resource type="Texture2D" uid="uid://ddh8erc5mqfi1" path="res://textures/ui/button-back.png" id="9_kd6pu"]
+[ext_resource type="Script" path="res://game/ui/move_prompt.gd" id="11_yf1l5"]
+[ext_resource type="Script" path="res://game/ui/new_round_popup.gd" id="13_5vkee"]
+[ext_resource type="Script" path="res://game/ui/minigame_results.gd" id="13_73tq6"]
+[ext_resource type="Texture2D" uid="uid://yyx0o5n7nd2f" path="res://textures/ui/double_chains.png" id="13_hc2id"]
+[ext_resource type="Script" path="res://game/ui/new_turn_popup.gd" id="13_oqcbl"]
+[ext_resource type="Texture2D" uid="uid://c3hfyd1wt8l2m" path="res://textures/ui/sign.png" id="14_3sn1k"]
+[ext_resource type="AudioStream" uid="uid://d118twb28l6f0" path="res://audio/sound/mysterious.mp3" id="14_6cd7v"]
+[ext_resource type="Script" path="res://game/ui/game_results.gd" id="14_ehj4p"]
+[ext_resource type="Texture2D" uid="uid://qo22rlhuk8te" path="res://textures/ui/headstone.png" id="16_se27x"]
+
+[sub_resource type="Animation" id="Animation_f07pt"]
+resource_name = "RESET"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sign:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1000, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_217yu"]
+resource_name = "sign_drop"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1000, -0.25, 0, 0.1, 1100, -250, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sign/MarginContainer/signboard:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-0.12, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, -0.03, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.45, 1.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sign/MarginContainer/signboard:pivot_offset:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sign/MarginContainer/signboard:pivot_offset:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_20nyu"]
+resource_name = "sign_raise"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-250, -0.25, 0, 0.1, 300, -1000, -0.25, -800, 0.25, 0),
+"times": PackedFloat32Array(0, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yps7i"]
+_data = {
+"RESET": SubResource("Animation_f07pt"),
+"sign_drop": SubResource("Animation_217yu"),
+"sign_raise": SubResource("Animation_20nyu")
+}
+
+[sub_resource type="Animation" id="Animation_xmjky"]
+resource_name = "RESET"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headstone:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(800, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_su5xa"]
+resource_name = "headstone_raise"
+length = 1.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headstone:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(400, -0.25, 0, 0.25, 0, 450, -0.25, 0, 0.25, 0, 410, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("headstone:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(800, -0.25, 0, 0.25, 0, 470, -0.25, 0, 0.25, 0, 370, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("headstone:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.3, -0.25, 0, 0.25, 0, -0.1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("headstone:pivot_offset:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("headstone:pivot_offset:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(150, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_rjeeo"]
+resource_name = "headstone_sink"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("headstone:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(410, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("headstone:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(370, -0.25, 0, 0.25, 0, 470, -0.25, 0, 0.25, 0, 700, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btfr8"]
+_data = {
+"RESET": SubResource("Animation_xmjky"),
+"headstone_raise": SubResource("Animation_su5xa"),
+"headstone_sink": SubResource("Animation_rjeeo")
+}
+
+[node name="gui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_x0lnl")
+
+[node name="pc_info" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="box_overall" type="Control" parent="pc_info"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="box_top_left" type="CenterContainer" parent="pc_info/box_overall"]
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 140.0
+mouse_filter = 2
+
+[node name="PlayerPlacard1" type="TextureRect" parent="pc_info/box_overall/box_top_left"]
+material = ExtResource("1_ampmw")
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_h8j4e")
+expand_mode = 3
+
+[node name="PlayerInfo1" type="VBoxContainer" parent="pc_info/box_overall/box_top_left"]
+custom_minimum_size = Vector2(185, 140)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="pc_info/box_overall/box_top_left/PlayerInfo1"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_bottom = -2
+
+[node name="PlayerSlot" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "Player Name"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pc_info/box_overall/box_top_left/PlayerInfo1"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesHeld" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesBanked" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues Saved:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_top_left/PlayerInfo1/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box_top_right" type="CenterContainer" parent="pc_info/box_overall"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -200.0
+offset_bottom = 140.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="PlayerPlacard2" type="TextureRect" parent="pc_info/box_overall/box_top_right"]
+material = ExtResource("3_glp1p")
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_h8j4e")
+expand_mode = 3
+
+[node name="PlayerInfo2" type="VBoxContainer" parent="pc_info/box_overall/box_top_right"]
+custom_minimum_size = Vector2(185, 140)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="pc_info/box_overall/box_top_right/PlayerInfo2"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_bottom = -2
+
+[node name="PlayerSlot" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "Player Name"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pc_info/box_overall/box_top_right/PlayerInfo2"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesHeld" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesBanked" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues Saved:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_top_right/PlayerInfo2/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box_bottom_left" type="CenterContainer" parent="pc_info/box_overall"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -140.0
+offset_right = 200.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PlayerPlacard3" type="TextureRect" parent="pc_info/box_overall/box_bottom_left"]
+material = ExtResource("4_scyrg")
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_h8j4e")
+expand_mode = 3
+
+[node name="PlayerInfo3" type="VBoxContainer" parent="pc_info/box_overall/box_bottom_left"]
+custom_minimum_size = Vector2(185, 140)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_bottom = -2
+
+[node name="PlayerSlot" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "Player Name"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesHeld" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesBanked" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues Saved:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_bottom_left/PlayerInfo3/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box_bottom_right" type="CenterContainer" parent="pc_info/box_overall"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -140.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PlayerPlacard4" type="TextureRect" parent="pc_info/box_overall/box_bottom_right"]
+material = ExtResource("5_msrdf")
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_h8j4e")
+expand_mode = 3
+
+[node name="PlayerInfo4" type="VBoxContainer" parent="pc_info/box_overall/box_bottom_right"]
+custom_minimum_size = Vector2(185, 140)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_bottom = -2
+
+[node name="PlayerSlot" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 11
+text = "Player 1"
+vertical_alignment = 1
+
+[node name="Name" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 22
+text = "Player Name"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4"]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesHeld" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CluesBanked" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Clues Saved:"
+vertical_alignment = 1
+
+[node name="Count" type="Label" parent="pc_info/box_overall/box_bottom_right/PlayerInfo4/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="turn_prompt" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("8_7fbnw")
+
+[node name="hbox_buttons" type="HBoxContainer" parent="turn_prompt"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="button1" type="CenterContainer" parent="turn_prompt/hbox_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="turn_prompt/hbox_buttons/button1"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_1c4cm")
+expand_mode = 1
+
+[node name="Button_Move" type="Button" parent="turn_prompt/hbox_buttons/button1"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(174, 114)
+layout_mode = 2
+
+[node name="button2" type="CenterContainer" parent="turn_prompt/hbox_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="turn_prompt/hbox_buttons/button2"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_r45jl")
+expand_mode = 1
+
+[node name="Button_End_Turn" type="Button" parent="turn_prompt/hbox_buttons/button2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(174, 114)
+layout_mode = 2
+
+[node name="move_prompt" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("11_yf1l5")
+
+[node name="hbox_buttons" type="HBoxContainer" parent="move_prompt"]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="button1" type="CenterContainer" parent="move_prompt/hbox_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="move_prompt/hbox_buttons/button1"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("8_0brka")
+expand_mode = 1
+
+[node name="Button_Roll" type="Button" parent="move_prompt/hbox_buttons/button1"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(174, 114)
+layout_mode = 2
+
+[node name="button2" type="CenterContainer" parent="move_prompt/hbox_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="move_prompt/hbox_buttons/button2"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("9_kd6pu")
+expand_mode = 1
+
+[node name="Button_Back" type="Button" parent="move_prompt/hbox_buttons/button2"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(174, 114)
+layout_mode = 2
+
+[node name="new_round_popup" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 2142.0
+offset_top = -1000.0
+offset_right = 2466.0
+offset_bottom = -400.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("13_5vkee")
+
+[node name="sign_animation" type="AnimationPlayer" parent="new_round_popup"]
+libraries = {
+"": SubResource("AnimationLibrary_yps7i")
+}
+
+[node name="new_round_sfx" type="AudioStreamPlayer" parent="new_round_popup"]
+stream = ExtResource("14_6cd7v")
+max_polyphony = 2
+bus = &"Sound"
+
+[node name="sign" type="VBoxContainer" parent="new_round_popup"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="chains2" type="TextureRect" parent="new_round_popup/sign"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("13_hc2id")
+expand_mode = 1
+
+[node name="chains" type="TextureRect" parent="new_round_popup/sign"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("13_hc2id")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="new_round_popup/sign"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_top = -30
+
+[node name="signboard" type="TextureRect" parent="new_round_popup/sign/MarginContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("14_3sn1k")
+expand_mode = 1
+
+[node name="label" type="Label" parent="new_round_popup/sign/MarginContainer/signboard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Round 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="new_turn_popup" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("13_oqcbl")
+
+[node name="headstone_animation" type="AnimationPlayer" parent="new_turn_popup"]
+libraries = {
+"": SubResource("AnimationLibrary_btfr8")
+}
+
+[node name="headstone" type="TextureRect" parent="new_turn_popup"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("16_se27x")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="new_turn_popup/headstone"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -53.0
+offset_right = 3.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.00872665
+pivot_offset = Vector2(150, 38.5)
+mouse_filter = 2
+alignment = 1
+
+[node name="name" type="Label" parent="new_turn_popup/headstone/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 26
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slot" type="Label" parent="new_turn_popup/headstone/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="minigame_results" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("13_73tq6")
+
+[node name="CenterContainer" type="CenterContainer" parent="minigame_results"]
+visible = false
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="minigame_results/CenterContainer"]
+custom_minimum_size = Vector2(600, 350)
+layout_mode = 2
+color = Color(0.196143, 0.196143, 0.196143, 0.0392157)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="minigame_results/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="title" type="Label" parent="minigame_results/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 36
+text = "Minigame over!
+Player wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="box1" type="MarginContainer" parent="minigame_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="minigame_results/CenterContainer/VBoxContainer/box1"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box1/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "1st Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box1/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box2" type="MarginContainer" parent="minigame_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="minigame_results/CenterContainer/VBoxContainer/box2"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box2/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "2nd Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box2/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box3" type="MarginContainer" parent="minigame_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="minigame_results/CenterContainer/VBoxContainer/box3"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box3/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "3rd Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box3/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box4" type="MarginContainer" parent="minigame_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="minigame_results/CenterContainer/VBoxContainer/box4"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box4/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "4th Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="minigame_results/CenterContainer/VBoxContainer/box4/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="game_results" type="MarginContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("14_ehj4p")
+
+[node name="CenterContainer" type="CenterContainer" parent="game_results"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="game_results/CenterContainer"]
+custom_minimum_size = Vector2(600, 350)
+layout_mode = 2
+color = Color(0.196143, 0.196143, 0.196143, 0.0392157)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game_results/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="title" type="Label" parent="game_results/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 36
+text = "Game over!
+Player wins!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="box1" type="MarginContainer" parent="game_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 60
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_results/CenterContainer/VBoxContainer/box1"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="game_results/CenterContainer/VBoxContainer/box1/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "1st Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/CenterContainer/VBoxContainer/box1/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box2" type="MarginContainer" parent="game_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_results/CenterContainer/VBoxContainer/box2"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="game_results/CenterContainer/VBoxContainer/box2/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "2nd Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/CenterContainer/VBoxContainer/box2/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box3" type="MarginContainer" parent="game_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_results/CenterContainer/VBoxContainer/box3"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="game_results/CenterContainer/VBoxContainer/box3/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "3rd Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/CenterContainer/VBoxContainer/box3/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="box4" type="MarginContainer" parent="game_results/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_right = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_results/CenterContainer/VBoxContainer/box4"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="game_results/CenterContainer/VBoxContainer/box4/HBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 24
+text = "4th Place: Player Name"
+vertical_alignment = 1
+
+[node name="score" type="Label" parent="game_results/CenterContainer/VBoxContainer/box4/HBoxContainer"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 20
+text = "0 points"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="hbox_buttons" type="HBoxContainer" parent="game_results/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="button1" type="CenterContainer" parent="game_results/CenterContainer/VBoxContainer/hbox_buttons"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="ButtonIcon" type="TextureRect" parent="game_results/CenterContainer/VBoxContainer/hbox_buttons/button1"]
+custom_minimum_size = Vector2(200, 140)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_sfp2g")
+expand_mode = 1
+
+[node name="Button_Main_Menu" type="Button" parent="game_results/CenterContainer/VBoxContainer/hbox_buttons/button1"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(174, 114)
+layout_mode = 2
+
+[connection signal="pressed" from="turn_prompt/hbox_buttons/button1/Button_Move" to="turn_prompt" method="_on_button_move_pressed"]
+[connection signal="pressed" from="turn_prompt/hbox_buttons/button2/Button_End_Turn" to="turn_prompt" method="_on_button_end_turn_pressed"]
+[connection signal="pressed" from="move_prompt/hbox_buttons/button1/Button_Roll" to="move_prompt" method="_on_button_roll_pressed"]
+[connection signal="pressed" from="move_prompt/hbox_buttons/button2/Button_Back" to="move_prompt" method="_on_button_back_pressed"]
+[connection signal="animation_finished" from="new_round_popup/sign_animation" to="new_round_popup" method="_on_sign_animation_animation_finished"]
+[connection signal="animation_finished" from="new_turn_popup/headstone_animation" to="new_turn_popup" method="_on_headstone_animation_animation_finished"]
+[connection signal="pressed" from="game_results/CenterContainer/VBoxContainer/hbox_buttons/button1/Button_Main_Menu" to="game_results" method="_on_button_main_menu_pressed"]

@@ -1,0 +1,536 @@
+[gd_scene load_steps=124 format=3 uid="uid://iuquwl584lq4"]
+
+[ext_resource type="Script" path="res://characters/astrologist/astrologist.gd" id="1_7wtpj"]
+[ext_resource type="Texture2D" uid="uid://c1kgn22ror0qa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="2_aiykg"]
+[ext_resource type="Texture2D" uid="uid://cghnchmnwyria" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="3_2yrtl"]
+[ext_resource type="Texture2D" uid="uid://bpdm7g12llgua" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="4_l8pio"]
+[ext_resource type="Texture2D" uid="uid://dm5iv17xk3pla" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="5_rbrkp"]
+[ext_resource type="Texture2D" uid="uid://c1wfqvl7nm1na" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="6_0031b"]
+[ext_resource type="Texture2D" uid="uid://bcusq8glx47wa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="7_ykvd7"]
+[ext_resource type="Texture2D" uid="uid://bxmam7yjecdca" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="8_6jq5j"]
+[ext_resource type="Texture2D" uid="uid://bqakbgi0vfmqa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="9_631gc"]
+[ext_resource type="Texture2D" uid="uid://cfuhw6e7pgf1a" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="10_14mbr"]
+[ext_resource type="Texture2D" uid="uid://cy0228u2ckp3a" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="11_i6812"]
+[ext_resource type="Texture2D" uid="uid://dico5xljqxbva" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="12_w4kpe"]
+[ext_resource type="Texture2D" uid="uid://dswkvydaucaua" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="13_j4wcv"]
+[ext_resource type="Texture2D" uid="uid://djrg3j5wu6qja" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="14_ytgqg"]
+[ext_resource type="Texture2D" uid="uid://st28rs1atfia" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="15_jsamw"]
+[ext_resource type="Texture2D" uid="uid://ckvc2vxvuayqa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="16_oa184"]
+[ext_resource type="Texture2D" uid="uid://ca2x5rehte8fa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="17_cnh6u"]
+[ext_resource type="Texture2D" uid="uid://dg8rytfpfwwaa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="18_uboh1"]
+[ext_resource type="Texture2D" uid="uid://bs6ipxgcjxwbc" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="19_3emmx"]
+[ext_resource type="Texture2D" uid="uid://blin8g4gftloa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="20_kj3nd"]
+[ext_resource type="Texture2D" uid="uid://5g3kcieosrva" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="21_2ocse"]
+[ext_resource type="Texture2D" uid="uid://cke7g74r71eta" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="22_kvwys"]
+[ext_resource type="Texture2D" uid="uid://bv1ka8nctl0wa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="23_7c1b6"]
+[ext_resource type="Texture2D" uid="uid://cln2ib5fefm8a" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="24_n3pil"]
+[ext_resource type="Texture2D" uid="uid://b0kt3a5iev4la" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="25_jf1my"]
+[ext_resource type="Texture2D" uid="uid://qvwbqpsd1lda" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="26_sn7vf"]
+[ext_resource type="Texture2D" uid="uid://ci5ur2yudmja8" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="27_d2um2"]
+[ext_resource type="Texture2D" uid="uid://ibq4iu4qo46a" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="28_pb2q6"]
+[ext_resource type="Texture2D" uid="uid://y4gqe4itiyaa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="29_qwuu7"]
+[ext_resource type="Texture2D" uid="uid://cioaed3gqceaa" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="30_a2jtx"]
+[ext_resource type="Texture2D" uid="uid://b6ynwdq1c1rba" path="res://characters/astrologist/res/PNG/Back/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="31_8lbf7"]
+[ext_resource type="Texture2D" uid="uid://shlr0xv1w33a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="32_rb1dt"]
+[ext_resource type="Texture2D" uid="uid://dneso8nsj7h5a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="33_h3maa"]
+[ext_resource type="Texture2D" uid="uid://btxmj764a8sda" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="34_sanpe"]
+[ext_resource type="Texture2D" uid="uid://dv8chxgntoqra" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="35_5kmnk"]
+[ext_resource type="Texture2D" uid="uid://cclnt8wijg52a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="36_bvh3k"]
+[ext_resource type="Texture2D" uid="uid://o8qo1o5j7p4a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="37_r36a8"]
+[ext_resource type="Texture2D" uid="uid://b2jfntl7d3p0a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="38_th7io"]
+[ext_resource type="Texture2D" uid="uid://be0rf62v3nspa" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="39_wqb3g"]
+[ext_resource type="Texture2D" uid="uid://bmvwnxanosewa" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="40_et5v2"]
+[ext_resource type="Texture2D" uid="uid://dy48m6obmbc0a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="41_gkkmm"]
+[ext_resource type="Texture2D" uid="uid://cdhcynajaek7a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="42_p8ipm"]
+[ext_resource type="Texture2D" uid="uid://dfh1as716sina" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="43_yjuam"]
+[ext_resource type="Texture2D" uid="uid://dbwdmnvtdhk0a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="44_57dbp"]
+[ext_resource type="Texture2D" uid="uid://d17r1cn2phwka" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="45_262mi"]
+[ext_resource type="Texture2D" uid="uid://ba8sythsgcpja" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="46_ypctc"]
+[ext_resource type="Texture2D" uid="uid://qff8wy4orhxa" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="47_h03pi"]
+[ext_resource type="Texture2D" uid="uid://2josx65o8r8a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="48_ym0j1"]
+[ext_resource type="Texture2D" uid="uid://cdvhi1atg64ka" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="49_brgy6"]
+[ext_resource type="Texture2D" uid="uid://c6eubcxdy1jda" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="50_wh4t4"]
+[ext_resource type="Texture2D" uid="uid://dy1c0h2y3wqaa" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="51_yy7jd"]
+[ext_resource type="Texture2D" uid="uid://bekm8fl7x1kna" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="52_vx7l4"]
+[ext_resource type="Texture2D" uid="uid://bngnk8kyl4y8a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="53_2kxey"]
+[ext_resource type="Texture2D" uid="uid://bvf1fpqi4rwva" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="54_ppwiv"]
+[ext_resource type="Texture2D" uid="uid://nvgu0xj6isia" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="55_vrk7b"]
+[ext_resource type="Texture2D" uid="uid://drel5h8ww7kac" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="56_2kijq"]
+[ext_resource type="Texture2D" uid="uid://b1jboht6gb16x" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="57_t72g2"]
+[ext_resource type="Texture2D" uid="uid://bn3qpv8pmkhia" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="58_fbfjp"]
+[ext_resource type="Texture2D" uid="uid://bwrfiowi875la" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="59_dxv4w"]
+[ext_resource type="Texture2D" uid="uid://jmtly3wt4aia" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="60_oss1g"]
+[ext_resource type="Texture2D" uid="uid://cpl0x7nufd7la" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="61_pfndm"]
+[ext_resource type="Texture2D" uid="uid://t7quptcloo3a" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="62_8g70b"]
+[ext_resource type="Texture2D" uid="uid://dd8otltuvkj10" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="63_ypheb"]
+[ext_resource type="Texture2D" uid="uid://8p8bw8j0g8kl" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="64_xt58c"]
+[ext_resource type="Texture2D" uid="uid://cfafwoiurlkc2" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="65_o2kyc"]
+[ext_resource type="Texture2D" uid="uid://bdt8fbxx55mf2" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="66_1t0y7"]
+[ext_resource type="Texture2D" uid="uid://bxdxxsmomgi07" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="67_ios11"]
+[ext_resource type="Texture2D" uid="uid://dl62j1wy7rnqy" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="68_i8a86"]
+[ext_resource type="Texture2D" uid="uid://bxnn7xunievhr" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="69_st30v"]
+[ext_resource type="Texture2D" uid="uid://bfcbfi2l1i6rr" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="70_ls1si"]
+[ext_resource type="Texture2D" uid="uid://dggx8wypsluat" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="71_usnc5"]
+[ext_resource type="Texture2D" uid="uid://dagwv5jyp0dwi" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="72_mimm6"]
+[ext_resource type="Texture2D" uid="uid://b10lhg5ieg52u" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="73_yia5e"]
+[ext_resource type="Texture2D" uid="uid://c1pu1t836acsb" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="74_gd42p"]
+[ext_resource type="Texture2D" uid="uid://2i4lh0m3fi0k" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="75_achqc"]
+[ext_resource type="Texture2D" uid="uid://cd05raq3ujpy2" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="76_ddoo0"]
+[ext_resource type="Texture2D" uid="uid://cylh4oatvpnlg" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="77_xtago"]
+[ext_resource type="Texture2D" uid="uid://bg2dx63s8251j" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="78_7xvgw"]
+[ext_resource type="Texture2D" uid="uid://b4ua7xnemtxx5" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="79_icmkj"]
+[ext_resource type="Texture2D" uid="uid://cnuoil0qpogyr" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="80_bqb7g"]
+[ext_resource type="Texture2D" uid="uid://dmqgiajxr2wer" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="81_mx1rc"]
+[ext_resource type="Texture2D" uid="uid://cm2j35xvd8dne" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="82_km3j3"]
+[ext_resource type="Texture2D" uid="uid://26xfc6jjv6mv" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="83_g03fx"]
+[ext_resource type="Texture2D" uid="uid://c4a73fpn4rqxo" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="84_nmkuv"]
+[ext_resource type="Texture2D" uid="uid://b4l1wxtc8xl4m" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="85_jltv6"]
+[ext_resource type="Texture2D" uid="uid://7nte1a05wq2y" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="86_rwilv"]
+[ext_resource type="Texture2D" uid="uid://clslf7jav11no" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="87_rte3l"]
+[ext_resource type="Texture2D" uid="uid://0elw4f1t8k2s" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="88_syc7d"]
+[ext_resource type="Texture2D" uid="uid://b6dhec405h713" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="89_updnj"]
+[ext_resource type="Texture2D" uid="uid://c26chyft7pp53" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_f774p"]
+[ext_resource type="Texture2D" uid="uid://b74lw526f0wsf" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_6t3dn"]
+[ext_resource type="Texture2D" uid="uid://dlpkvijtxc0k6" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_000.png" id="92_4cc8v"]
+[ext_resource type="Texture2D" uid="uid://bsl7pkhdmfd84" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_001.png" id="93_ch8ln"]
+[ext_resource type="Texture2D" uid="uid://bblxvw88p110d" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_002.png" id="94_wqlno"]
+[ext_resource type="Texture2D" uid="uid://dwkxtbg1g3jhw" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_003.png" id="95_16uhs"]
+[ext_resource type="Texture2D" uid="uid://cr3a4j8yo5ui3" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_004.png" id="96_00fim"]
+[ext_resource type="Texture2D" uid="uid://8hqujvhpv176" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_005.png" id="97_trl5j"]
+[ext_resource type="Texture2D" uid="uid://crwt0deqomgbb" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_006.png" id="98_f6o0o"]
+[ext_resource type="Texture2D" uid="uid://dpaatl03fuioa" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_007.png" id="99_w2t4p"]
+[ext_resource type="Texture2D" uid="uid://b0j5m8nsycywc" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_008.png" id="100_a7ih8"]
+[ext_resource type="Texture2D" uid="uid://bipc8p41fp7e5" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_009.png" id="101_b55o2"]
+[ext_resource type="Texture2D" uid="uid://jep4rqmw6p77" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_010.png" id="102_mlhxy"]
+[ext_resource type="Texture2D" uid="uid://dkm2woclb333o" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_011.png" id="103_ond4u"]
+[ext_resource type="Texture2D" uid="uid://fdwypjdy67s5" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_012.png" id="104_d3sig"]
+[ext_resource type="Texture2D" uid="uid://cnbinm8w1gypr" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_013.png" id="105_5suew"]
+[ext_resource type="Texture2D" uid="uid://dnbrjnk2aaksi" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_014.png" id="106_qxedx"]
+[ext_resource type="Texture2D" uid="uid://bmhtjmrehypl" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_015.png" id="107_mhk56"]
+[ext_resource type="Texture2D" uid="uid://dtua61jq5vj5u" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_016.png" id="108_sdd8h"]
+[ext_resource type="Texture2D" uid="uid://h4of2qt0nbwo" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_017.png" id="109_wq2e6"]
+[ext_resource type="Texture2D" uid="uid://c4genibgfgspp" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_018.png" id="110_obvum"]
+[ext_resource type="Texture2D" uid="uid://b73x832h1tnab" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_019.png" id="111_c4lbw"]
+[ext_resource type="Texture2D" uid="uid://cgchnsnlpq2y6" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_020.png" id="112_2c5ko"]
+[ext_resource type="Texture2D" uid="uid://cigig0k6q5qle" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_021.png" id="113_el2o7"]
+[ext_resource type="Texture2D" uid="uid://c7der0ghhpudl" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_022.png" id="114_rka0p"]
+[ext_resource type="Texture2D" uid="uid://dfxgt6lwsx7ty" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_023.png" id="115_a550e"]
+[ext_resource type="Texture2D" uid="uid://iwef2wv4nsdn" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_024.png" id="116_q8ryd"]
+[ext_resource type="Texture2D" uid="uid://beproec0nnjek" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_025.png" id="117_sb6t0"]
+[ext_resource type="Texture2D" uid="uid://2d6m24t7bxd4" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_026.png" id="118_jmaai"]
+[ext_resource type="Texture2D" uid="uid://bwgs2kf0yq5cm" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_027.png" id="119_sn71x"]
+[ext_resource type="Texture2D" uid="uid://yq62iwt6wwy2" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_028.png" id="120_ao8jt"]
+[ext_resource type="Texture2D" uid="uid://ckhgowp6rxhoe" path="res://characters/astrologist/res/PNG/Side/PNG Sequences/Walk/0_Citizen_Walk_029.png" id="121_1sw0e"]
+
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83t84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_aiykg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2yrtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l8pio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rbrkp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0031b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ykvd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6jq5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_631gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_14mbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i6812")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w4kpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j4wcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ytgqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jsamw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_oa184")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cnh6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uboh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3emmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kj3nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2ocse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kvwys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7c1b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n3pil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_jf1my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_sn7vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_d2um2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_pb2q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qwuu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a2jtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_8lbf7")
+}],
+"loop": true,
+"name": &"back_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_rb1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h3maa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_sanpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5kmnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_bvh3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_r36a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_th7io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_wqb3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_et5v2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_gkkmm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_p8ipm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_yjuam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_57dbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_262mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_ypctc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_h03pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_ym0j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_brgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_wh4t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_yy7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_vx7l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_2kxey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ppwiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vrk7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_2kijq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_t72g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_fbfjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_dxv4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_oss1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_pfndm")
+}],
+"loop": true,
+"name": &"front_walk",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_8g70b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ypheb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_xt58c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_o2kyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_1t0y7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ios11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_i8a86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_st30v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ls1si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_usnc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_mimm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_yia5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_gd42p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_achqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_ddoo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_xtago")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_7xvgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_icmkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_bqb7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_mx1rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_km3j3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_g03fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_nmkuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jltv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_rwilv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_rte3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_syc7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_updnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_f774p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_6t3dn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_4cc8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_ch8ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_wqlno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_16uhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_00fim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_trl5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_f6o0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_w2t4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_a7ih8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_b55o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_mlhxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_ond4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_d3sig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_5suew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_qxedx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_mhk56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_sdd8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_wq2e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_obvum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_c4lbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_2c5ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_el2o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_rka0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_a550e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_q8ryd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_sb6t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_jmaai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_sn71x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ao8jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_1sw0e")
+}],
+"loop": true,
+"name": &"side_walk",
+"speed": 30.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqtbd"]
+size = Vector2(164, 282)
+
+[node name="Astrologer" type="CharacterBody2D"]
+script = ExtResource("1_7wtpj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -150)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_83t84")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -140)
+shape = SubResource("RectangleShape2D_aqtbd")
+
+[node name="PlayerName" type="Label" parent="."]
+offset_left = -81.0
+offset_top = -415.0
+offset_right = 83.0
+offset_bottom = -352.0
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://8ywlcp31fxnk"]
+
+[ext_resource type="Script" path="res://game/camerapan.gd" id="2_2u6m6"]
+[ext_resource type="PackedScene" uid="uid://ches5letpkfn7" path="res://game/ui/gui.tscn" id="3_783ro"]
+
+[sub_resource type="GDScript" id="GDScript_ophoo"]
+script/source = "extends Node3D
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	data.currentBoardGameState.setPlayers
+	
+	
+
+	#iniialize game state
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func play_random_music():
+	MusicManager.Music
+"
+
+[node name="GameSession" type="Node3D"]
+script = SubResource("GDScript_ophoo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="GUI" parent="CanvasLayer" instance=ExtResource("3_783ro")]
+
+[node name="CameraTarget" type="Node3D" parent="."]
+
+[node name="CameraFocus" type="Node3D" parent="."]
+top_level = true
+script = ExtResource("2_2u6m6")
+
+[node name="OverheadCamera" type="Camera3D" parent="CameraFocus"]
+transform = Transform3D(0.859208, -0.398078, 0.321394, 0.0112182, 0.64269, 0.766044, -0.511502, -0.654587, 0.55667, 0, 4, 0)
+h_offset = 0.1
+v_offset = -1.5
+current = true
+fov = 70.0
+far = 200.0

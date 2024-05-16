@@ -1,0 +1,147 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxvrxwr2un5g"]
+
+[ext_resource type="SystemFont" uid="uid://u40xu32e5s2f" path="res://menu/menu-font.tres" id="1_storw"]
+[ext_resource type="Script" path="res://menu/options/tabs/scripts/MasterVolume.gd" id="1_vvo4e"]
+[ext_resource type="Script" path="res://menu/options/tabs/scripts/MusicVolume.gd" id="3_f7vup"]
+[ext_resource type="Script" path="res://menu/options/tabs/scripts/SoundVolume.gd" id="4_clu8f"]
+
+[node name="Sound" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="MasterVolume" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_vvo4e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/MasterVolume"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/MasterVolume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 32
+text = "Master Volume"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/MasterVolume/HBoxContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Number" type="Label" parent="ScrollContainer/VBoxContainer/MasterVolume/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 32
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MusicVolume" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("3_f7vup")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/MusicVolume"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/MusicVolume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 24
+text = " ・ Music Volume"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/MusicVolume/HBoxContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Number" type="Label" parent="ScrollContainer/VBoxContainer/MusicVolume/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SoundVolume" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("4_clu8f")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/SoundVolume"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/SoundVolume/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 24
+text = " ・ Sound Volume"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="ScrollContainer/VBoxContainer/SoundVolume/HBoxContainer"]
+custom_minimum_size = Vector2(300, 40)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+tick_count = 10
+ticks_on_borders = true
+
+[node name="Number" type="Label" parent="ScrollContainer/VBoxContainer/SoundVolume/HBoxContainer"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_storw")
+theme_override_font_sizes/font_size = 24
+text = "100%"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+self_modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 2

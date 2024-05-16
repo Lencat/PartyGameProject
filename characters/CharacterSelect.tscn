@@ -1,0 +1,508 @@
+[gd_scene load_steps=93 format=3 uid="uid://bneb3s6jpxx4y"]
+
+[ext_resource type="Script" path="res://characters/CharacterSelect.gd" id="1_clw72"]
+[ext_resource type="Texture2D" uid="uid://br2q6nl1mmas4" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="32_c7y6l"]
+[ext_resource type="Texture2D" uid="uid://b5np34vqqnnca" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="33_lln0b"]
+[ext_resource type="Texture2D" uid="uid://3qmb1j42id5t" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="34_oxtnh"]
+[ext_resource type="Texture2D" uid="uid://d0m2sidfg1mxw" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="35_q8htj"]
+[ext_resource type="Texture2D" uid="uid://bgbj1cg4otn0g" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="36_4h7v0"]
+[ext_resource type="Texture2D" uid="uid://cog8bkqc5cxqm" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="37_tndr2"]
+[ext_resource type="Texture2D" uid="uid://bb4hcqidj0217" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="38_3r52k"]
+[ext_resource type="Texture2D" uid="uid://djtltbg7s57hp" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="39_ecxnx"]
+[ext_resource type="Texture2D" uid="uid://cfyv41qg016w8" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="40_8dkat"]
+[ext_resource type="Texture2D" uid="uid://davsmi8tgqlg6" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="41_h2x8w"]
+[ext_resource type="Texture2D" uid="uid://corclopd74fen" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="42_m5u70"]
+[ext_resource type="Texture2D" uid="uid://c1ine1bjuq117" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="43_astyl"]
+[ext_resource type="Texture2D" uid="uid://busrgesi6du2s" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="44_2o007"]
+[ext_resource type="Texture2D" uid="uid://dbubywv3m1s1o" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="45_lix54"]
+[ext_resource type="Texture2D" uid="uid://btjayln5y1x2m" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="46_52xgw"]
+[ext_resource type="Texture2D" uid="uid://coksrukyghnri" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="47_umpev"]
+[ext_resource type="Texture2D" uid="uid://cah77bf3xrg8d" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="48_kwmjw"]
+[ext_resource type="Texture2D" uid="uid://dr0dmqjxkdycn" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="49_4yyt2"]
+[ext_resource type="Texture2D" uid="uid://1tlui5b5ucoa" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="50_d70kr"]
+[ext_resource type="Texture2D" uid="uid://c2irt5fqus1t2" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="51_w2e8q"]
+[ext_resource type="Texture2D" uid="uid://cooodxy1mcoay" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="52_yk123"]
+[ext_resource type="Texture2D" uid="uid://xmosykivf88u" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="53_wosoi"]
+[ext_resource type="Texture2D" uid="uid://l7eibt6iidud" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="54_v558h"]
+[ext_resource type="Texture2D" uid="uid://c10t618osbni1" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="55_vw4ha"]
+[ext_resource type="Texture2D" uid="uid://y4a6tp0rk57s" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="56_amxda"]
+[ext_resource type="Texture2D" uid="uid://b0o832vcdvww1" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="57_wjeug"]
+[ext_resource type="Texture2D" uid="uid://dq334geqmjts6" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="58_ifne5"]
+[ext_resource type="Texture2D" uid="uid://r742y0a70ira" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="59_3ahiv"]
+[ext_resource type="Texture2D" uid="uid://b07j0xqcr5kc7" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="60_sl6mn"]
+[ext_resource type="Texture2D" uid="uid://tj4bdowttqaq" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="61_3rxf8"]
+[ext_resource type="Texture2D" uid="uid://t7quptcloo3i" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="62_g56e7"]
+[ext_resource type="Texture2D" uid="uid://dxq1mafrxn664" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="62_lpxxl"]
+[ext_resource type="Texture2D" uid="uid://cp1c54tjqia05" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="63_jqrhg"]
+[ext_resource type="Texture2D" uid="uid://dd8otltuvkj10" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="63_vgpr4"]
+[ext_resource type="Texture2D" uid="uid://8p8bw8j0g8kl" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="64_8f84g"]
+[ext_resource type="Texture2D" uid="uid://qlx2liyprjg4" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="64_ln2q8"]
+[ext_resource type="Texture2D" uid="uid://cfafwoiurlkc2" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="65_817o1"]
+[ext_resource type="Texture2D" uid="uid://d33tejiyrck7f" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_003.png" id="65_qy8j6"]
+[ext_resource type="Texture2D" uid="uid://bdt8fbxx55mf2" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="66_ecwqk"]
+[ext_resource type="Texture2D" uid="uid://voqqj46l582g" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_004.png" id="66_gy1eo"]
+[ext_resource type="Texture2D" uid="uid://bxdxxsmomgi07" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="67_l58po"]
+[ext_resource type="Texture2D" uid="uid://cxgx300cnsc6j" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_005.png" id="67_vimr7"]
+[ext_resource type="Texture2D" uid="uid://dl62j1wy7rnqy" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="68_axbgy"]
+[ext_resource type="Texture2D" uid="uid://0d1gsuuc3cqj" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_006.png" id="68_wdv64"]
+[ext_resource type="Texture2D" uid="uid://bxnn7xunievhr" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="69_laval"]
+[ext_resource type="Texture2D" uid="uid://cx46jruttrhwy" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_007.png" id="69_olg11"]
+[ext_resource type="Texture2D" uid="uid://bfcbfi2l1i6rr" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="70_uk8f4"]
+[ext_resource type="Texture2D" uid="uid://di10qbg4c32i6" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_008.png" id="70_yh1af"]
+[ext_resource type="Texture2D" uid="uid://b5grqtqa1yr5o" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="71_ecir6"]
+[ext_resource type="Texture2D" uid="uid://dggx8wypsluat" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_009.png" id="71_m4kc5"]
+[ext_resource type="Texture2D" uid="uid://dagwv5jyp0dwi" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="72_2iyxg"]
+[ext_resource type="Texture2D" uid="uid://5tkdtwomabcr" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_010.png" id="72_n7vso"]
+[ext_resource type="Texture2D" uid="uid://b10lhg5ieg52u" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="73_e1q37"]
+[ext_resource type="Texture2D" uid="uid://d4j78x850xrlt" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_011.png" id="73_tgee8"]
+[ext_resource type="Texture2D" uid="uid://c1pu1t836acsb" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="74_ga55n"]
+[ext_resource type="Texture2D" uid="uid://cbaihhr6csm7e" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_012.png" id="74_jsb6a"]
+[ext_resource type="Texture2D" uid="uid://2i4lh0m3fi0k" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="75_h54ok"]
+[ext_resource type="Texture2D" uid="uid://cg5hs3dtabv0j" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_013.png" id="75_oxrtx"]
+[ext_resource type="Texture2D" uid="uid://dyopr2c045pyp" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="76_7w8tc"]
+[ext_resource type="Texture2D" uid="uid://cd05raq3ujpy2" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_014.png" id="76_4564q"]
+[ext_resource type="Texture2D" uid="uid://cylh4oatvpnlg" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="77_rf51i"]
+[ext_resource type="Texture2D" uid="uid://uc75lgocqdja" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_015.png" id="77_y1mro"]
+[ext_resource type="Texture2D" uid="uid://bviwtsifcqh75" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="78_1yjih"]
+[ext_resource type="Texture2D" uid="uid://bg2dx63s8251j" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_016.png" id="78_ssv65"]
+[ext_resource type="Texture2D" uid="uid://df6rkl0e0uijl" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="79_gank4"]
+[ext_resource type="Texture2D" uid="uid://b4ua7xnemtxx5" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_017.png" id="79_sm7kw"]
+[ext_resource type="Texture2D" uid="uid://cnuoil0qpogyr" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="80_5frsh"]
+[ext_resource type="Texture2D" uid="uid://b532hx546luax" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_018.png" id="80_p23fu"]
+[ext_resource type="Texture2D" uid="uid://b56qf3y3t5ltk" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="81_4451e"]
+[ext_resource type="Texture2D" uid="uid://dmqgiajxr2wer" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_019.png" id="81_c5aa0"]
+[ext_resource type="Texture2D" uid="uid://cm2j35xvd8dne" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="82_0e1qv"]
+[ext_resource type="Texture2D" uid="uid://b5f8xvnmoujbf" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_020.png" id="82_183us"]
+[ext_resource type="Texture2D" uid="uid://dus5qj7sivjs1" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="83_jaadu"]
+[ext_resource type="Texture2D" uid="uid://26xfc6jjv6mv" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_021.png" id="83_lafss"]
+[ext_resource type="Texture2D" uid="uid://qfcel60fxhib" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="84_d07vh"]
+[ext_resource type="Texture2D" uid="uid://c4a73fpn4rqxo" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_022.png" id="84_kup8s"]
+[ext_resource type="Texture2D" uid="uid://b4l1wxtc8xl4m" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="85_6x4ko"]
+[ext_resource type="Texture2D" uid="uid://723hwasrtdph" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_023.png" id="85_qr6ty"]
+[ext_resource type="Texture2D" uid="uid://7nte1a05wq2y" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="86_7gw5e"]
+[ext_resource type="Texture2D" uid="uid://dhnm5c3ielejh" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_024.png" id="86_aannl"]
+[ext_resource type="Texture2D" uid="uid://clslf7jav11no" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="87_1sffu"]
+[ext_resource type="Texture2D" uid="uid://b5bs0a2p7aatf" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_025.png" id="87_6mi60"]
+[ext_resource type="Texture2D" uid="uid://dawu4rplobbbc" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="88_cohun"]
+[ext_resource type="Texture2D" uid="uid://0elw4f1t8k2s" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_026.png" id="88_p3i0s"]
+[ext_resource type="Texture2D" uid="uid://b6dhec405h713" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="89_e20jm"]
+[ext_resource type="Texture2D" uid="uid://cvc7yof53nelu" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_027.png" id="89_g3kbk"]
+[ext_resource type="Texture2D" uid="uid://c26chyft7pp53" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_0vrv2"]
+[ext_resource type="Texture2D" uid="uid://b02g8vb51550k" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_yg4tg"]
+[ext_resource type="Texture2D" uid="uid://c7rxyjpcf3ypf" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_cs1r1"]
+[ext_resource type="Texture2D" uid="uid://b74lw526f0wsf" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_xf8xj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icdfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_g56e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_vgpr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8f84g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_817o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_ecwqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_l58po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_axbgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_laval")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_uk8f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_m4kc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_2iyxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_e1q37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_ga55n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_h54ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_4564q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_rf51i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ssv65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_sm7kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_5frsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_c5aa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_0e1qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_lafss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_kup8s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_6x4ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_7gw5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_1sffu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_p3i0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_e20jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_0vrv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_xf8xj")
+}],
+"loop": true,
+"name": &"artist",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_c7y6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_lln0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_oxtnh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_q8htj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4h7v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_tndr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_3r52k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ecxnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_8dkat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_h2x8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_m5u70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_astyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_2o007")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_lix54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_52xgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_umpev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_kwmjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4yyt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_d70kr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_w2e8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_yk123")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_wosoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_v558h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_vw4ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_amxda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_wjeug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_ifne5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_3ahiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_sl6mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3rxf8")
+}],
+"loop": true,
+"name": &"astrologer",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_lpxxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_jqrhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ln2q8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_qy8j6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_gy1eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_vimr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_wdv64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_olg11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yh1af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ecir6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_n7vso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tgee8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_jsb6a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_oxrtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_7w8tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_y1mro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_1yjih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_gank4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_p23fu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_4451e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_183us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_jaadu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_d07vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_qr6ty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_aannl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_6mi60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_cohun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_g3kbk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_yg4tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_cs1r1")
+}],
+"loop": true,
+"name": &"citizen",
+"speed": 20.0
+}]
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_clw72")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+
+[node name="PlayerSelect" type="AnimatedSprite2D" parent="."]
+position = Vector2(581, 290)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_icdfp")
+animation = &"citizen"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 326)
+
+[node name="Left" type="Button" parent="."]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 320.0
+offset_right = 360.0
+offset_bottom = 371.0
+text = "Left"
+
+[node name="Right" type="Button" parent="."]
+layout_mode = 0
+offset_left = 793.0
+offset_top = 324.0
+offset_right = 888.0
+offset_bottom = 375.0
+text = "Right
+"
+
+[node name="CharacterName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 70.0
+offset_right = 644.0
+offset_bottom = 110.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Select" type="Button" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 566.0
+offset_right = 614.0
+offset_bottom = 608.0
+text = "Select"
+
+[node name="PlayerName" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 510.0
+offset_right = 672.0
+offset_bottom = 548.0
+alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 468.0
+offset_right = 627.0
+offset_bottom = 498.0
+text = "Enter Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NeedName" type="Label" parent="."]
+layout_mode = 0
+offset_left = 699.0
+offset_top = 509.0
+offset_right = 842.0
+offset_bottom = 544.0
+vertical_alignment = 1
+
+[node name="Player" type="Label" parent="."]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 60.0
+offset_right = 246.0
+offset_bottom = 83.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 12
+
+[node name="Selecting" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 48
+text = "Selecting"
+
+[node name="PlayerNumber" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 48
+text = "Player 1"
+horizontal_alignment = 2
+vertical_alignment = 3
+
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Select" to="." method="_on_select_pressed"]

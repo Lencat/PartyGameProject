@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://bq7fpctxbxuhm"]
+
+[ext_resource type="Texture2D" uid="uid://cttnii4ae5pnk" path="res://textures/black.png" id="1_8c7n7"]
+[ext_resource type="Script" path="res://menu/options/menu_options.gd" id="1_mavw5"]
+[ext_resource type="SystemFont" uid="uid://u40xu32e5s2f" path="res://menu/menu-font.tres" id="2_1olgd"]
+[ext_resource type="PackedScene" uid="uid://da1t2wopoetlh" path="res://menu/options/tabs/graphics.tscn" id="4_ylpdt"]
+[ext_resource type="PackedScene" uid="uid://dxvrxwr2un5g" path="res://menu/options/tabs/sound.tscn" id="5_jjxxs"]
+[ext_resource type="PackedScene" uid="uid://i4x5uw1tqvfy" path="res://menu/options/tabs/controls.tscn" id="6_82xls"]
+[ext_resource type="PackedScene" uid="uid://ck0w568fwd0m0" path="res://menu/options/tabs/accessibility.tscn" id="7_1cwmi"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mavw5")
+
+[node name="FadeBackground" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.266667)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8c7n7")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Options" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_1olgd")
+theme_override_font_sizes/font_size = 32
+text = "Options"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="FadeBackground" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.666667)
+layout_mode = 2
+texture = ExtResource("1_8c7n7")
+expand_mode = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_1olgd")
+theme_override_font_sizes/font_size = 32
+tab_alignment = 1
+
+[node name="Graphics" parent="MarginContainer/VBoxContainer/MarginContainer/TabContainer" instance=ExtResource("4_ylpdt")]
+layout_mode = 2
+
+[node name="Sound" parent="MarginContainer/VBoxContainer/MarginContainer/TabContainer" instance=ExtResource("5_jjxxs")]
+visible = false
+layout_mode = 2
+
+[node name="Controls" parent="MarginContainer/VBoxContainer/MarginContainer/TabContainer" instance=ExtResource("6_82xls")]
+visible = false
+layout_mode = 2
+
+[node name="Accessibility" parent="MarginContainer/VBoxContainer/MarginContainer/TabContainer" instance=ExtResource("7_1cwmi")]
+visible = false
+layout_mode = 2
+
+[node name="Button_Exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_1olgd")
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

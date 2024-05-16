@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cdj1utqboa8n4"]
+
+[ext_resource type="Shader" path="res://textures/shaders/tint.gdshader" id="1_oaj1h"]
+
+[resource]
+shader = ExtResource("1_oaj1h")
+shader_parameter/tint = Vector4(0.3, 0.3, 0, 0.7)
+shader_parameter/alpha = 0.8
