@@ -1,19 +1,18 @@
 extends CanvasLayer
 
 signal start_game
+signal return_minigame
 
 func show_message(text):
 	$Message.text = text
 	$Message.show()
 	$MessageTimer.start()
 
-func show_game_over():
-	show_message("All Players Done")
-	
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$ReturnButton.hide()
+	$StartButton.grab_focus()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -30,3 +29,12 @@ func _on_start_button_pressed():
 
 func _on_message_timer_timeout():
 	$Message.hide()
+
+
+func end_game():
+	$ReturnButton.show()
+	$ReturnButton.grab_focus()
+
+
+func _on_return_pressed():
+	return_minigame.emit()
