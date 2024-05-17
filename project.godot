@@ -28,6 +28,11 @@ MusicManager="*res://audio/musicmanager.gd"
 Controller="*res://global/controller.gd"
 CharacterData="*res://characters/CharacterData.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [dotnet]
 
 project/assembly_name="PartyGame"

@@ -15,6 +15,7 @@ var character_temp
 var distance_temp
 
 func _ready():
+	visible = false
 	move_mutex = Mutex.new()
 
 func show_direction_prompt(n,w,e,s,char,steps_left):

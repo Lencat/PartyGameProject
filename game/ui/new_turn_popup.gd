@@ -3,6 +3,7 @@ extends MarginContainer
 @onready var headstone_animation := $headstone_animation
 @onready var headstone_name := $headstone/VBoxContainer/name
 @onready var headstone_slot := $headstone/VBoxContainer/slot
+@onready var sfx := $new_turn_sfx
 
 var headstone_mutex : Mutex
 
@@ -23,9 +24,10 @@ func label_headstone(name : String, slot : String) -> void:
 	headstone_name.text = name
 	headstone_slot.text = slot
 
-func display_sign(name : String, slot : String, duration_sec : float) -> void:
+func display_headstone(name : String, slot : String, duration_sec : float) -> void:
 	label_headstone(name, slot)
 	raise_headstone()
+	sfx.play()
 	get_tree().create_timer(duration_sec).timeout.connect(lower_headstone)
 
 func _on_headstone_animation_animation_finished(anim_name):

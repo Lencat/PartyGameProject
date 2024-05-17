@@ -8,7 +8,7 @@ signal thread_exit
 
 var Music = {
 	"GothicCuteInst": "res://audio/music/gothic/peritune_gothic_inst_loop.ogg",
-	"CrimsonMoon": "res://audio/music/peritune_crimson_moon_loop.ogg"
+	"CrimsonMoon": "res://audio/music/peritune_crimson_moon_loop.ogg",
 	"NotreDame": "res://audio/music/notre_dame.mp3"
 }
 
@@ -100,7 +100,8 @@ func _close_threads():
 	mutex.lock()
 	for i in range(len(threads)):
 		threads[i].wait_to_finish()
-		threads.pop_at(i)
+	for i in range(len(threads)):
+		threads.pop_front()
 	mutex.unlock()
 
 func _exit_tree():

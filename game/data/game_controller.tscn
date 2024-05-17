@@ -9,8 +9,8 @@
 [sub_resource type="GDScript" id="GDScript_mwfu4"]
 script/source = "extends Node3D
 
-@onready var GUI := $GUI
-var map
+@onready var GUI := $CanvasLayer/GUI
+@onready var cameraTarget := $CameraTarget
 
 var gameData = {
 	\"board\": {},
@@ -18,6 +18,7 @@ var gameData = {
 	\"round\": 1,
 	\"whoseTurn\": 0,
 	\"isWon\": false,
+	\"continueLoop\": true,
 }
 
 enum player_slot {
@@ -42,50 +43,81 @@ enum IO {
 	o = 1,
 }
 
+signal next_turn_loop_end
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_load_map()
 	_load_players()
 	_load_music()
+	get_tree().create_timer(1).timeout.connect(GUI.show_pc_info)
+	get_tree().create_timer(2).timeout.connect(game_loop)
 
 func _load_map():
 	#TODO replace with actual load when actual map select is in
 	_temp_function_load_graveyard()
-	map = load(\"res://maps/boards/graveyard/graveyard_staged.tscn\")
+	var map = load(\"res://maps/boards/graveyard/graveyard_staged.tscn\")
 	add_child(map.instantiate())
 
 func _load_players():
+	var character_pack = load(\"res://characters/character3d.tscn\")
 	for i in range(len(CharacterData.players_info)):
 		var new_player = {}
 		new_player[\"name\"] = CharacterData.players_info[i].name
-		new_player[\"character_id\"] = CharacterData.players_info[i].character
-		new_player[\"position\"] = Vector2i(gameData.board.homes[i])
+		new_player[\"position\"] = gameData.board.homes[i]
 		new_player[\"clues_held\"] = 0
 		new_player[\"clues_stored\"] = 0
+		var new_character = character_pack.instantiate()
+		add_child(new_character)
+		new_character.set_player_name(new_player.name)
+		new_character.set_character_model(CharacterData.players_info[i].character)
+		new_character.set_camera(cameraTarget)
+		new_character.position = Vector3(gameData.board.visualTransformX.call(new_player.position.x), 0.0, gameData.board.visualTransformY.call(new_player.position.y))
+		print_debug(new_character.position)
+		new_player[\"character\"] = new_character
 		gameData.players.append(new_player)
+	GUI.set_pc_info(gameData.players)
 
 func _load_music():
 	get_tree().create_timer(3).timeout.connect(MusicManager.play.bind(MusicManager.Music.CrimsonMoon))
 
+func game_loop():
+	gameData.continueLoop = true
+	while gameData.continueLoop == true:
+		handle_next_turn()
+		await get_tree().create_timer(1.0).timeout
+		await next_turn_loop_end
+
 func handle_next_turn():
 	if gameData.whoseTurn == player_slot.player1:
 		handle_round_start()
+		await get_tree().create_timer(3.0).timeout
 	handle_turn_start()
+	await get_tree().create_timer(1.0).timeout
 	handle_turn()
+	await $MoveHandler.end_move
 	handle_turn_end()
+	await get_tree().create_timer(1.0).timeout
 	if gameData.whoseTurn == player_slot.player4:
 		handle_round_end()
+		await get_tree().create_timer(1.0).timeout
 	advance_turn()
+	await get_tree().create_timer(1.0).timeout
+	next_turn_loop_end.emit()
 
 func handle_round_start():
+	GUI.log_message(\"Round \"+str(gameData.round)+\" start!\")
+	cameraTarget.position = Vector3(1,3,1)
 	GUI.show_new_round_popup(gameData.round)
 
 func handle_turn_start():
+	GUI.log_message(\"Player \"+str(gameData.whoseTurn+1)+\"'s turn.\")
 	var player_slot = gameData.whoseTurn
 	var player_name = gameData.players[player_slot].name
 	GUI.show_new_turn_popup(player_name, player_slot)
 
 func handle_turn():
+	cameraTarget.position = gameData.players[gameData.whoseTurn].character.position
 	GUI.show_turn_prompt()
 
 func handle_turn_end():
@@ -95,7 +127,7 @@ func handle_round_end():
 	#end early if game is already won
 	if gameData.isWon:
 		return
-	pass
+	GUI.update_pc_info()
 
 func advance_turn():
 	if gameData.whoseTurn == 3:
@@ -108,7 +140,11 @@ func check_win():
 	for player in gameData.players:
 		if player.clues_held >= 10:
 			gameData.isWon = true
+			gameData.continueLoop = false
 			GUI.show_game_results()
+
+func start_minigame():
+	pass
 
 func _temp_function_load_graveyard():
 	var graveyard_board = {
@@ -116,7 +152,9 @@ func _temp_function_load_graveyard():
 		\"maxX\": 7,
 		\"minY\": 0,
 		\"maxY\": 6,
-		\"homes\": [Vector2i(7,0), Vector2i(7,0), Vector2i(7,0), Vector2i(7,0)]
+		\"visualTransformX\": (func(x): return float(x-7)),
+		\"visualTransformY\": (func(y): return float(-y)),
+		\"homes\": [Vector2i(7,0), Vector2i(7,1), Vector2i(7,2), Vector2i(7,3)]
 	}
 	graveyard_board[\"tiles\"] = {
 		Vector2i(7,0): {\"tile_type\": tile_type.home,  \"n\":IO.o,    \"w\":IO.i,    \"e\":IO.none, \"s\":IO.none},

@@ -505,8 +505,7 @@ animations = [{
 }]
 
 [node name="Artist" type="AnimatedSprite3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.7, 0)
-billboard = 1
+transform = Transform3D(0.103923, -0.03, 0.0519615, 0, 0.103923, 0.06, -0.06, -0.0519615, 0.09, -0.1, 0.35, -0.2)
 sprite_frames = SubResource("SpriteFrames_ensj7")
 animation = &"idle"
 autoplay = "idle"

@@ -43,77 +43,82 @@ func _ready():
 	exit_mutex = Mutex.new()
 	thread_exit.connect(_close_threads)
 
-func update_pc_info():
-	pass
+func set_pc_info(player_dict):
+	menus[menu.pc_info].set_player_dict(player_dict)
+
+func update_pc_info(names = true, clues = true):
+	menus[menu.pc_info].update_pc_info(names, clues)
 
 func show_pc_info():
 	if current_menu_state == menu_state.hidden:
 		current_menu_state = menu_state.normal
-	menus[menu.pc_info].set_block_signals(false)
+	#
+	#menus[menu.pc_info].set_block_signals(false)
 	fade_in(menu.pc_info)
 
 func hide_pc_info():
 	if current_menu_state == menu_state.normal:
 		current_menu_state = menu_state.hidden
-	menus[menu.pc_info].set_block_signals(true)
+	#menus[menu.pc_info].set_block_signals(true)
 	fade_out(menu.pc_info)
 
 func show_new_round_popup(round_number):
-	menus[menu.new_round_popup].visible = true
-	menus[menu.new_round_popup].display_sign("Round "+str(round_number), 2.0)
+	menus[menu.new_round_popup].display_sign("Round "+str(round_number), 3.0)
 
 func show_new_turn_popup(player_name, slot_number):
-	menus[menu.new_turn_popup].visible = true
-	menus[menu.new_turn_popup].display_headstone(player_name, "Player "+str(slot_number), 2.0)
+	if $new_round_popup/sign_animation.is_playing():
+		await $new_round_popup/sign_animation.animation_finished
+	menus[menu.new_turn_popup].display_headstone(player_name, "Player "+str(slot_number+1), 3.0)
 
 func show_turn_prompt():
+	if $new_turn_popup/headstone_animation.is_playing():
+		await $new_turn_popup/headstone_animation.animation_finished
 	current_menu_state = menu_state.turn
-	menus[menu.turn_prompt].set_block_signals(false)
+	#menus[menu.turn_prompt].set_block_signals(false)
 	fade_in(menu.turn_prompt)
 	
 func hide_turn_prompt():
 	current_menu_state = menu_state.normal
-	menus[menu.turn_prompt].set_block_signals(true)
+	#menus[menu.turn_prompt].set_block_signals(true)
 	fade_out(menu.turn_prompt)
 
 func show_move_prompt():
-	if current_menu_state == menu_state.turn:
-		current_menu_state = menu_state.move
-		menus[menu.move_prompt].set_block_signals(false)
-		fade_in(menu.move_prompt)
+	#menus[menu.move_prompt].set_block_signals(false)
+	fade_in(menu.move_prompt)
 
 func hide_move_prompt():
-	if current_menu_state == menu_state.turn:
-		current_menu_state = menu_state.move
-		menus[menu.move_prompt].set_block_signals(false)
-		fade_in(menu.move_prompt)
+	#menus[menu.move_prompt].set_block_signals(false)
+	fade_out(menu.move_prompt)
 
 func show_minigame_results(game_name, points_name, p1name, p1score, p2name, p2score, p3name, p3score, p4name, p4score):
 	current_menu_state = menu_state.minigame_end
 	menus[menu.minigame_results].set_results(game_name, points_name, p1name, p1score, p2name, p2score, p3name, p3score, p4name, p4score)
-	menus[menu.minigame_results].set_block_signals(false)
+	#menus[menu.minigame_results].set_block_signals(false)
 	fade_in(menu.minigame_results)
 
 func hide_minigame_results():
 	current_menu_state = menu_state.normal
-	menus[menu.minigame_results].set_block_signals(true)
+	#menus[menu.minigame_results].set_block_signals(true)
 	fade_out(menu.minigame_results)
 
 func show_game_results(game_name, points_name, p1name, p1score, p2name, p2score, p3name, p3score, p4name, p4score):
 	current_menu_state = menu_state.game_end
 	menus[menu.game_results].set_results(game_name, points_name, p1name, p1score, p2name, p2score, p3name, p3score, p4name, p4score)
-	menus[menu.game_results].set_block_signals(false)
+	#menus[menu.game_results].set_block_signals(false)
 	fade_in(menu.game_results)
+
+func log_message(message : String):
+	$message_log.log_message(message)
 
 func fade_in(menu_index : int):
 	var thread = Thread.new()
-	thread.start(_fade_in_thread.bind(menu_index, menus[menu_index].visible, menus[menu_index].modulate.a))
 	threads.append(thread)
+	thread.start(_fade_in_thread.bind(menu_index, menus[menu_index].visible, menus[menu_index].modulate.a))
 
 func fade_out(menu_index : int):
 	var thread = Thread.new()
-	thread.start(_fade_out_thread.bind(menu_index, menus[menu_index].visible, menus[menu_index].modulate.a))
 	threads.append(thread)
+	thread.start(_fade_out_thread.bind(menu_index, menus[menu_index].visible, menus[menu_index].modulate.a))
 
 func _fade_in_thread(menu_index : int, start_visible : bool, start_a : float) -> void:
 	#if invisible, makes node visible first
@@ -123,7 +128,7 @@ func _fade_in_thread(menu_index : int, start_visible : bool, start_a : float) ->
 		call_deferred("_set_menu_modulate_a", menu_index, start_a)
 		call_deferred("_set_menu_visible", menu_index, true)
 	
-	var fade_duration_sec : float = 1.0
+	var fade_duration_sec : float = 0.8
 	var step_sec          : float = 0.05
 	var step_count        : float = fade_duration_sec / step_sec
 	var step_size         : float = (1.0 - start_a) / step_count
@@ -146,7 +151,7 @@ func _fade_out_thread(menu_index : int, start_visible : bool, start_a : float) -
 		thread_exit.emit()
 		return
 	
-	var fade_duration_sec : float = 1.0
+	var fade_duration_sec : float = 0.4
 	var step_sec          : float = 0.05
 	var step_count        : float = fade_duration_sec / step_sec
 	var step_size         : float = start_a / step_count
@@ -193,38 +198,38 @@ func reset_menus() -> void:
 	var display_game_results = (current_menu_state == menu_state.game_end)
 	
 	if display_pc_info:
-		menus[menu.pc_info].set_block_signals(false)
+		#menus[menu.pc_info].set_block_signals(false)
 		fade_in(menu.pc_info)
 	else:
-		menus[menu.pc_info].set_block_signals(true)
+		#menus[menu.pc_info].set_block_signals(true)
 		fade_out(menu.pc_info)
 	
 	if display_turn_prompt:
-		menus[menu.turn_prompt].set_block_signals(false)
+		#menus[menu.turn_prompt].set_block_signals(false)
 		fade_in(menu.turn_prompt)
 	else:
-		menus[menu.turn_prompt].set_block_signals(true)
+		#menus[menu.turn_prompt].set_block_signals(true)
 		fade_out(menu.turn_prompt)
 	
 	if display_move_prompt:
-		menus[menu.move_prompt].set_block_signals(false)
+		#menus[menu.move_prompt].set_block_signals(false)
 		fade_in(menu.move_prompt)
 	else:
-		menus[menu.move_prompt].set_block_signals(true)
+		#menus[menu.move_prompt].set_block_signals(true)
 		fade_out(menu.move_prompt)
 	
 	if display_minigame_results:
-		menus[menu.minigame_results].set_block_signals(false)
+		#menus[menu.minigame_results].set_block_signals(false)
 		fade_in(menu.minigame_results)
 	else:
-		menus[menu.minigame_results].set_block_signals(true)
+		#menus[menu.minigame_results].set_block_signals(true)
 		fade_out(menu.minigame_results)
 	
 	if display_game_results:
-		menus[menu.game_results].set_block_signals(false)
+		#menus[menu.game_results].set_block_signals(false)
 		fade_in(menu.game_results)
 	else:
-		menus[menu.game_results].set_block_signals(true)
+		#menus[menu.game_results].set_block_signals(true)
 		fade_out(menu.game_results)
 
 # thread stuff
@@ -237,7 +242,8 @@ func _close_threads():
 	exit_mutex.lock()
 	for i in range(len(threads)):
 		threads[i].wait_to_finish()
-		threads.pop_at(i)
+	for i in range(len(threads)):
+		threads.pop_front()
 	exit_mutex.unlock()
 
 func _exit_tree():
