@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6lbb0rayyy5u"]
+
+[ext_resource type="Script" path="res://player_yellow.gd" id="1_sr84d"]
+[ext_resource type="Texture2D" uid="uid://cevlkcqsnpycn" path="res://art/playerYellowPlaeholder.png" id="1_vvrbe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1t5j"]
+radius = 12.0
+height = 40.0
+
+[node name="PlayerYellow" type="Area2D"]
+position = Vector2(102, 595)
+script = ExtResource("1_sr84d")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.567, -0.25)
+scale = Vector2(0.415426, 0.374074)
+texture = ExtResource("1_vvrbe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_s1t5j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
