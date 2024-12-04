@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bydpeu3njw1vc"]
+[gd_scene load_steps=10 format=3 uid="uid://bydpeu3njw1vc"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ej1s6"]
 [ext_resource type="PackedScene" uid="uid://cqlspjfsfsjap" path="res://placeholder_enemy.tscn" id="2_x2y2f"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dm4qefxcmf5uy" path="res://player_green.tscn" id="5_fm8as"]
 [ext_resource type="PackedScene" uid="uid://c6lbb0rayyy5u" path="res://player_yellow.tscn" id="6_7ts4v"]
 [ext_resource type="PackedScene" uid="uid://caqy3jmk4ue1c" path="res://hud.tscn" id="7_gauy1"]
+[ext_resource type="Texture2D" uid="uid://dwphaex32xxau" path="res://art/backgroundEnviron.PNG" id="8_xuvk2"]
 
 [sub_resource type="Curve2D" id="Curve2D_qwp0w"]
 _data = {
@@ -17,6 +18,17 @@ point_count = 2
 [node name="Main" type="Node"]
 script = ExtResource("1_ej1s6")
 mob_scene = ExtResource("2_x2y2f")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -257.5
+offset_right = 257.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_xuvk2")
 
 [node name="PlayerBlue" parent="." instance=ExtResource("3_dnptf")]
 
@@ -45,6 +57,7 @@ one_shot = true
 curve = SubResource("Curve2D_qwp0w")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+visible = false
 position = Vector2(0, 1)
 rotation = -0.00208768
 
