@@ -26,8 +26,8 @@ func _process(delta):
 		velocity.y += 200
 	position += velocity * delta
 	position = position.clamp(
-		Vector2((screen_size.x / 2) - 240, 400),  # Adjusted for top bound
-		Vector2((screen_size.x / 2) + 240, 800)   # Adjusted for bottom bound
+		Vector2(0, 0),  # Adjusted for top bound
+		Vector2(screen_size.x, screen_size.y)  # Adjusted for bottom bound
 	)
 
 

@@ -7,16 +7,20 @@
 [ext_resource type="PackedScene" uid="uid://dm4qefxcmf5uy" path="res://player_green.tscn" id="5_fm8as"]
 [ext_resource type="PackedScene" uid="uid://c6lbb0rayyy5u" path="res://player_yellow.tscn" id="6_7ts4v"]
 [ext_resource type="PackedScene" uid="uid://caqy3jmk4ue1c" path="res://hud.tscn" id="7_gauy1"]
-[ext_resource type="PackedScene" path="res://enemy.tscn" id="9_282iu"]
+[ext_resource type="PackedScene" uid="uid://cfm1ccr0pjdax" path="res://enemy.tscn" id="9_282iu"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fv0uv"]
-vertices = PackedVector2Array(1064.08, 703.023, 12.9531, 705.969, 10.0391, 12.9531, 1069.91, 8.03906)
+vertices = PackedVector2Array(1416.98, 704.008, 12.9063, 705.977, 4.07813, -289.109, 1415.01, -305.883)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(0, 3, 1080, -2, 1074, 713, 3, 716)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-6, -299, 1425, -316, 1427, 714, 3, 716)])
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ej1s6")
 mob_scene = ExtResource("2_x2y2f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="PlayerBlue" parent="." instance=ExtResource("3_dnptf")]
 
@@ -49,11 +53,13 @@ one_shot = true
 [node name="Enemy" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("9_282iu")]
 position = Vector2(539, 319)
 scale = Vector2(0.391607, 0.559999)
+collision_layer = 1
 target_to_chase = NodePath("../PlayerRed")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_fv0uv")
 
+[connection signal="hit" from="PlayerBlue" to="." method="_on_player_blue_hit"]
 [connection signal="hit" from="PlayerRed" to="." method="_on_player_red_hit"]
 [connection signal="hit" from="PlayerGreen" to="." method="_on_player_green_hit"]
 [connection signal="hit" from="PlayerYellow" to="." method="_on_player_yellow_hit"]
