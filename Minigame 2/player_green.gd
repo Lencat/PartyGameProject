@@ -3,6 +3,7 @@ signal hit
 
 
 @export var speed = 400
+#@export (Array, Texture) var idle_textures = [] 
 var screen_size
 
 # Called when the node enters the scene tree for the first time.

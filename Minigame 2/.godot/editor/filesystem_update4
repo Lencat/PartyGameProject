@@ -1,6 +1,6 @@
 res://main.tscn
-res://player_blue.gd
-res://Main.gd
+res://enemy_red.tscn
+res://player_green.tscn
+res://art/Player Green/idle/idle.tres
+res://art/Player Green/idle/left.tres
 res://player_green.gd
-res://player_red.gd
-res://player_yellow.gd

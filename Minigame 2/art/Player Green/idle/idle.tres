@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://b8rebukngllvo"]
+
+[ext_resource type="Texture2D" uid="uid://nv38fy642ojd" path="res://art/Player Green/Free-Wizard-Sprite-Sheets-Pixel-Art6-720x480_webp.png" id="1_er0cx"]
+
+[resource]
+atlas = ExtResource("1_er0cx")
+region = Rect2(0, 11, 595, 86)

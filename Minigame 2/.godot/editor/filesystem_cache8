@@ -1,27 +1,53 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733283785
-enemy.tscn::PackedScene::5150140464489482427::1733279385::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
-enemy_reaper_chaser.gd::GDScript::-1::1733279608::0::1::::<>CharacterBody2D<>::
-hud.gd::GDScript::-1::1733279375::0::1::::<>CanvasLayer<>::
-hud.tscn::PackedScene::4807379113248594614::1733279375::0::1::::<><>::res://hud.gd
-icon.svg::CompressedTexture2D::7587593593368540317::1733279375::1733279395::1::::<><>::
-Main.gd::GDScript::-1::1733279375::0::1::::<>Node<>::
-main.tscn::PackedScene::4078065056660283668::1733279642::0::1::::<><>::res://Main.gd<>uid://cqlspjfsfsjap::::res://placeholder_enemy.tscn<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn<>uid://3ikbt8tnjxv1::::res://player_red.tscn<>uid://dm4qefxcmf5uy::::res://player_green.tscn<>uid://c6lbb0rayyy5u::::res://player_yellow.tscn<>uid://caqy3jmk4ue1c::::res://hud.tscn<>uid://cfm1ccr0pjdax::::res://enemy.tscn
-placeholder_enemy.gd::GDScript::-1::1733279375::0::1::::<>RigidBody2D<>::
-placeholder_enemy.tscn::PackedScene::5919691194927158163::1733279375::0::1::::<><>::res://placeholder_enemy.gd<>uid://b1ghk828lj72m::::res://art/enemyPlaceholder.png
-player_blue.gd::GDScript::-1::1733279376::0::1::::<>Area2D<>::
-player_blue.tscn::PackedScene::6681273037941305664::1733279376::0::1::::<><>::uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>res://player_blue.gd
-player_blue_character.tscn::PackedScene::2392872759660766070::1733279376::0::1::::<><>::res://player_blue.gd<>uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn
-player_green.gd::GDScript::-1::1733279376::0::1::::<>Area2D<>::
-player_green.tscn::PackedScene::8062374042917699360::1733279376::0::1::::<><>::res://player_green.gd<>uid://dyk8iyy3tnhi2::::res://art/playerGreenPlaceholder.png
-player_red.gd::GDScript::-1::1733279376::0::1::::<>Area2D<>::
-player_red.tscn::PackedScene::1982412649422179448::1733279376::0::1::::<><>::uid://cxartymdoys0t::::res://art/playerRedPlaceholder.png<>res://player_red.gd
-player_yellow.gd::GDScript::-1::1733279376::0::1::::<>Area2D<>::
-player_yellow.tscn::PackedScene::6971467517625007728::1733279376::0::1::::<><>::res://player_yellow.gd<>uid://cevlkcqsnpycn::::res://art/playerYellowPlaeholder.png
-reaper.png::CompressedTexture2D::9004966277432206148::1733279376::1733279395::1::::<><>::
-::res://art/::1733279395
-enemyPlaceholder.png::CompressedTexture2D::4224161538189450234::1733279384::1733279395::1::::<><>::
-playerBluePlaceholder.png::CompressedTexture2D::5605145941547886026::1733279384::1733279395::1::::<><>::
-playerGreenPlaceholder.png::CompressedTexture2D::8866457321979021663::1733279384::1733279395::1::::<><>::
-playerRedPlaceholder.png::CompressedTexture2D::6388252169276206253::1733279384::1733279395::1::::<><>::
-playerYellowPlaeholder.png::CompressedTexture2D::5097634550232465337::1733279384::1733279395::1::::<><>::
+::res://::1733693235
+enemy_blue.tscn::PackedScene::6411191964723231517::1733687914::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_green.tscn::PackedScene::8802015744497890659::1733687932::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_reaper_chaser.gd::GDScript::-1::1733687080::0::1::::<>CharacterBody2D<>::
+enemy_red.tscn::PackedScene::5150140464489482427::1733692329::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_yellow.tscn::PackedScene::3980390682019880994::1733687923::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+hud.gd::GDScript::-1::1733687080::0::1::::<>CanvasLayer<>::
+hud.tscn::PackedScene::4807379113248594614::1733687080::0::1::::<><>::res://hud.gd
+icon.svg::CompressedTexture2D::7587593593368540317::1733687080::1733687129::1::::<><>::
+Main.gd::GDScript::-1::1733687080::0::1::::<>Node<>::
+main.tscn::PackedScene::4078065056660283668::1733692378::0::1::::<><>::res://Main.gd<>res://placeholder_enemy.tscn<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn<>uid://bnex3g2nhgofv::::res://art/ground.jpg<>uid://3ikbt8tnjxv1::::res://player_red.tscn<>uid://dm4qefxcmf5uy::::res://player_green.tscn<>uid://c6lbb0rayyy5u::::res://player_yellow.tscn<>uid://caqy3jmk4ue1c::::res://hud.tscn<>uid://cfm1ccr0pjdax::::res://enemy_red.tscn
+placeholder_enemy.gd::GDScript::-1::1733687080::0::1::::<>RigidBody2D<>::
+placeholder_enemy.tscn::PackedScene::-1::1733687080::0::1::::<><>::
+player_blue.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_blue.tscn::PackedScene::6681273037941305664::1733687080::0::1::::<><>::uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>res://player_blue.gd
+player_blue_character.tscn::PackedScene::2392872759660766070::1733687080::0::1::::<><>::res://player_blue.gd<>uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn
+player_green.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_green.tscn::PackedScene::8062374042917699360::1733692329::0::1::::<><>::res://player_green.gd<>uid://nv38fy642ojd::::res://art/Player Green/Free-Wizard-Sprite-Sheets-Pixel-Art6-720x480_webp.png
+player_red.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_red.tscn::PackedScene::1982412649422179448::1733687080::0::1::::<><>::uid://cxartymdoys0t::::res://art/playerRedPlaceholder.png<>res://player_red.gd
+player_yellow.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_yellow.tscn::PackedScene::6971467517625007728::1733687080::0::1::::<><>::res://player_yellow.gd<>uid://cevlkcqsnpycn::::res://art/playerYellowPlaeholder.png
+reaper.png::CompressedTexture2D::9004966277432206148::1733687080::1733687080::1::::<><>::
+::res://art/::1733691300
+enemyPlaceholder.png::CompressedTexture2D::4224161538189450234::1733687080::1733687080::1::::<><>::
+ground.jpg::CompressedTexture2D::3308580012516814071::1733687795::1733687873::1::::<><>::
+playerBluePlaceholder.png::CompressedTexture2D::5605145941547886026::1733687080::1733687080::1::::<><>::
+playerGreenPlaceholder.png::CompressedTexture2D::8866457321979021663::1733687080::1733687080::1::::<><>::
+playerRedPlaceholder.png::CompressedTexture2D::6388252169276206253::1733687080::1733687080::1::::<><>::
+playerYellowPlaeholder.png::CompressedTexture2D::5097634550232465337::1733687080::1733687080::1::::<><>::
+::res://art/Enemy Blue/::1733691288
+::res://art/Enemy Green/::1733691259
+::res://art/Enemy Red/::1733691284
+::res://art/Enemy Yellow/::1733691297
+::res://art/Player Blue/::1733691270
+::res://art/Player Green/::1733693216
+Free-Wizard-Sprite-Sheets-Pixel-Art6-720x480_webp.png::CompressedTexture2D::957566208266385141::1733693210::1733693216::1::::<><>::
+Idle.png::CompressedTexture2D::2171545065965666143::1733691266::1733691405::1::::<><>::
+Walk Frame 1.png::CompressedTexture2D::5681193610308415942::1733691356::1733691405::1::::<><>::
+Walk Frame 2.png::CompressedTexture2D::3262545308330965852::1733691257::1733691404::1::::<><>::
+Walk Frame 3.png::CompressedTexture2D::3239480046403558874::1733691253::1733691405::1::::<><>::
+Walk Frame 4.png::CompressedTexture2D::2511181822585791691::1733691249::1733691405::1::::<><>::
+Walk Frame 5.png::CompressedTexture2D::4165219759902966336::1733691245::1733691405::1::::<><>::
+Walk Frame 6.png::CompressedTexture2D::1340405519973839917::1733691240::1733691405::1::::<><>::
+Walk Frame 7.png::CompressedTexture2D::2782069710319272553::1733691236::1733691405::1::::<><>::
+Walk Frame 8.png::CompressedTexture2D::8732080601343937710::1733691232::1733691404::1::::<><>::
+::res://art/Player Green/idle/::1733693235
+idle.tres::AtlasTexture::4737992665846328028::1733692733::0::1::::<><>::
+left.tres::AtlasTexture::1439372431016669713::1733693241::0::1::::<><>::uid://nv38fy642ojd::::res://art/Player Green/Free-Wizard-Sprite-Sheets-Pixel-Art6-720x480_webp.png
+right.tres::AtlasTexture::7844237758497410999::1733692848::0::1::::<><>::uid://nv38fy642ojd::::res://art/Player Green/Free-Wizard-Sprite-Sheets-Pixel-Art6-720x480_webp.png
+::res://art/Player Red/::1733691265
+::res://art/Player Yellow/::1733691275

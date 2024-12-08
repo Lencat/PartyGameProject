@@ -1,3 +1,4 @@
+AnimationPlayer
 TextureRect
 CharacterBody2D
 CollisionShape2D
