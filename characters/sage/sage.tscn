@@ -1,0 +1,137 @@
+[gd_scene load_steps=32 format=3 uid="uid://dofftgppl1t50"]
+
+[ext_resource type="Texture2D" uid="uid://7ahqgn3cq6j2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_000.png" id="1_vapiy"]
+[ext_resource type="Texture2D" uid="uid://erv4i1akcrll" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_001.png" id="2_vuc7c"]
+[ext_resource type="Texture2D" uid="uid://do0xhu5q2hk74" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_002.png" id="3_s4as0"]
+[ext_resource type="Texture2D" uid="uid://bhhl1d6b66hor" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_003.png" id="4_eivot"]
+[ext_resource type="Texture2D" uid="uid://cmwxc1hurl1xx" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_004.png" id="5_i1hvf"]
+[ext_resource type="Texture2D" uid="uid://c3sl2da44o6bg" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_005.png" id="6_lgcik"]
+[ext_resource type="Texture2D" uid="uid://d0iklg10r081j" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_006.png" id="7_0dqim"]
+[ext_resource type="Texture2D" uid="uid://bpbcga3whr2kr" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_007.png" id="8_wkhfk"]
+[ext_resource type="Texture2D" uid="uid://cfovyseqllh2b" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_008.png" id="9_mwspe"]
+[ext_resource type="Texture2D" uid="uid://bnyj53jggg0l8" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_009.png" id="10_7rokg"]
+[ext_resource type="Texture2D" uid="uid://c8avjr8e2vdt8" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_010.png" id="11_nitoj"]
+[ext_resource type="Texture2D" uid="uid://taouy6oumbp2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_011.png" id="12_yrcjk"]
+[ext_resource type="Texture2D" uid="uid://cypt5ua1q88jl" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_012.png" id="13_wfigp"]
+[ext_resource type="Texture2D" uid="uid://cbstn8ie2lwb6" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_013.png" id="14_y3c7n"]
+[ext_resource type="Texture2D" uid="uid://bmqnllksp7bua" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_014.png" id="15_02ngs"]
+[ext_resource type="Texture2D" uid="uid://b6i1ysvbrm8ym" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_015.png" id="16_sxf55"]
+[ext_resource type="Texture2D" uid="uid://c3yfpwyuwu5wq" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_016.png" id="17_uh3hx"]
+[ext_resource type="Texture2D" uid="uid://ucab1uti32af" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_017.png" id="18_ukb0p"]
+[ext_resource type="Texture2D" uid="uid://cyxv6fgdo5kyt" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_018.png" id="19_t0e0n"]
+[ext_resource type="Texture2D" uid="uid://d30oqfe1y83i2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_019.png" id="20_2yqbe"]
+[ext_resource type="Texture2D" uid="uid://qmypdmb7hp84" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_020.png" id="21_igt3n"]
+[ext_resource type="Texture2D" uid="uid://bbob5o8ix3mlu" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_021.png" id="22_yffhl"]
+[ext_resource type="Texture2D" uid="uid://d1sc72tl8e12k" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_022.png" id="23_mwo7q"]
+[ext_resource type="Texture2D" uid="uid://c7knet3tml6fe" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_023.png" id="24_c8rxn"]
+[ext_resource type="Texture2D" uid="uid://teqpodd2a3kf" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_024.png" id="25_2vyq4"]
+[ext_resource type="Texture2D" uid="uid://c61a4stspb2sr" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_025.png" id="26_ycndi"]
+[ext_resource type="Texture2D" uid="uid://bv2ixs8vdty82" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_026.png" id="27_5qkhs"]
+[ext_resource type="Texture2D" uid="uid://dyq206amf4dqm" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_027.png" id="28_5rdg6"]
+[ext_resource type="Texture2D" uid="uid://cmlxytb238126" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_028.png" id="29_4iwb6"]
+[ext_resource type="Texture2D" uid="uid://c5onnnguu63hx" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_029.png" id="30_wi2v8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kk40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vapiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vuc7c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s4as0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eivot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i1hvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lgcik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0dqim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wkhfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mwspe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7rokg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nitoj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_yrcjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_wfigp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_y3c7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_02ngs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_sxf55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uh3hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ukb0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t0e0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2yqbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_igt3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_yffhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mwo7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_c8rxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2vyq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ycndi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_5qkhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5rdg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4iwb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wi2v8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[node name="Sage" type="AnimatedSprite3D"]
+transform = Transform3D(0.103923, -0.03, 0.0519615, 0, 0.103923, 0.06, -0.06, -0.0519615, 0.09, -0.1, 0.35, -0.2)
+sprite_frames = SubResource("SpriteFrames_4kk40")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.490685
