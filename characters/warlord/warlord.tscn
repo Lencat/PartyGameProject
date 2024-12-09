@@ -1,0 +1,137 @@
+[gd_scene load_steps=32 format=3 uid="uid://b58u8m0t673ha"]
+
+[ext_resource type="Texture2D" uid="uid://cin8ht1ujnsd2" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_000.png" id="1_wpfhv"]
+[ext_resource type="Texture2D" uid="uid://c0cs65fuw0t0f" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_001.png" id="2_5c5af"]
+[ext_resource type="Texture2D" uid="uid://dwkegylct47bc" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_002.png" id="3_tmdfn"]
+[ext_resource type="Texture2D" uid="uid://dh6hk7rvg537b" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_003.png" id="4_e5cqt"]
+[ext_resource type="Texture2D" uid="uid://dwubdttkec2ft" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_004.png" id="5_eu3t1"]
+[ext_resource type="Texture2D" uid="uid://cw3r4og5m71dc" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_005.png" id="6_enrqk"]
+[ext_resource type="Texture2D" uid="uid://bo5jdyprtfxgg" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_006.png" id="7_kgxcp"]
+[ext_resource type="Texture2D" uid="uid://b3t7ftk5fo1wf" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_007.png" id="8_yetnx"]
+[ext_resource type="Texture2D" uid="uid://cvstk43kp734g" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_008.png" id="9_8rl6u"]
+[ext_resource type="Texture2D" uid="uid://cthhr31i714pg" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_009.png" id="10_laste"]
+[ext_resource type="Texture2D" uid="uid://bsouqi2tqela0" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_010.png" id="11_bmxur"]
+[ext_resource type="Texture2D" uid="uid://35wik1tii3yi" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_011.png" id="12_vp5xi"]
+[ext_resource type="Texture2D" uid="uid://8bm1jwudb1w8" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_012.png" id="13_ibsol"]
+[ext_resource type="Texture2D" uid="uid://0o5fq1caqb4f" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_013.png" id="14_dn5cc"]
+[ext_resource type="Texture2D" uid="uid://sj1kce81oxt4" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_014.png" id="15_g0agc"]
+[ext_resource type="Texture2D" uid="uid://bhxuohpl17xf5" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_015.png" id="16_rjsrm"]
+[ext_resource type="Texture2D" uid="uid://do5e647a3u44p" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_016.png" id="17_fcj8g"]
+[ext_resource type="Texture2D" uid="uid://f3o1cjfr68nv" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_017.png" id="18_hgkcx"]
+[ext_resource type="Texture2D" uid="uid://dyynydhy56s1r" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_018.png" id="19_2jxsj"]
+[ext_resource type="Texture2D" uid="uid://buge4eeak84sw" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_019.png" id="20_li5g2"]
+[ext_resource type="Texture2D" uid="uid://bm2lmcor7i63a" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_020.png" id="21_610wb"]
+[ext_resource type="Texture2D" uid="uid://dw0yxla33bbcl" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_021.png" id="22_fhecd"]
+[ext_resource type="Texture2D" uid="uid://driedjjolx31o" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_022.png" id="23_ci4mp"]
+[ext_resource type="Texture2D" uid="uid://7od5v82d2xdy" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_023.png" id="24_e717u"]
+[ext_resource type="Texture2D" uid="uid://cd26soog2b1kh" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_024.png" id="25_dv8ib"]
+[ext_resource type="Texture2D" uid="uid://bedybuc20rn4v" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_025.png" id="26_osy5s"]
+[ext_resource type="Texture2D" uid="uid://btlua0kruefxh" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_026.png" id="27_kyqd3"]
+[ext_resource type="Texture2D" uid="uid://c32xwj6iqqj3d" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_027.png" id="28_e0f11"]
+[ext_resource type="Texture2D" uid="uid://cnwm3mbq1fhqb" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_028.png" id="29_05lwu"]
+[ext_resource type="Texture2D" uid="uid://s5l4cdfeqvin" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_029.png" id="30_btv8y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vkksa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wpfhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5c5af")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tmdfn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e5cqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_eu3t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_enrqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kgxcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yetnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8rl6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_laste")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bmxur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vp5xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ibsol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dn5cc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_g0agc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rjsrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_fcj8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hgkcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_2jxsj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_li5g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_610wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_fhecd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ci4mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_e717u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dv8ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_osy5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_kyqd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_e0f11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_05lwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_btv8y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[node name="Warlord" type="AnimatedSprite3D"]
+transform = Transform3D(0.103923, -0.03, 0.0519615, 0, 0.103923, 0.06, -0.06, -0.0519615, 0.09, -0.1, 0.35, -0.2)
+sprite_frames = SubResource("SpriteFrames_vkksa")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.00251495
