@@ -1,6 +1,7 @@
-[gd_scene load_steps=93 format=3 uid="uid://bneb3s6jpxx4y"]
+[gd_scene load_steps=172 format=3 uid="uid://bneb3s6jpxx4y"]
 
 [ext_resource type="Script" path="res://characters/CharacterSelect.gd" id="1_clw72"]
+[ext_resource type="Texture2D" uid="uid://bus738suq76ht" path="res://textures/backgrounds/HauntedHenhouse_10.png" id="2_twf2p"]
 [ext_resource type="Texture2D" uid="uid://br2q6nl1mmas4" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_000.png" id="32_c7y6l"]
 [ext_resource type="Texture2D" uid="uid://b5np34vqqnnca" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_001.png" id="33_lln0b"]
 [ext_resource type="Texture2D" uid="uid://3qmb1j42id5t" path="res://characters/astrologist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_002.png" id="34_oxtnh"]
@@ -91,6 +92,68 @@
 [ext_resource type="Texture2D" uid="uid://b02g8vb51550k" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_028.png" id="90_yg4tg"]
 [ext_resource type="Texture2D" uid="uid://c7rxyjpcf3ypf" path="res://characters/citizen/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_cs1r1"]
 [ext_resource type="Texture2D" uid="uid://b74lw526f0wsf" path="res://characters/artist/res/PNG/Front/PNG Sequences/Idle Blinking/0_Citizen_Idle Blinking_029.png" id="91_xf8xj"]
+[ext_resource type="Texture2D" uid="uid://7ahqgn3cq6j2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_000.png" id="92_0c44e"]
+[ext_resource type="Texture2D" uid="uid://erv4i1akcrll" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_001.png" id="93_dyawg"]
+[ext_resource type="Texture2D" uid="uid://do0xhu5q2hk74" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_002.png" id="94_1gkm2"]
+[ext_resource type="Texture2D" uid="uid://bhhl1d6b66hor" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_003.png" id="95_wp7yv"]
+[ext_resource type="Texture2D" uid="uid://cmwxc1hurl1xx" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_004.png" id="96_f3g87"]
+[ext_resource type="Texture2D" uid="uid://c3sl2da44o6bg" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_005.png" id="97_144g8"]
+[ext_resource type="Texture2D" uid="uid://d0iklg10r081j" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_006.png" id="98_vmp5n"]
+[ext_resource type="Texture2D" uid="uid://bpbcga3whr2kr" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_007.png" id="99_1ajvf"]
+[ext_resource type="Texture2D" uid="uid://cfovyseqllh2b" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_008.png" id="100_qrll8"]
+[ext_resource type="Texture2D" uid="uid://bnyj53jggg0l8" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_009.png" id="101_mfkr5"]
+[ext_resource type="Texture2D" uid="uid://c8avjr8e2vdt8" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_010.png" id="102_xn5fg"]
+[ext_resource type="Texture2D" uid="uid://taouy6oumbp2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_011.png" id="103_7nwbn"]
+[ext_resource type="Texture2D" uid="uid://cypt5ua1q88jl" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_012.png" id="104_s7bol"]
+[ext_resource type="Texture2D" uid="uid://cbstn8ie2lwb6" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_013.png" id="105_qigd5"]
+[ext_resource type="Texture2D" uid="uid://bmqnllksp7bua" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_014.png" id="106_o2tdf"]
+[ext_resource type="Texture2D" uid="uid://b6i1ysvbrm8ym" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_015.png" id="107_yd4t2"]
+[ext_resource type="Texture2D" uid="uid://c3yfpwyuwu5wq" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_016.png" id="108_ei5vo"]
+[ext_resource type="Texture2D" uid="uid://ucab1uti32af" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_017.png" id="109_vxray"]
+[ext_resource type="Texture2D" uid="uid://cyxv6fgdo5kyt" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_018.png" id="110_toasi"]
+[ext_resource type="Texture2D" uid="uid://d30oqfe1y83i2" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_019.png" id="111_u5u46"]
+[ext_resource type="Texture2D" uid="uid://qmypdmb7hp84" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_020.png" id="112_doadu"]
+[ext_resource type="Texture2D" uid="uid://bbob5o8ix3mlu" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_021.png" id="113_pb2cj"]
+[ext_resource type="Texture2D" uid="uid://d1sc72tl8e12k" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_022.png" id="114_un64d"]
+[ext_resource type="Texture2D" uid="uid://c7knet3tml6fe" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_023.png" id="115_yj7bf"]
+[ext_resource type="Texture2D" uid="uid://teqpodd2a3kf" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_024.png" id="116_11xcj"]
+[ext_resource type="Texture2D" uid="uid://c61a4stspb2sr" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_025.png" id="117_a8kwd"]
+[ext_resource type="Texture2D" uid="uid://bv2ixs8vdty82" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_026.png" id="118_5o2ay"]
+[ext_resource type="Texture2D" uid="uid://dyq206amf4dqm" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_027.png" id="119_up3vv"]
+[ext_resource type="Texture2D" uid="uid://cmlxytb238126" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_028.png" id="120_ncs1c"]
+[ext_resource type="Texture2D" uid="uid://c5onnnguu63hx" path="res://characters/sage/res/PNG/PNG Sequences/Idle Blinking/0_Sage_Idle Blinking_029.png" id="121_iummk"]
+[ext_resource type="Texture2D" uid="uid://cin8ht1ujnsd2" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_000.png" id="122_j6por"]
+[ext_resource type="Texture2D" uid="uid://c0cs65fuw0t0f" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_001.png" id="123_d66ko"]
+[ext_resource type="Texture2D" uid="uid://dwkegylct47bc" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_002.png" id="124_xlus8"]
+[ext_resource type="Texture2D" uid="uid://dh6hk7rvg537b" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_003.png" id="125_7p1ng"]
+[ext_resource type="Texture2D" uid="uid://dwubdttkec2ft" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_004.png" id="126_877ov"]
+[ext_resource type="Texture2D" uid="uid://cw3r4og5m71dc" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_005.png" id="127_g62un"]
+[ext_resource type="Texture2D" uid="uid://bo5jdyprtfxgg" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_006.png" id="128_i5nfh"]
+[ext_resource type="Texture2D" uid="uid://b3t7ftk5fo1wf" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_007.png" id="129_1aym6"]
+[ext_resource type="Texture2D" uid="uid://cvstk43kp734g" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_008.png" id="130_m7ive"]
+[ext_resource type="Texture2D" uid="uid://cthhr31i714pg" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_009.png" id="131_syx75"]
+[ext_resource type="Texture2D" uid="uid://bsouqi2tqela0" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_010.png" id="132_863ic"]
+[ext_resource type="Texture2D" uid="uid://35wik1tii3yi" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_011.png" id="133_7i1s7"]
+[ext_resource type="Texture2D" uid="uid://8bm1jwudb1w8" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_012.png" id="134_w8m2q"]
+[ext_resource type="Texture2D" uid="uid://0o5fq1caqb4f" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_013.png" id="135_6ra5y"]
+[ext_resource type="Texture2D" uid="uid://sj1kce81oxt4" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_014.png" id="136_prxmc"]
+[ext_resource type="Texture2D" uid="uid://bhxuohpl17xf5" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_015.png" id="137_pxqyd"]
+[ext_resource type="Texture2D" uid="uid://do5e647a3u44p" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_016.png" id="138_1aw5b"]
+[ext_resource type="Texture2D" uid="uid://f3o1cjfr68nv" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_017.png" id="139_3yax1"]
+[ext_resource type="Texture2D" uid="uid://dyynydhy56s1r" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_018.png" id="140_tan2s"]
+[ext_resource type="Texture2D" uid="uid://buge4eeak84sw" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_019.png" id="141_jvhjy"]
+[ext_resource type="Texture2D" uid="uid://bm2lmcor7i63a" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_020.png" id="142_mwjun"]
+[ext_resource type="Texture2D" uid="uid://dw0yxla33bbcl" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_021.png" id="143_sd5e4"]
+[ext_resource type="Texture2D" uid="uid://driedjjolx31o" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_022.png" id="144_xo8id"]
+[ext_resource type="Texture2D" uid="uid://7od5v82d2xdy" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_023.png" id="145_fw4ce"]
+[ext_resource type="Texture2D" uid="uid://cd26soog2b1kh" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_024.png" id="146_40mx0"]
+[ext_resource type="Texture2D" uid="uid://bedybuc20rn4v" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_025.png" id="147_qt4oq"]
+[ext_resource type="Texture2D" uid="uid://btlua0kruefxh" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_026.png" id="148_muuk6"]
+[ext_resource type="Texture2D" uid="uid://c32xwj6iqqj3d" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_027.png" id="149_j76de"]
+[ext_resource type="Texture2D" uid="uid://cnwm3mbq1fhqb" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_028.png" id="150_vyhfp"]
+[ext_resource type="Texture2D" uid="uid://s5l4cdfeqvin" path="res://characters/warlord/res/PNG/PNG Sequences/Idle Blinking/0_Warlord_Idle Blinking_029.png" id="151_ct8om"]
+[ext_resource type="Texture2D" uid="uid://dpq2ugmd7ewun" path="res://textures/backgrounds/Play.png" id="154_hmmi3"]
+[ext_resource type="SystemFont" uid="uid://u40xu32e5s2f" path="res://menu/menu-font.tres" id="154_o7q3t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_icdfp"]
 animations = [{
@@ -378,7 +441,312 @@ animations = [{
 "loop": true,
 "name": &"citizen",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("92_0c44e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_dyawg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_1gkm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_wp7yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_f3g87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_144g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_vmp5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_1ajvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_qrll8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_mfkr5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_xn5fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_7nwbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_s7bol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_qigd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_o2tdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_yd4t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ei5vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_vxray")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_toasi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_u5u46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_doadu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_pb2cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_un64d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_yj7bf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_11xcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_a8kwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_5o2ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_up3vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_ncs1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_iummk")
+}],
+"loop": true,
+"name": &"sage",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("122_j6por")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_d66ko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_xlus8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_7p1ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_877ov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_g62un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_i5nfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_1aym6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_m7ive")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_syx75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_863ic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_7i1s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_w8m2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_6ra5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_prxmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_pxqyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_1aw5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_3yax1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_tan2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_jvhjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_mwjun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_sd5e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_xo8id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_fw4ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_40mx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_qt4oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_muuk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_j76de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_vyhfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_ct8om")
+}],
+"loop": true,
+"name": &"warlord",
+"speed": 20.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aocid"]
+bg_color = Color(0.00392157, 0.0509804, 0.929412, 0.709804)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_nl61x"]
+default_font = ExtResource("154_o7q3t")
+Button/styles/hover = SubResource("StyleBoxFlat_aocid")
+Button/styles/normal = SubResource("StyleBoxFlat_aocid")
+Button/styles/pressed = SubResource("StyleBoxFlat_aocid")
+
+[sub_resource type="Theme" id="Theme_tjckn"]
+default_font = ExtResource("154_o7q3t")
+Button/styles/hover = SubResource("StyleBoxFlat_aocid")
+Button/styles/normal = SubResource("StyleBoxFlat_aocid")
+Button/styles/pressed = SubResource("StyleBoxFlat_aocid")
+
+[sub_resource type="Theme" id="Theme_d6mdm"]
+default_font = ExtResource("154_o7q3t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc4cq"]
+bg_color = Color(0.19492, 0.576052, 0.304026, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.0490599, 0.151235, 0.123862, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_xr0mj"]
+default_font = ExtResource("154_o7q3t")
+Button/fonts/font = ExtResource("154_o7q3t")
+Button/styles/hover = SubResource("StyleBoxFlat_xc4cq")
+Button/styles/normal = SubResource("StyleBoxFlat_xc4cq")
+Button/styles/pressed = SubResource("StyleBoxFlat_xc4cq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1kfg"]
+bg_color = Color(0.0383972, 0.0383972, 0.0383971, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_emsnj"]
+default_font = ExtResource("154_o7q3t")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_s1kfg")
+
+[sub_resource type="Theme" id="Theme_8ahki"]
+default_font = ExtResource("154_o7q3t")
+
+[sub_resource type="Theme" id="Theme_0pyk5"]
+default_font = ExtResource("154_o7q3t")
+
+[sub_resource type="Theme" id="Theme_r670d"]
+default_font = ExtResource("154_o7q3t")
+
+[sub_resource type="Theme" id="Theme_t2xtb"]
+default_font = ExtResource("154_o7q3t")
+Label/font_sizes/font_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lt23j"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qyy60"]
+bg_color = Color(0.388235, 0.388235, 0.388235, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhuew"]
+bg_color = Color(0.266575, 0.266575, 0.266575, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_4gfgg"]
+default_font = ExtResource("154_o7q3t")
+default_font_size = 32
+Button/styles/hover = SubResource("StyleBoxFlat_lt23j")
+Button/styles/normal = SubResource("StyleBoxFlat_qyy60")
+Button/styles/pressed = SubResource("StyleBoxFlat_xhuew")
 
 [node name="CharacterSelect" type="Control"]
 layout_mode = 3
@@ -394,31 +762,47 @@ layout_mode = 0
 offset_right = 1151.0
 offset_bottom = 648.0
 
+[node name="HauntedHenhouse10" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(576, 324)
+scale = Vector2(0.313044, 0.326613)
+texture = ExtResource("2_twf2p")
+
 [node name="PlayerSelect" type="AnimatedSprite2D" parent="."]
 position = Vector2(581, 290)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_icdfp")
-animation = &"citizen"
+animation = &"warlord"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(574, 326)
 
 [node name="Left" type="Button" parent="."]
 layout_mode = 0
-offset_left = 265.0
-offset_top = 320.0
-offset_right = 360.0
-offset_bottom = 371.0
-text = "Left"
+offset_left = 384.0
+offset_top = 352.0
+offset_right = 450.0
+offset_bottom = 418.0
+rotation = 3.14159
+theme = SubResource("Theme_nl61x")
+toggle_mode = true
+action_mode = 0
+icon = ExtResource("154_hmmi3")
+icon_alignment = 1
 
 [node name="Right" type="Button" parent="."]
 layout_mode = 0
-offset_left = 793.0
-offset_top = 324.0
-offset_right = 888.0
-offset_bottom = 375.0
-text = "Right
+offset_left = 768.0
+offset_top = 288.0
+offset_right = 834.0
+offset_bottom = 354.0
+theme = SubResource("Theme_tjckn")
+toggle_mode = true
+action_mode = 0
+text = "
 "
+icon = ExtResource("154_hmmi3")
+icon_alignment = 1
 
 [node name="CharacterName" type="Label" parent="."]
 layout_mode = 0
@@ -426,15 +810,17 @@ offset_left = 521.0
 offset_top = 70.0
 offset_right = 644.0
 offset_bottom = 110.0
+theme = SubResource("Theme_d6mdm")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Select" type="Button" parent="."]
 layout_mode = 0
-offset_left = 537.0
+offset_left = 541.0
 offset_top = 566.0
-offset_right = 614.0
+offset_right = 618.0
 offset_bottom = 608.0
+theme = SubResource("Theme_xr0mj")
 text = "Select"
 
 [node name="PlayerName" type="LineEdit" parent="."]
@@ -443,6 +829,7 @@ offset_left = 484.0
 offset_top = 510.0
 offset_right = 672.0
 offset_bottom = 548.0
+theme = SubResource("Theme_emsnj")
 alignment = 1
 
 [node name="Label" type="Label" parent="."]
@@ -451,6 +838,7 @@ offset_left = 535.0
 offset_top = 468.0
 offset_right = 627.0
 offset_bottom = 498.0
+theme = SubResource("Theme_8ahki")
 text = "Enter Name"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -461,6 +849,7 @@ offset_left = 699.0
 offset_top = 509.0
 offset_right = 842.0
 offset_bottom = 544.0
+theme = SubResource("Theme_0pyk5")
 vertical_alignment = 1
 
 [node name="Player" type="Label" parent="."]
@@ -485,17 +874,19 @@ theme_override_constants/margin_bottom = 12
 
 [node name="Selecting" type="Label" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 0
+size_flags_horizontal = 4
 size_flags_vertical = 0
+theme = SubResource("Theme_r670d")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 48
-text = "Selecting"
+text = "Character Selection"
 
 [node name="PlayerNumber" type="Label" parent="MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
+theme = SubResource("Theme_t2xtb")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 48
@@ -503,6 +894,22 @@ text = "Player 1"
 horizontal_alignment = 2
 vertical_alignment = 3
 
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.099
+anchor_top = 0.928
+anchor_right = 0.099
+anchor_bottom = 0.928
+offset_left = -76.048
+offset_top = -25.344
+offset_right = 74.952
+offset_bottom = 25.656
+grow_vertical = 0
+theme = SubResource("Theme_4gfgg")
+text = "Main Menu"
+
 [connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
 [connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
 [connection signal="pressed" from="Select" to="." method="_on_select_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]

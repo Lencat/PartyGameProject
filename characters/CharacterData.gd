@@ -4,8 +4,10 @@ extends Node
 const ARTIST_SCENE = preload("res://characters/artist/artist.tscn")
 const ASTROLOGER_SCENE = preload("res://characters/astrologist/astrologist.tscn")
 const CITIZEN_SCENE = preload("res://characters/citizen/citizen.tscn")
+const SAGE_SCENE = preload("res://characters/sage/sage.tscn")
+const WARLORD_SCENE = preload("res://characters/warlord/warlord.tscn")
 
-var characters = [ARTIST_SCENE, ASTROLOGER_SCENE, CITIZEN_SCENE]
+var characters = [ARTIST_SCENE, ASTROLOGER_SCENE, CITIZEN_SCENE, SAGE_SCENE, WARLORD_SCENE]
 
 # Store player information and current player index
 var players_info = []

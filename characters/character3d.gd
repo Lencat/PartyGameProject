@@ -11,11 +11,15 @@ const characters = [
 	"res://characters/artist/artist.tscn",
 	"res://characters/astrologist/astrologist.tscn",
 	"res://characters/citizen/citizen.tscn",
+	"res://characters/sage/sage.tscn",
+	"res://characters/warlord/warlord.tscn",
 ]
 enum character {
 	artist = 0,
 	astrologer = 1,
 	citizen = 2,
+	sage = 3,
+	warlord = 4
 }
 
 var current_sprite
