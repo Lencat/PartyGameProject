@@ -1,6 +1,7 @@
 res://main.tscn
-res://enemy_red.tscn
+res://Main.gd
 res://player_green.tscn
-res://art/Player Green/idle/idle.tres
-res://art/Player Green/idle/left.tres
-res://player_green.gd
+res://player_red.tscn
+res://player_yellow.tscn
+res://player_blue.tscn
+res://enemy_reaper_chaser.gd

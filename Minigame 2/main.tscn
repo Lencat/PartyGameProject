@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bydpeu3njw1vc"]
+[gd_scene load_steps=12 format=3 uid="uid://bydpeu3njw1vc"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ej1s6"]
 [ext_resource type="PackedScene" path="res://placeholder_enemy.tscn" id="2_x2y2f"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c6lbb0rayyy5u" path="res://player_yellow.tscn" id="6_7ts4v"]
 [ext_resource type="PackedScene" uid="uid://caqy3jmk4ue1c" path="res://hud.tscn" id="7_gauy1"]
 [ext_resource type="PackedScene" uid="uid://cfm1ccr0pjdax" path="res://enemy_red.tscn" id="9_282iu"]
+[ext_resource type="AudioStream" uid="uid://d1s537gteq8e0" path="res://The Exorcist Theme (8 Bit Raxlen Slice Chiptune Remix).mp3" id="10_3gcxi"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_fv0uv"]
 vertices = PackedVector2Array(1409, 15, 1405, 699, 12, 705, 11, 14)
@@ -54,32 +55,17 @@ one_shot = true
 
 [node name="Hud" parent="." instance=ExtResource("7_gauy1")]
 
-[node name="Enemy_Red" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("9_282iu")]
+[node name="Enemy" parent="." instance=ExtResource("9_282iu")]
 position = Vector2(539, 319)
 scale = Vector2(0.391607, 0.559999)
 collision_layer = 1
-target_to_chase = NodePath("../PlayerRed")
-
-[node name="Enemy_Blue" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("9_282iu")]
-position = Vector2(539, 319)
-scale = Vector2(0.391607, 0.559999)
-collision_layer = 1
-target_to_chase = NodePath("../PlayerBlue")
-
-[node name="Enemy_Green" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("9_282iu")]
-position = Vector2(539, 319)
-scale = Vector2(0.391607, 0.559999)
-collision_layer = 1
-target_to_chase = NodePath("../PlayerGreen")
-
-[node name="Enemy_Yellow" parent="." node_paths=PackedStringArray("target_to_chase") instance=ExtResource("9_282iu")]
-position = Vector2(539, 319)
-scale = Vector2(0.391607, 0.559999)
-collision_layer = 1
-target_to_chase = NodePath("../PlayerYellow")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_fv0uv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_3gcxi")
+volume_db = -10.09
 
 [connection signal="hit" from="PlayerBlue" to="." method="_on_player_blue_hit"]
 [connection signal="hit" from="PlayerRed" to="." method="_on_player_red_hit"]

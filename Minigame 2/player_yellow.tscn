@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6lbb0rayyy5u"]
 
 [ext_resource type="Script" path="res://player_yellow.gd" id="1_sr84d"]
-[ext_resource type="Texture2D" uid="uid://cevlkcqsnpycn" path="res://art/playerYellowPlaeholder.png" id="1_vvrbe"]
+[ext_resource type="Texture2D" uid="uid://cxplsr71g6wgd" path="res://art/Player Yellow/Yellow.png" id="2_4184q"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1t5j"]
 radius = 12.0
@@ -13,9 +13,9 @@ script = ExtResource("1_sr84d")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.567, -0.25)
-scale = Vector2(0.415426, 0.374074)
-texture = ExtResource("1_vvrbe")
+position = Vector2(-1, 0)
+scale = Vector2(0.0317938, 0.036755)
+texture = ExtResource("2_4184q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_s1t5j")
