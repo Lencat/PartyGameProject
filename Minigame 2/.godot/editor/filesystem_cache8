@@ -1,0 +1,40 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1733983414
+enemy_blue.tscn::PackedScene::6411191964723231517::1733687914::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_green.tscn::PackedScene::8802015744497890659::1733687932::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_reaper_chaser.gd::GDScript::-1::1733983023::0::1::::<>CharacterBody2D<>::
+enemy_red.tscn::PackedScene::5150140464489482427::1733692329::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+enemy_yellow.tscn::PackedScene::3980390682019880994::1733687923::0::1::::<><>::res://enemy_reaper_chaser.gd<>uid://d1kcqjwsqj1vk::::res://reaper.png
+hud.gd::GDScript::-1::1733687080::0::1::::<>CanvasLayer<>::
+hud.tscn::PackedScene::4807379113248594614::1733687080::0::1::::<><>::res://hud.gd
+icon.svg::CompressedTexture2D::7587593593368540317::1733687080::1733687129::1::::<><>::
+Main.gd::GDScript::-1::1733983366::0::1::::<>Node<>::
+main.tscn::PackedScene::4078065056660283668::1733983414::0::1::::<><>::res://Main.gd<>res://placeholder_enemy.tscn<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn<>uid://bnex3g2nhgofv::::res://art/ground.jpg<>uid://3ikbt8tnjxv1::::res://player_red.tscn<>uid://dm4qefxcmf5uy::::res://player_green.tscn<>uid://c6lbb0rayyy5u::::res://player_yellow.tscn<>uid://caqy3jmk4ue1c::::res://hud.tscn<>uid://cfm1ccr0pjdax::::res://enemy_red.tscn<>uid://d1s537gteq8e0::::res://The Exorcist Theme (8 Bit Raxlen Slice Chiptune Remix).mp3
+placeholder_enemy.gd::GDScript::-1::1733687080::0::1::::<>RigidBody2D<>::
+placeholder_enemy.tscn::PackedScene::-1::1733687080::0::1::::<><>::
+player_blue.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_blue.tscn::PackedScene::6681273037941305664::1733983369::0::1::::<><>::uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>res://player_blue.gd
+player_blue_character.tscn::PackedScene::2392872759660766070::1733687080::0::1::::<><>::res://player_blue.gd<>uid://cl4f61s3lf8sk::::res://art/playerBluePlaceholder.png<>uid://c2gpuc7mgpbgy::::res://player_blue.tscn
+player_green.gd::GDScript::-1::1733693907::0::1::::<>Area2D<>::
+player_green.tscn::PackedScene::8062374042917699360::1733983369::0::1::::<><>::res://player_green.gd<>uid://b8rebukngllvo::::res://art/Player Green/idle/idle.tres
+player_red.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_red.tscn::PackedScene::1982412649422179448::1733983369::0::1::::<><>::uid://cxartymdoys0t::::res://art/playerRedPlaceholder.png<>res://player_red.gd
+player_yellow.gd::GDScript::-1::1733687080::0::1::::<>Area2D<>::
+player_yellow.tscn::PackedScene::6971467517625007728::1733983369::0::1::::<><>::res://player_yellow.gd<>uid://cevlkcqsnpycn::::res://art/playerYellowPlaeholder.png
+reaper.png::CompressedTexture2D::9004966277432206148::1733687080::1733687080::1::::<><>::
+The Exorcist Theme (8 Bit Raxlen Slice Chiptune Remix).mp3::AudioStreamMP3::9023203988138868805::1733981491::1733981507::1::::<><>::
+::res://art/::1733985340
+enemyPlaceholder.png::CompressedTexture2D::4224161538189450234::1733687080::1733687080::1::::<><>::
+ground.jpg::CompressedTexture2D::3308580012516814071::1733687795::1733687873::1::::<><>::
+playerBluePlaceholder.png::CompressedTexture2D::5605145941547886026::1733687080::1733687080::1::::<><>::
+playerGreenPlaceholder.png::CompressedTexture2D::8866457321979021663::1733687080::1733687080::1::::<><>::
+playerRedPlaceholder.png::CompressedTexture2D::6388252169276206253::1733687080::1733687080::1::::<><>::
+playerYellowPlaeholder.png::CompressedTexture2D::5097634550232465337::1733687080::1733687080::1::::<><>::
+::res://art/Player Blue/::1733985366
+Blue.png::CompressedTexture2D::8783361474063547898::1733984867::1733985368::1::::<><>::
+::res://art/Player Green/::1733985358
+Green.png::CompressedTexture2D::6409685354702259228::1733984291::1733985368::1::::<><>::
+::res://art/Player Red/::1733985365
+Red.png::CompressedTexture2D::6464746883916379936::1733984579::1733985368::1::::<><>::
+::res://art/Player Yellow/::1733985363
+Yellow.png::CompressedTexture2D::6418851412103839679::1733985315::1733985368::1::::<><>::

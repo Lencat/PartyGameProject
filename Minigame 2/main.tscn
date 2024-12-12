@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://bydpeu3njw1vc"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_ej1s6"]
+[ext_resource type="PackedScene" path="res://placeholder_enemy.tscn" id="2_x2y2f"]
+[ext_resource type="PackedScene" uid="uid://c2gpuc7mgpbgy" path="res://player_blue.tscn" id="3_dnptf"]
+[ext_resource type="Texture2D" uid="uid://bnex3g2nhgofv" path="res://art/ground.jpg" id="3_ylxkp"]
+[ext_resource type="PackedScene" uid="uid://3ikbt8tnjxv1" path="res://player_red.tscn" id="4_6qmk6"]
+[ext_resource type="PackedScene" uid="uid://dm4qefxcmf5uy" path="res://player_green.tscn" id="5_fm8as"]
+[ext_resource type="PackedScene" uid="uid://c6lbb0rayyy5u" path="res://player_yellow.tscn" id="6_7ts4v"]
+[ext_resource type="PackedScene" uid="uid://caqy3jmk4ue1c" path="res://hud.tscn" id="7_gauy1"]
+[ext_resource type="PackedScene" uid="uid://cfm1ccr0pjdax" path="res://enemy_red.tscn" id="9_282iu"]
+[ext_resource type="AudioStream" uid="uid://d1s537gteq8e0" path="res://The Exorcist Theme (8 Bit Raxlen Slice Chiptune Remix).mp3" id="10_3gcxi"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_fv0uv"]
+vertices = PackedVector2Array(1409, 15, 1405, 699, 12, 705, 11, 14)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, 4, 1420, 6, 1415, 709, 3, 716)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Main" type="Node"]
+script = ExtResource("1_ej1s6")
+mob_scene = ExtResource("2_x2y2f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_right = 1413.0
+offset_bottom = 832.0
+texture = ExtResource("3_ylxkp")
+
+[node name="PlayerBlue" parent="." instance=ExtResource("3_dnptf")]
+
+[node name="PlayerRed" parent="." instance=ExtResource("4_6qmk6")]
+position = Vector2(935, 93)
+
+[node name="PlayerGreen" parent="." instance=ExtResource("5_fm8as")]
+position = Vector2(938, 599)
+
+[node name="PlayerYellow" parent="." instance=ExtResource("6_7ts4v")]
+position = Vector2(92, 99)
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimerBlue" type="Timer" parent="."]
+
+[node name="ScoreTimerRed" type="Timer" parent="."]
+
+[node name="ScoreTimerGreen" type="Timer" parent="."]
+
+[node name="ScoreTimerYellow" type="Timer" parent="."]
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Hud" parent="." instance=ExtResource("7_gauy1")]
+
+[node name="Enemy" parent="." instance=ExtResource("9_282iu")]
+position = Vector2(539, 319)
+scale = Vector2(0.391607, 0.559999)
+collision_layer = 1
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_fv0uv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_3gcxi")
+volume_db = -10.09
+
+[connection signal="hit" from="PlayerBlue" to="." method="_on_player_blue_hit"]
+[connection signal="hit" from="PlayerRed" to="." method="_on_player_red_hit"]
+[connection signal="hit" from="PlayerGreen" to="." method="_on_player_green_hit"]
+[connection signal="hit" from="PlayerYellow" to="." method="_on_player_yellow_hit"]
+[connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
+[connection signal="timeout" from="ScoreTimerBlue" to="." method="_on_score_timer_blue_timeout"]
+[connection signal="timeout" from="ScoreTimerRed" to="." method="_on_score_timer_red_timeout"]
+[connection signal="timeout" from="ScoreTimerGreen" to="." method="_on_score_timer_green_timeout"]
+[connection signal="timeout" from="ScoreTimerYellow" to="." method="_on_score_timer_yellow_timeout"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="start_game" from="Hud" to="." method="new_game"]

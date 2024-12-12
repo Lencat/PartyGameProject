@@ -1,0 +1,7 @@
+res://main.tscn
+res://Main.gd
+res://player_green.tscn
+res://player_red.tscn
+res://player_yellow.tscn
+res://player_blue.tscn
+res://enemy_reaper_chaser.gd

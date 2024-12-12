@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://badejabw8uf6u"]
+
+[ext_resource type="Script" path="res://player_blue.gd" id="1_7e1n0"]
+[ext_resource type="Texture2D" uid="uid://cl4f61s3lf8sk" path="res://art/playerBluePlaceholder.png" id="2_phksk"]
+[ext_resource type="PackedScene" uid="uid://c2gpuc7mgpbgy" path="res://player_blue.tscn" id="3_n36dm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wsum8"]
+radius = 12.0
+height = 40.0
+
+[node name="PlayerBlue" type="CharacterBody2D"]
+script = ExtResource("1_7e1n0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_wsum8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.567001, -0.25)
+scale = Vector2(0.415426, 0.374074)
+texture = ExtResource("2_phksk")
+
+[node name="PlayerBlue" parent="." instance=ExtResource("3_n36dm")]
+position = Vector2(0, 0)
